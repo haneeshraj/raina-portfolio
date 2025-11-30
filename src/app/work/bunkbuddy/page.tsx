@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
@@ -610,6 +609,483 @@ export default function BunkBuddy() {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles["high-fidelity-section"]}>
+        <div className={styles["high-fidelity-header"]}>
+          <h2 className={styles["high-fidelity-header__title"]}>
+            High Fidelity
+          </h2>
+          <p className={styles["high-fidelity-header__subtitle"]}>
+            add text here
+          </p>
+        </div>
+
+        <div className={styles["high-fidelity-showcase"]}>
+          <div className={styles["high-fidelity-showcase__left"]}>
+            <div className={styles["high-fidelity-showcase__screens"]}>
+              <Image
+                src="/hi-fi-1.png"
+                alt="High Fidelity Screen 1"
+                width={280}
+                height={600}
+                className={styles["high-fidelity-showcase__image"]}
+              />
+              <Image
+                src="/hi-fi-2.png"
+                alt="High Fidelity Screen 2"
+                width={280}
+                height={600}
+                className={styles["high-fidelity-showcase__image"]}
+              />
+              <Image
+                src="/hi-fi-3.png"
+                alt="High Fidelity Screen 3"
+                width={280}
+                height={600}
+                className={styles["high-fidelity-showcase__image"]}
+              />
+            </div>
+          </div>
+
+          <div className={styles["high-fidelity-showcase__right"]}>
+            <div className={styles["high-fidelity-annotation"]}>
+              <span className={styles["high-fidelity-annotation__number"]}>
+                1
+              </span>
+              <div className={styles["high-fidelity-annotation__content"]}>
+                <p className={styles["high-fidelity-annotation__text"]}>
+                  Users can click on the toggle button to switch between
+                  Roommates and Houses
+                </p>
+                <ul className={styles["high-fidelity-annotation__list"]}>
+                  <li>
+                    Roommates: shows individual profiles of people looking for
+                    shared accommodation or roommate match.
+                  </li>
+                  <li>House: show listings of available rental properties.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className={styles["high-fidelity-annotation"]}>
+              <span className={styles["high-fidelity-annotation__number"]}>
+                2
+              </span>
+              <p className={styles["high-fidelity-annotation__text"]}>
+                Users can swipe left to go through profiles of roommates or
+                houses.
+              </p>
+            </div>
+
+            <div className={styles["high-fidelity-annotation"]}>
+              <span className={styles["high-fidelity-annotation__number"]}>
+                3
+              </span>
+              <p className={styles["high-fidelity-annotation__text"]}>
+                Users can swipe right to like a profile or listing.
+              </p>
+            </div>
+
+            <div className={styles["high-fidelity-annotation"]}>
+              <span className={styles["high-fidelity-annotation__number"]}>
+                4
+              </span>
+              <div className={styles["high-fidelity-annotation__content"]}>
+                <p className={styles["high-fidelity-annotation__text"]}>
+                  Upon swiping right, a pop-up shows to confirm that they want
+                  to like the profile
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["share-filters-section"]}>
+        <div className={styles["share-filters-showcase"]}>
+          <div className={styles["share-filters-showcase__screens"]}>
+            <Image
+              src="/hi-fi-4.png"
+              alt="Share Screen"
+              width={250}
+              height={540}
+              className={styles["share-filters-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-5.png"
+              alt="Filters Screen"
+              width={250}
+              height={540}
+              className={styles["share-filters-showcase__image"]}
+            />
+          </div>
+
+          <div className={styles["share-filters-showcase__annotations"]}>
+            <div className={styles["share-filters-annotation"]}>
+              <span className={styles["share-filters-annotation__number"]}>
+                5
+              </span>
+              <p className={styles["share-filters-annotation__text"]}>
+                Clicking on the share button, pulls up a modal with the
+                user&apos;s matches, for them to share a listing or another
+                roommate&apos;s profile with them.
+              </p>
+            </div>
+
+            <div className={styles["share-filters-annotation"]}>
+              <span className={styles["share-filters-annotation__number"]}>
+                6
+              </span>
+              <p className={styles["share-filters-annotation__text"]}>
+                They can even click on copy link if they want to share the
+                profile or listing outside of the BunkBuddy app.
+              </p>
+            </div>
+
+            <div className={styles["share-filters-annotation"]}>
+              <span className={styles["share-filters-annotation__number"]}>
+                7
+              </span>
+              <p className={styles["share-filters-annotation__text"]}>
+                Clicking on the filters button opens a list of filter options.
+              </p>
+            </div>
+
+            <div className={styles["share-filters-annotation"]}>
+              <span className={styles["share-filters-annotation__number"]}>
+                8
+              </span>
+              <p className={styles["share-filters-annotation__text"]}>
+                There is a toggle for users to switch between basic and advanced
+                filter setting options. Users can drag to adjust it to their
+                preferred values or tap on the number and manually enter a
+                value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["matches-messages-section"]}>
+        <div className={styles["matches-messages-showcase"]}>
+          <div className={styles["matches-messages-showcase__screens"]}>
+            <Image
+              src="/hi-fi-6.png"
+              alt="Matches and Messages Screen"
+              width={250}
+              height={540}
+              className={styles["matches-messages-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-7.png"
+              alt="You Matched Screen"
+              width={250}
+              height={540}
+              className={styles["matches-messages-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-8.png"
+              alt="Chat Screen"
+              width={250}
+              height={540}
+              className={styles["matches-messages-showcase__image"]}
+            />
+          </div>
+
+          <div className={styles["matches-messages-showcase__annotations"]}>
+            <div className={styles["matches-messages-annotation"]}>
+              <span className={styles["matches-messages-annotation__number"]}>
+                9
+              </span>
+              <p className={styles["matches-messages-annotation__text"]}>
+                The toggle switch allows users to switch between ongoing
+                conversations and matches with Roommates or Properties.
+              </p>
+            </div>
+
+            <div className={styles["matches-messages-annotation"]}>
+              <span className={styles["matches-messages-annotation__number"]}>
+                10
+              </span>
+              <p className={styles["matches-messages-annotation__text"]}>
+                Matches Tab – A separate tab that shows users with whom there
+                has been a mutual like or match. Tapping a match here can
+                initiate a conversation if one hasn&apos;t started yet.
+              </p>
+            </div>
+
+            <div className={styles["matches-messages-annotation"]}>
+              <span className={styles["matches-messages-annotation__number"]}>
+                11
+              </span>
+              <p className={styles["matches-messages-annotation__text"]}>
+                Messages Tab – Displays a list of existing conversations with
+                other users. Tapping on a message card opens the chat screen
+                (13).
+              </p>
+            </div>
+
+            <div className={styles["matches-messages-annotation"]}>
+              <span className={styles["matches-messages-annotation__number"]}>
+                12
+              </span>
+              <p className={styles["matches-messages-annotation__text"]}>
+                {'"YOU MATCHED!"'} Banner – Appears when two users like each
+                other, confirming a successful match. This celebratory screen
+                encourages the user to take the next step in engaging with their
+                new match.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles["likes-saved-profile-section"]}>
+        <div className={styles["likes-saved-profile-showcase"]}>
+          <div className={styles["likes-saved-profile-showcase__screens"]}>
+            <Image
+              src="/hi-fi-9.png"
+              alt="Likes and Recommended Screen"
+              width={250}
+              height={540}
+              className={styles["likes-saved-profile-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-10.png"
+              alt="Saved Listings Screen"
+              width={250}
+              height={540}
+              className={styles["likes-saved-profile-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-11.png"
+              alt="Profile Screen"
+              width={250}
+              height={540}
+              className={styles["likes-saved-profile-showcase__image"]}
+            />
+          </div>
+
+          <div className={styles["likes-saved-profile-showcase__annotations"]}>
+            <div className={styles["likes-saved-profile-annotation"]}>
+              <span
+                className={styles["likes-saved-profile-annotation__number"]}
+              >
+                14
+              </span>
+              <p className={styles["likes-saved-profile-annotation__text"]}>
+                Likes Tab - Shows profiles of people who have liked you but whom
+                you haven&apos;t interacted with yet. Users can then choose to
+                like them back to create a match or ignore them.
+              </p>
+            </div>
+
+            <div className={styles["likes-saved-profile-annotation"]}>
+              <span
+                className={styles["likes-saved-profile-annotation__number"]}
+              >
+                15
+              </span>
+              <p className={styles["likes-saved-profile-annotation__text"]}>
+                Recommended Tab – Displays listings or profiles tailored to the
+                user based on preferences, location, and past likes. Uses card
+                format for easy swiping or tapping.
+              </p>
+            </div>
+
+            <div className={styles["likes-saved-profile-annotation"]}>
+              <span
+                className={styles["likes-saved-profile-annotation__number"]}
+              >
+                16
+              </span>
+              <p className={styles["likes-saved-profile-annotation__text"]}>
+                Saved Listings – This section is for profiles or listings the
+                user has chosen to save for later viewing. Tapping on any saved
+                item opens the full listing or profile, allowing users to
+                re-evaluate or contact the other party.
+              </p>
+            </div>
+
+            <div className={styles["likes-saved-profile-annotation"]}>
+              <span
+                className={styles["likes-saved-profile-annotation__number"]}
+              >
+                17
+              </span>
+              <p className={styles["likes-saved-profile-annotation__text"]}>
+                Profile – The user can set up their profile by adding a photo,
+                name, bio, phone number and email ID. They can come back and
+                edit it at any point.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["testing-section"]}>
+        <div className={styles["testing-header"]}>
+          <h2 className={styles["testing-header__title"]}>
+            Phase 4 - Testing & Iteration
+          </h2>
+        </div>
+
+        <div className={styles["testing-content"]}>
+          <h3 className={styles["testing-content__subtitle"]}>
+            Usability Testing
+          </h3>
+          <p className={styles["testing-content__text"]}>
+            Moderated usability testing sessions were conducted to evaluate the
+            ease of navigation, clarity of features, and overall user experience
+            of the Bunk Buddy prototype.
+          </p>
+          <p className={styles["testing-content__text"]}>
+            The sample size was 4 participants, ages ranging from 18-30 with a
+            criteria of having searched for a house or housemate in the past
+            year. They were given scenario-based tasks like, Start a
+            conversation with a new match, Find your saved property listings etc
+            and their steps were observed closely. This setup was recorded.
+          </p>
+        </div>
+
+        <div className={styles["key-findings"]}>
+          <h3 className={styles["key-findings__title"]}>Key Findings</h3>
+          <ol className={styles["key-findings__list"]}>
+            <li>
+              <strong>Sharing Profiles/Houses</strong>
+              <p>
+                All participants could successfully click on the share button
+                but 2 of them talked about having more options like WhatsApp or
+                Email alongside the Bunk Buddy matches.
+              </p>
+            </li>
+            <li>
+              <strong>Like & Match Flow</strong>
+              <p>
+                All 4 participants said they liked how the Match confirmation,
+                but 1 wanted the ability to revisit skipped profiles.
+              </p>
+            </li>
+            <li>
+              <strong>Chat Initiation</strong>
+              <p>
+                Messaging after a match was smooth for all, though 2
+                participants wanted chat shortcuts directly from the match
+                confirmation screen.
+              </p>
+            </li>
+            <li>
+              <strong>Saved Listings</strong>
+              <p>
+                Users saved listings easily but 3 participants mentioned adding
+                sort/filter options in the Saved section or a way to separate
+                roommates and houses.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div className={styles["implemented-feedback-section"]}>
+        <h2 className={styles["implemented-feedback-section__title"]}>
+          Implemented Feedback
+        </h2>
+
+        <div className={styles["feedback-grid"]}>
+          <div className={styles["feedback-item"]}>
+            <div className={styles["feedback-item__image-container"]}>
+              <Image
+                src="/iterated-1.png"
+                alt="Sharing Options"
+                width={300}
+                height={650}
+                className={styles["feedback-item__image"]}
+              />
+            </div>
+            <div className={styles["feedback-item__content"]}>
+              <h3 className={styles["feedback-item__number"]}>1.</h3>
+              <h4 className={styles["feedback-item__title"]}>
+                Sharing Options
+              </h4>
+              <p className={styles["feedback-item__text"]}>
+                Added users&apos; preferred mode of sharing listings: WhatsApp
+                and Email options, alongside the existing Copy Link option.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles["feedback-item"]}>
+            <div className={styles["feedback-item__image-container"]}>
+              <Image
+                src="/iterated-2.png"
+                alt="Chat Shortcut"
+                width={300}
+                height={650}
+                className={styles["feedback-item__image"]}
+              />
+            </div>
+            <div className={styles["feedback-item__content"]}>
+              <h3 className={styles["feedback-item__number"]}>2.</h3>
+              <h4 className={styles["feedback-item__title"]}>Chat Shortcut</h4>
+              <p className={styles["feedback-item__text"]}>
+                Added a {"'Send Message'"} option on the Matches page, so it is
+                easier for quicker chat initiation, instead of users having to
+                manually find the matched room/date in chats.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles["feedback-item"]}>
+            <div className={styles["feedback-item__image-container"]}>
+              <Image
+                src="/iterated-3.png"
+                alt="Revisiting Profiles"
+                width={300}
+                height={650}
+                className={styles["feedback-item__image"]}
+              />
+            </div>
+            <div className={styles["feedback-item__content"]}>
+              <h3 className={styles["feedback-item__number"]}>3.</h3>
+              <h4 className={styles["feedback-item__title"]}>
+                Revisiting Profiles
+              </h4>
+              <p className={styles["feedback-item__text"]}>
+                Added a {"'Recently Viewed'"} section in the Likes page, so in
+                case users accidently skip past a potential roommate instead of
+                liking the profile, they can revisit the profile here.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles["feedback-item"]}>
+            <div className={styles["feedback-item__image-container"]}>
+              <Image
+                src="/iterated-4.png"
+                alt="Sorting Saved Options"
+                width={300}
+                height={650}
+                className={styles["feedback-item__image"]}
+              />
+            </div>
+            <div className={styles["feedback-item__content"]}>
+              <h3 className={styles["feedback-item__number"]}>4.</h3>
+              <h4 className={styles["feedback-item__title"]}>
+                Sorting Saved Options
+              </h4>
+              <p className={styles["feedback-item__text"]}>
+                Added a toggle in the Saved section between saved roommates and
+                houses. Also added a filter option for users to sort through
+                their saved listings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["testing-header"]}>
+        <h2 className={styles["testing-header__title"]}>
+          Phase 5 - Final Product & Impact
+        </h2>
       </div>
     </>
   );
