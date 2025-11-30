@@ -539,7 +539,7 @@ export default function BunkBuddy() {
               className={styles["chat-likes-showcase__image"]}
             />
             <Image
-              src="/mid-fid-9.png"
+              src="/mid-fid-10.png"
               alt="Likes and Recommended Screen"
               width={250}
               height={540}
