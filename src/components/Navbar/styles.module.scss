@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.6rem;
+  margin-top: 2rem !important;
+  padding-inline: 2rem;
+
+  backdrop-filter: blur(10px);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  max-width: 144rem;
+  margin: 0 auto;
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e77295;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    &-item {
+      font-size: 4rem;
+      font-weight: 700;
+      color: white;
+      padding: 2rem 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.hamburger {
+  width: 2.4rem;
+  height: 2rem;
+
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+
+  &__line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: black;
+    position: absolute;
+    left: 0;
+
+    &--1 {
+      top: 0;
+    }
+
+    &--2 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--3 {
+      bottom: 0;
+    }
+  }
+}
