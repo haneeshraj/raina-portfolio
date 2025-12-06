@@ -9,7 +9,7 @@
   justify-content: space-between;
   gap: 4rem;
   padding: 2rem;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 .heroLeft {
@@ -96,4 +96,68 @@
     flex-direction: column;
     min-height: auto;
   }
+}
+
+.workSection {
+  padding: 2rem;
+  max-width: 154rem;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  margin-bottom: 10rem;
+}
+
+.workHeading {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.workText-small {
+  font-size: 2rem;
+}
+.workText-big {
+  margin-top: -3.2rem;
+  font-size: 7rem;
+}
+
+.workSvgSpace {
+  position: absolute;
+  top: 0;
+  left: 16rem;
+}
+
+.workContainer {
+  height: 80rem;
+  background-color: #fff4d7;
+}
+
+.aboutSection {
+  padding: 2rem;
+  max-width: 154rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.aboutHeading {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.aboutText-small {
+  font-size: 2rem;
+}
+
+.aboutText-big {
+  margin-top: -3.6rem;
+  font-size: 7rem;
+  margin-left: 5rem;
+}
+
+.aboutSvgSpace {
+  position: absolute;
+  top: 0;
+  left: 39rem;
+}
+
+.aboutContainer {
 }
