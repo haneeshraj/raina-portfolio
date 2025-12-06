@@ -23,39 +23,12 @@
 .greeting {
   font-size: 5.6rem;
   margin: 0;
+  letter-spacing: -2px;
 }
 
 .nameWrapper {
   position: relative;
   width: fit-content;
-}
-
-.nameDecoration {
-  position: absolute;
-  &--1 {
-    top: 0;
-    left: -2rem;
-  }
-  &--2 {
-    bottom: 2rem;
-    left: 1.4rem;
-    rotate: 30deg;
-  }
-  &--3 {
-    top: 0;
-    right: 14rem;
-    rotate: -30deg;
-  }
-  &--4 {
-    top: 7rem;
-    right: -2rem;
-    rotate: -30deg;
-  }
-  &--5 {
-    top: 45%;
-    left: 16rem;
-    rotate: -30deg;
-  }
 }
 
 .name {
@@ -72,6 +45,7 @@
 .subtitle {
   font-size: 5.8rem;
   margin: 0;
+  letter-spacing: -2px;
 }
 
 .description {
@@ -103,8 +77,8 @@
   max-width: 154rem;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
-  margin-bottom: 10rem;
+  height: 100rem;
+  border-bottom: 5rem;
 }
 
 .workHeading {
@@ -113,11 +87,13 @@
 }
 
 .workText-small {
-  font-size: 2rem;
+  letter-spacing: -2px;
+  font-size: 2.4rem;
 }
 .workText-big {
   margin-top: -3.2rem;
   font-size: 7rem;
+  letter-spacing: -2px;
 }
 
 .workSvgSpace {
@@ -127,8 +103,9 @@
 }
 
 .workContainer {
-  height: 80rem;
+  height: 80%;
   background-color: #fff4d7;
+  border: 1px solid #000;
 }
 
 .aboutSection {
@@ -144,20 +121,186 @@
 }
 
 .aboutText-small {
-  font-size: 2rem;
+  letter-spacing: -2px;
+  font-size: 2.2rem;
 }
 
 .aboutText-big {
   margin-top: -3.6rem;
   font-size: 7rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
+  letter-spacing: -2px;
 }
 
 .aboutSvgSpace {
   position: absolute;
   top: 0;
-  left: 39rem;
+  left: 35rem;
 }
 
 .aboutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.imagePlaceholder {
+  background-color: #e0e0e0;
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+
+/* Section 1: 30-70 split */
+.aboutSection1 {
+  display: flex;
+  gap: 3rem;
+}
+
+.aboutSection1Left {
+  position: relative;
+}
+
+.aboutSection1Right {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Section 2: Text left, images right */
+.aboutSection2 {
+  display: flex;
+  gap: 3rem;
+}
+
+.aboutSection2Left {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.aboutSection2Right {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section 3: 40-60 split */
+.aboutSection3 {
+  display: flex;
+  gap: 3rem;
+}
+
+.aboutSection3Left {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutSection3Right {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: var(--image-width, 100%);
+  height: var(--image-height, auto);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(4px) translateX(2px);
+  }
+  50% {
+    transform: translateY(-4px) translateX(-1px);
+  }
+  70% {
+    transform: translateY(2px) translateX(1px);
+  }
+}
+
+.softFloat {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes decorationFloat {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+  25% {
+    transform: rotate(2deg) translateX(3px) translateY(-2px);
+  }
+  50% {
+    transform: rotate(-2deg) translateX(-2px) translateY(3px);
+  }
+  75% {
+    transform: rotate(1deg) translateX(2px) translateY(1px);
+  }
+}
+
+.nameDecoration {
+  position: absolute;
+  animation: decorationFloat 5s ease-in-out infinite;
+
+  &--1 {
+    top: 0;
+    left: -2rem;
+    animation-delay: 0s;
+  }
+  &--2 {
+    bottom: 2rem;
+    left: 1.4rem;
+    rotate: 30deg;
+    animation-delay: 0.8s;
+  }
+  &--3 {
+    top: 0;
+    right: 14rem;
+    rotate: -30deg;
+    animation-delay: 1.6s;
+  }
+  &--4 {
+    top: 7rem;
+    right: -2rem;
+    rotate: -30deg;
+    animation-delay: 2.4s;
+  }
+  &--5 {
+    top: 45%;
+    left: 16rem;
+    rotate: -30deg;
+    animation-delay: 3.2s;
+  }
 }
