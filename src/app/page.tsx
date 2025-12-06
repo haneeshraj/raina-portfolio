@@ -6,8 +6,7 @@ import clsx from "clsx";
 
 export default function Home() {
   const handleResumeClick = () => {
-    // window.open("/Raina Motihar Resume 2025 design.pdf", "_blank");
-    console.log("rest");
+    window.open("/Raina Motihar Resume 2025 design.pdf", "_blank");
   };
 
   return (
