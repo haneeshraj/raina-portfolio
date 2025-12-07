@@ -98,8 +98,8 @@ export default function Home() {
         {/* Right Section - Image */}
         <div className={styles.heroRight}>
           <svg
-            width="800"
-            height="700"
+            width="100%"
+            // height="700"
             viewBox="0 0 812 549"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

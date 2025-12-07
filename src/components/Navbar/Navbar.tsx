@@ -13,10 +13,10 @@ const Navbar = () => {
   return (
     <>
       <div className={styles["navbar"]}>
-        <div className={styles["navbar__logo"]}>
+        <Link className={styles["navbar__logo"]} href={"/"}>
           <svg
-            width="84"
-            height="52"
+            width="62"
+            height="42"
             viewBox="0 0 84 52"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const Navbar = () => {
               animate={{ stroke: isOpen ? "white" : "black" }}
             />
           </svg>
-        </div>
+        </Link>
 
         <div className={styles["hamburger"]} onClick={() => setIsOpen(!isOpen)}>
           <motion.div
