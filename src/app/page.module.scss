@@ -141,7 +141,7 @@
 .aboutContainer {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: rem;
 }
 
 .imagePlaceholder {
@@ -150,35 +150,33 @@
   border-radius: 8px;
 }
 
-/* Section 1: 30-70 split */
+/* Section 1: 40-60 split */
 .aboutSection1 {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 43rem 1fr;
+  height: 45rem;
 }
 
 .aboutSection1Left {
-  flex: 0 0 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   position: relative;
 }
 
 .aboutSection1Right {
-  flex: 0 0 70%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
-
   p {
     margin: 0;
+    font-size: 1.4rem;
   }
 }
 
 /* Section 2: Text left, images right */
 .aboutSection2 {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 48rem;
+  height: 43rem;
 }
 
 .aboutSection2Left {
@@ -186,9 +184,12 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   p {
     margin: 0;
+    font-size: 1.4rem;
   }
 }
 
@@ -197,12 +198,14 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
 }
 
 /* Section 3: 40-60 split */
 .aboutSection3 {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 45rem 1fr;
+  height: 40rem;
 }
 
 .aboutSection3Left {
@@ -210,16 +213,17 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
 }
 
 .aboutSection3Right {
-  flex: 0 0 60%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
-
   p {
     margin: 0;
+    font-size: 1.4rem;
   }
 }
 
