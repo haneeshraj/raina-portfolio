@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTransform, useScroll, motion } from "framer-motion";
+import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
 import Image from "next/image";
 import styles from "./ParallaxGallery.module.scss";
 import Lenis from "@studio-freight/lenis";
@@ -65,7 +65,7 @@ export default function ParallaxGallery({
 
 interface ColumnProps {
   images: string[];
-  y: any;
+  y: MotionValue<number>;
 }
 
 const Column = ({ images, y }: ColumnProps) => {
