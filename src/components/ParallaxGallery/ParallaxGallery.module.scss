@@ -1,0 +1,154 @@
+.gallery {
+  height: 175vh;
+  overflow: hidden;
+  background: rgb(45, 45, 45);
+
+  .galleryWrapper {
+    position: relative;
+    top: -12.5vh;
+    height: 200vh;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+
+    .column {
+      position: relative;
+      height: 100%;
+      width: 25%;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      white-space: nowrap;
+
+      &:nth-of-type(1) {
+        top: -30%;
+      }
+      &:nth-of-type(2) {
+        top: -70%;
+      }
+      &:nth-of-type(3) {
+        top: -30%;
+      }
+      &:nth-of-type(4) {
+        top: -60%;
+      }
+
+      .imageContainer {
+        position: relative;
+        height: 33%;
+        width: 100%;
+        border-radius: 1vw;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: 150vh;
+
+    .galleryWrapper {
+      top: -10vh;
+      height: 170vh;
+      gap: 1.5vw;
+      padding: 1.5vw;
+
+      .column {
+        width: 30%;
+        min-width: 200px;
+        gap: 1.5vw;
+
+        .imageContainer {
+          border-radius: 0.75vw;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 120vh;
+
+    .galleryWrapper {
+      top: -8vh;
+      height: 140vh;
+      gap: 1vw;
+      padding: 1vw;
+      flex-wrap: wrap;
+
+      .column {
+        width: 48%;
+        min-width: 150px;
+        gap: 1vw;
+
+        &:nth-of-type(1) {
+          top: -20%;
+        }
+        &:nth-of-type(2) {
+          top: -50%;
+        }
+        &:nth-of-type(3) {
+          top: -20%;
+        }
+        &:nth-of-type(4) {
+          top: -40%;
+        }
+
+        .imageContainer {
+          border-radius: 0.5vw;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 200vh;
+
+    .galleryWrapper {
+      top: -15vh;
+      height: 230vh;
+      flex-direction: column;
+      gap: 0.75vw;
+      padding: 0.75vw;
+
+      .column {
+        width: 100%;
+        min-width: unset;
+        gap: 0.75vw;
+
+        &:nth-of-type(1) {
+          top: 0;
+        }
+        &:nth-of-type(2) {
+          top: 0;
+        }
+        &:nth-of-type(3) {
+          top: 0;
+        }
+        &:nth-of-type(4) {
+          top: 0;
+        }
+
+        .imageContainer {
+          height: 25vh;
+          border-radius: 0.5vw;
+        }
+      }
+    }
+  }
+}
+
+.spacer {
+  height: 100vh;
+
+  @media (max-width: 768px) {
+    height: 50vh;
+  }
+
+  @media (max-width: 480px) {
+    height: 30vh;
+  }
+}

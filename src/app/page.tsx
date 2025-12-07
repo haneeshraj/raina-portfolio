@@ -4,6 +4,7 @@ import styles from "./page.module.scss";
 import Button from "@/components/Button/Button";
 import clsx from "clsx";
 import Image from "next/image";
+import ParallaxGallery from "@/components/ParallaxGallery/ParallaxGallery";
 
 export default function Home() {
   const handleResumeClick = () => {
@@ -237,7 +238,7 @@ export default function Home() {
             />
           </svg>
         </div>
-        <div className={styles.workContainer}>wip</div>
+        <ParallaxGallery />
       </section>
 
       <section className={styles.aboutSection}>
