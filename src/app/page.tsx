@@ -277,7 +277,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/1.png"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
@@ -303,7 +303,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/2.jpg"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
@@ -480,7 +480,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/3.jpeg"}
                   alt="Card Sorting"
                   width={300}
                   height={450}
@@ -507,7 +507,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/4.png"}
                   alt="Card Sorting"
                   width={300}
                   height={450}
@@ -535,7 +535,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/5.png"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
@@ -563,7 +563,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/6.png"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
@@ -615,7 +615,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/7.png"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
@@ -642,7 +642,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/9.PNG"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
@@ -668,7 +668,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src={"/IMG_8433.png"}
+                  src={"/images/8.png"}
                   alt="Card Sorting"
                   width={300}
                   height={400}
