@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import { useEffect, useRef } from "react";
 import styles from "./page.module.scss";
 import Button from "@/components/Button/Button";
 import clsx from "clsx";
@@ -7,12 +8,33 @@ import Image from "next/image";
 import ParallaxGallery from "@/components/ParallaxGallery/ParallaxGallery";
 
 export default function Home() {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        if (bgRef.current) {
+          const progress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+          const shift = 30 * (progress - 0.5); // â€“15 to +15
+          bgRef.current.style.setProperty("--grad-shift", `${shift}%`);
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const handleResumeClick = () => {
     window.open("/Raina Motihar Resume 2025 design.pdf", "_blank");
   };
 
   return (
     <>
+      <div ref={bgRef} className={styles.diamondBg} />
       <section className={styles.hero}>
         {/* Left Section - Text */}
         <div className={styles.heroLeft}>
@@ -90,7 +112,7 @@ export default function Home() {
 
           <p className={styles.description}>
             Simplicity is my superpower. I turn complex ideas into smooth
-            experiences users love. Based in Toronto, I’m looking for my next
+            experiences users love. Based in Toronto, Iâ€™m looking for my next
             opportunity to bring strategy and creativity together.
           </p>
 
@@ -261,444 +283,124 @@ export default function Home() {
           </svg>
         </div>
         <div className={styles.aboutContainer}>
-          {/* Section 1: 30-70 split */}
+          {/* Section 1: images left, text right */}
           <div className={styles.aboutSection1}>
             <div className={styles.aboutSection1Left}>
-              <div
-                style={{
-                  width: "200px",
-                  height: "230px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "-10deg",
-                  zIndex: 1,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                }}
-              >
-                <Image
-                  src={"/images/1.png"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg1}`}>
+                <Image src={"/images/1.png"} alt="Raina 1" width={300} height={400} />
               </div>
-              <div
-                style={{
-                  width: "200px",
-                  height: "230px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "10deg",
-                  top: "180px",
-                  left: "160px",
-                  zIndex: 0,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                }}
-              >
-                <Image
-                  src={"/images/2.jpg"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg2}`}>
+                <Image src={"/images/2.jpg"} alt="Raina 2" width={300} height={400} />
               </div>
+              {/* curly dotted arrow - sits between the two portrait photos, left side */}
               <svg
-                width="220"
-                height="150"
-                viewBox="0 0 251 208"
-                fill="none"
+                width="220" height="150" viewBox="0 0 251 208" fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  position: "absolute",
-                  top: "200px",
-                  left: "20px",
-                  zIndex: -1,
-                }}
+                style={{ position: "absolute", top: "215px", left: "8px", zIndex: 0 }}
               >
-                <path
-                  d="M25.617 2.18341C22.3884 4.78818 19.2371 15.4468 17.8617 28.3068C16.5715 40.3714 16.8941 43.6241 19.6782 43.9219C21.6668 44.1346 28.2169 29.2802 30.2984 19.8481C31.8879 12.5088 31.2703 1.98345 29.3526 1.10789C28.4529 0.743479 26.7911 1.23622 25.617 2.18341Z"
-                  fill="black"
-                />
-                <path
-                  d="M12.0204 72.8811C10.6053 76.0821 11.7815 86.399 14.3303 93.9127C16.6706 100.868 23.9405 110.629 26.8572 110.941C31.2322 111.409 27.5731 91.7084 21.0413 78.8073C17.0342 71.1377 13.6531 68.8988 12.0204 72.8811Z"
-                  fill="black"
-                />
-                <path
-                  d="M35.2576 137.71C29.2548 142.432 49.6562 162.314 60.0206 161.948C61.7583 162 63.4768 160.976 63.8554 159.944C65.7292 153.708 39.968 133.789 35.2576 137.71Z"
-                  fill="black"
-                />
-                <path
-                  d="M139.987 185.12C134.613 185.216 132.299 188.053 134.757 191.4C141.302 200.414 172.424 202.803 168.942 193.983C167.218 190.044 150.868 184.943 139.987 185.12Z"
-                  fill="black"
-                />
-                <path
-                  d="M215.47 180.241C196.404 184.237 193.977 191.888 211.633 192.302C221.794 192.584 233.407 188.06 233.875 183.685C234.116 181.431 233.098 180.92 227.558 180.059C223.993 179.544 218.486 179.625 215.47 180.241Z"
-                  fill="black"
-                />
-                <path
-                  d="M80.014 171.864C78.5131 172.105 77.4149 173.597 77.2023 175.586C76.9187 178.237 77.9843 179.558 82.5302 182.19C90.1162 186.487 99.6809 188.583 105.992 187.247C111.612 186.104 112.109 185.219 108.988 181.801C104.196 176.461 87.1207 170.612 80.014 171.864Z"
-                  fill="black"
-                />
+                <path d="M25.617 2.18341C22.3884 4.78818 19.2371 15.4468 17.8617 28.3068C16.5715 40.3714 16.8941 43.6241 19.6782 43.9219C21.6668 44.1346 28.2169 29.2802 30.2984 19.8481C31.8879 12.5088 31.2703 1.98345 29.3526 1.10789C28.4529 0.743479 26.7911 1.23622 25.617 2.18341Z" fill="black" />
+                <path d="M12.0204 72.8811C10.6053 76.0821 11.7815 86.399 14.3303 93.9127C16.6706 100.868 23.9405 110.629 26.8572 110.941C31.2322 111.409 27.5731 91.7084 21.0413 78.8073C17.0342 71.1377 13.6531 68.8988 12.0204 72.8811Z" fill="black" />
+                <path d="M35.2576 137.71C29.2548 142.432 49.6562 162.314 60.0206 161.948C61.7583 162 63.4768 160.976 63.8554 159.944C65.7292 153.708 39.968 133.789 35.2576 137.71Z" fill="black" />
+                <path d="M139.987 185.12C134.613 185.216 132.299 188.053 134.757 191.4C141.302 200.414 172.424 202.803 168.942 193.983C167.218 190.044 150.868 184.943 139.987 185.12Z" fill="black" />
+                <path d="M215.47 180.241C196.404 184.237 193.977 191.888 211.633 192.302C221.794 192.584 233.407 188.06 233.875 183.685C234.116 181.431 233.098 180.92 227.558 180.059C223.993 179.544 218.486 179.625 215.47 180.241Z" fill="black" />
+                <path d="M80.014 171.864C78.5131 172.105 77.4149 173.597 77.2023 175.586C76.9187 178.237 77.9843 179.558 82.5302 182.19C90.1162 186.487 99.6809 188.583 105.992 187.247C111.612 186.104 112.109 185.219 108.988 181.801C104.196 176.461 87.1207 170.612 80.014 171.864Z" fill="black" />
               </svg>
+              {/* heart swirl - peeks from right edge of left column */}
               <svg
-                width="280"
-                height="220"
-                viewBox="0 0 338 328"
-                fill="none"
+                width="280" height="220" viewBox="0 0 338 328" fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  position: "absolute",
-                  top: "60px",
-                  left: "150px",
-                  zIndex: -1,
-                  rotate: "-30deg",
-                }}
+                style={{ position: "absolute", top: "265px", left: "205px", zIndex: 0, rotate: "-30deg" }}
               >
-                <path
-                  d="M35.9361 1.68785C24.6236 9.40405 17.0898 42.4698 20.8485 69.0975C22.4448 80.2662 22.4448 80.2662 18.8483 85.9338C11.8461 97.0727 6.66892 108.534 3.66127 120.04C0.585232 132.168 0.445387 135.849 3.21768 145.335C4.44724 149.964 4.29608 152.871 2.25104 161.343C-3.81567 186.139 2.53989 210.25 19.3538 226.503C26.8184 233.752 26.8982 233.906 25.3314 243.301C22.7192 258.016 25.3686 272.345 33.1943 285.746C42.449 301.528 55.454 311.563 74.4811 317.598C88.4887 322.042 101.321 322.901 117.863 320.569C132.857 318.259 144.687 314.176 157.824 306.782C163.471 303.563 168.237 301.092 168.587 301.203C168.937 301.314 171.38 304.145 174.179 307.473C194.454 332.66 229.289 333.818 258.611 310.233C268.067 302.699 282.162 286.616 289.201 275.361C294.122 267.544 294.159 267.427 301.998 265.803C318.099 262.432 329.124 253.597 335.189 239.334C340.016 227.763 337.532 219.395 328.586 216.814C323.88 215.45 318.98 216.722 310.762 221.566C305.307 224.589 304.034 224.956 303.545 223.259C299.605 208.135 292.815 201.999 285.489 206.869C282.229 209.047 281.551 210.373 279.39 218.808C276.604 229.615 277.232 238.164 281.875 251.07C286.683 264.67 286.472 266.145 279.416 276.239C266.67 294.548 252.604 307.3 238.484 313.741C216.401 323.821 193.322 318.812 179.35 300.892L175.244 295.607L181.916 288.346C191.979 277.279 196.777 269.038 200.081 256.597C203.533 243.69 202.973 234.52 198.011 226.266C195.03 221.081 194.208 220.435 189.353 219.537C182.711 218.201 177.016 220.762 170.769 227.901C166.996 232.1 165.53 235.103 162.377 244.637C157.823 258.993 157.557 269.957 161.59 283.568C164.73 294.327 164.958 294.014 150.314 301.702C115.645 319.865 74.6348 317.519 50.9682 296.138C35.7371 282.185 29.1646 264.428 32.2812 244.477C33.5204 236.521 34.0557 236.048 42.1729 237.595C55.0647 239.886 73.4695 232.493 80.1014 222.521C86.5796 212.629 85.2909 201.301 77.2879 196.964C66.2812 191.16 45.5557 201.414 34.5698 218.226C32.1808 221.708 30.0565 224.759 29.9027 224.839C28.9432 225.434 19.7903 216.621 16.7471 212.444C9.58736 202.209 6.19228 184.56 8.37456 169.58C9.9614 158.907 10.7245 158.122 19.4937 159.233C29.8915 160.476 37.2886 157.813 44.9625 150.227C49.6579 145.55 51.4376 142.775 53.0296 137.756C54.8438 132.037 54.7471 130.721 52.3559 126.109C46.2982 114.424 32.2443 117.417 17.3749 133.511C11.0478 140.496 10.7033 140.773 9.77253 138.037C7.41575 130.48 13.7869 107.965 23.3977 89.8177C26.5643 83.8852 27.3274 83.0996 30.2344 83.2509C35.4703 83.7557 56.3264 77.1398 63.4675 72.8535C76.1751 65.1944 88.3823 49.7974 90.1286 39.432C91.7211 29.1464 85.5976 20.9093 76.5435 21.5058C74.4537 21.6136 68.1755 23.9898 62.6773 26.7419C52.6406 31.6513 50.6305 31.9129 51.9263 27.8278C53.2962 23.5092 49.915 9.46207 46.5586 5.05739C42.1773 -0.571642 40.1929 -1.20112 35.9361 1.68785ZM41.5038 16.9424C42.1528 18.9468 42.2119 25.6456 41.5281 31.8517C40.2143 45.3089 40.2627 45.9665 43.8813 47.1144C45.749 47.7068 48.4852 46.7763 52.09 44.3228C55.0426 42.3048 61.3779 38.5336 66.3351 35.8669C73.4819 31.9677 75.6031 31.3559 78.2935 32.5948C81.3342 33.9447 81.4139 34.0984 79.1128 40.9477C77.4097 46.3167 75.3651 49.522 70.6754 54.586C63.1239 62.596 55.0547 66.9733 39.5542 71.6911L27.7552 75.2707L26.7221 70.8322C23.7194 58.832 28.5736 30.5686 35.912 15.9394C38.2842 11.2965 39.6052 11.5871 41.5038 16.9424ZM46.143 130.304C48.4545 134.763 42.3265 144.766 34.9463 148.591C30.0631 151.024 20.0069 151.945 17.735 150.197C16.4026 149.132 16.6617 148.315 19.9194 143.311C28.6386 130.404 42.6359 123.539 46.143 130.304ZM329.621 229.347C329.832 233.139 324.748 243.088 320.09 247.648C318.182 249.612 314.694 252.103 312.308 253.144C307.616 255.381 296.076 258.144 294.092 257.514C292.224 256.922 286.77 238.877 286.435 231.834C286.068 225.294 288.176 215.815 289.927 216.37C291.795 216.962 294.061 223.59 294.74 230.358C295.341 236.971 297.678 240.539 300.764 239.719C301.576 239.591 305.408 236.825 309.352 233.708C313.295 230.591 318.204 227.267 320.166 226.347C325.129 224.068 329.448 225.438 329.621 229.347ZM192.416 232.969C193.654 235.546 194.761 239.751 194.801 242.461C195.045 248.577 189.449 265.814 185.539 271.254C180.718 277.946 172.446 287.012 171.513 286.716C169.878 286.197 166.896 272.919 166.708 265.409C166.393 257.087 170.443 242.7 174.957 236.167C178.177 231.279 185.355 226.876 188.274 227.802C189.324 228.135 191.257 230.547 192.416 232.969ZM77.0591 207.811C78.7495 217.467 67.9749 227.538 53.3316 229.959C47.0735 231.057 38.5748 229.902 38.0425 227.935C37.4676 225.697 44.5721 216.261 50.5459 211.604C61.571 202.769 75.6789 200.821 77.0591 207.811Z"
-                  fill="black"
-                />
+                <path d="M35.9361 1.68785C24.6236 9.40405 17.0898 42.4698 20.8485 69.0975C22.4448 80.2662 22.4448 80.2662 18.8483 85.9338C11.8461 97.0727 6.66892 108.534 3.66127 120.04C0.585232 132.168 0.445387 135.849 3.21768 145.335C4.44724 149.964 4.29608 152.871 2.25104 161.343C-3.81567 186.139 2.53989 210.25 19.3538 226.503C26.8184 233.752 26.8982 233.906 25.3314 243.301C22.7192 258.016 25.3686 272.345 33.1943 285.746C42.449 301.528 55.454 311.563 74.4811 317.598C88.4887 322.042 101.321 322.901 117.863 320.569C132.857 318.259 144.687 314.176 157.824 306.782C163.471 303.563 168.237 301.092 168.587 301.203C168.937 301.314 171.38 304.145 174.179 307.473C194.454 332.66 229.289 333.818 258.611 310.233C268.067 302.699 282.162 286.616 289.201 275.361C294.122 267.544 294.159 267.427 301.998 265.803C318.099 262.432 329.124 253.597 335.189 239.334C340.016 227.763 337.532 219.395 328.586 216.814C323.88 215.45 318.98 216.722 310.762 221.566C305.307 224.589 304.034 224.956 303.545 223.259C299.605 208.135 292.815 201.999 285.489 206.869C282.229 209.047 281.551 210.373 279.39 218.808C276.604 229.615 277.232 238.164 281.875 251.07C286.683 264.67 286.472 266.145 279.416 276.239C266.67 294.548 252.604 307.3 238.484 313.741C216.401 323.821 193.322 318.812 179.35 300.892L175.244 295.607L181.916 288.346C191.979 277.279 196.777 269.038 200.081 256.597C203.533 243.69 202.973 234.52 198.011 226.266C195.03 221.081 194.208 220.435 189.353 219.537C182.711 218.201 177.016 220.762 170.769 227.901C166.996 232.1 165.53 235.103 162.377 244.637C157.823 258.993 157.557 269.957 161.59 283.568C164.73 294.327 164.958 294.014 150.314 301.702C115.645 319.865 74.6348 317.519 50.9682 296.138C35.7371 282.185 29.1646 264.428 32.2812 244.477C33.5204 236.521 34.0557 236.048 42.1729 237.595C55.0647 239.886 73.4695 232.493 80.1014 222.521C86.5796 212.629 85.2909 201.301 77.2879 196.964C66.2812 191.16 45.5557 201.414 34.5698 218.226C32.1808 221.708 30.0565 224.759 29.9027 224.839C28.9432 225.434 19.7903 216.621 16.7471 212.444C9.58736 202.209 6.19228 184.56 8.37456 169.58C9.9614 158.907 10.7245 158.122 19.4937 159.233C29.8915 160.476 37.2886 157.813 44.9625 150.227C49.6579 145.55 51.4376 142.775 53.0296 137.756C54.8438 132.037 54.7471 130.721 52.3559 126.109C46.2982 114.424 32.2443 117.417 17.3749 133.511C11.0478 140.496 10.7033 140.773 9.77253 138.037C7.41575 130.48 13.7869 107.965 23.3977 89.8177C26.5643 83.8852 27.3274 83.0996 30.2344 83.2509C35.4703 83.7557 56.3264 77.1398 63.4675 72.8535C76.1751 65.1944 88.3823 49.7974 90.1286 39.432C91.7211 29.1464 85.5976 20.9093 76.5435 21.5058C74.4537 21.6136 68.1755 23.9898 62.6773 26.7419C52.6406 31.6513 50.6305 31.9129 51.9263 27.8278C53.2962 23.5092 49.915 9.46207 46.5586 5.05739C42.1773 -0.571642 40.1929 -1.20112 35.9361 1.68785Z" fill="black" />
               </svg>
             </div>
             <div className={styles.aboutSection1Right}>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
-                eius quos corporis necessitatibus, natus provident illo
-                voluptates nostrum nobis eligendi fugit soluta quam quod
-                praesentium id nihil atque reprehenderit sapiente hic in neque
-                sequi aperiam vitae. Rerum eos sequi cum.
+                I&apos;m a recent graduate from the User Experience Design postgraduate program at Humber Polytechnic, based in Toronto. This extensive course taught me endless skills like visual design principles, deep rooted user research, from interviews to usability testing, and modern tech design for VR/AR, and so much more.
               </p>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, numquam! Aut nesciunt aliquam ipsum, sint, sapiente
-                tempore quia sit eaque, neque nemo quibusdam? Repudiandae libero
-                sunt perferendis harum explicabo! Non, veniam. Atque neque nobis
-                beatae! Quod, deserunt molestias ullam optio eveniet aliquam
-                quibusdam laborum illo quisquam autem eos accusantium. Sit rem
-                ducimus accusantium vitae enim aliquam numquam veritatis
-                architecto voluptatibus?
+                I was born and raised in New Delhi, the capital of India, a country rife with culture, color and celebrations. The city and my family molded me into a creatively expressive person with a passion for art. This art manifests in so many forms in my life, from paintings to pumpkin carvings, henna tattoos and even dyeing stars on my friends&apos; hair!
               </p>
             </div>
           </div>
 
-          {/* Section 2: Text left, images right */}
+          {/* Section 2: text left, images right */}
           <div className={styles.aboutSection2}>
             <div className={styles.aboutSection2Left}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Laborum dolore neque saepe sequi assumenda ea accusantium minus
-                repellendus, quas dicta totam voluptatibus quo praesentium
-                placeat cum modi fugiat, quisquam officiis consequuntur magnam
-                asperiores! Dolor repellendus, pariatur, expedita asperiores
-                ipsa libero doloribus voluptatibus dignissimos eius maxime
-                laudantium alias consectetur tenetur sequi.
+                For the longest time I only treated this passion for art as a hobby, and ended up studying Business Administration, specializing in Digital Marketing.
+                It was only during the pandemic that I delved deeper into Digital Art, Illustrations, and Graphic Design by self-learning and also interning and freelancing for some companies.
               </p>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores atque possimus odio eos unde libero, necessitatibus
-                dolore corrupti repellat quos, quasi distinctio quisquam modi
-                odit, fugit animi. Saepe repudiandae fugit expedita ratione sint
-                architecto ullam pariatur aliquam hic a, ut recusandae
-                voluptatum libero officia iure dolorum consequuntur error illum
-                aliquid?
+                When came the time to decide what I wanted to pursue further in my postgraduation, I took some time off to decide. I worked as a Social Media Marketing and Web Development Executive for an educational institute, simultaneously researched various fields and niches within design. I took up Google&apos;s UX Design Certificate online as a trial and just like that fell in love with the subject!
               </p>
             </div>
             <div className={styles.aboutSection2Right}>
+              {/* swish SVG - top-right corner, above henna hand */}
               <svg
-                width="70"
-                height="40"
-                viewBox="0 0 101 84"
-                fill="none"
+                width="70" height="40" viewBox="0 0 101 84" fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  position: "absolute",
-                  rotate: "10deg",
-                  top: "40px",
-                  right: "100px",
-                  zIndex: 5,
-                }}
+                style={{ position: "absolute", rotate: "10deg", top: "6px", right: "6px", zIndex: 5 }}
               >
-                <path
-                  d="M58.726 1.60942C52.1736 5.28795 41.9427 28.8535 38.6091 47.9359C37.6894 53.3387 36.8848 62.7649 36.8848 68.7425C36.8848 78.5136 37.1147 79.5482 38.6091 78.1688C39.5287 77.2491 42.1726 69.4323 44.4717 60.9257C48.1503 47.1312 49.5297 43.9125 56.5419 32.532C65.8532 17.588 67.9223 12.9899 67.9223 7.58703C67.9223 3.56364 65.5083 6.86646e-05 62.9793 6.86646e-05C62.1746 0.115021 60.3354 0.804749 58.726 1.60942Z"
-                  fill="black"
-                />
-                <path
-                  d="M2.39925 18.3927C-2.31386 23.1058 0.100172 33.1068 8.03199 41.7283C15.0442 49.3153 17.2283 55.1779 17.3433 66.0985C17.3433 76.3294 18.4928 79.4332 21.1367 77.1341C25.6199 73.4556 26.5396 40.004 22.5162 28.5086C18.8377 17.9328 8.14695 12.645 2.39925 18.3927Z"
-                  fill="black"
-                />
-                <path
-                  d="M71.717 57.362C60.7963 61.0405 52.6346 70.0069 51.0252 79.778C50.1056 85.5257 52.2897 85.1808 59.3019 78.6284C70.1076 68.6274 82.9824 64.6041 92.7535 68.3975C97.5816 70.2368 98.1564 70.2368 99.8807 68.6274C101.49 67.0181 101.375 66.4433 98.3863 62.5349C92.7535 55.1778 83.3273 53.3386 71.717 57.362Z"
-                  fill="black"
-                />
+                <path d="M58.726 1.60942C52.1736 5.28795 41.9427 28.8535 38.6091 47.9359C37.6894 53.3387 36.8848 62.7649 36.8848 68.7425C36.8848 78.5136 37.1147 79.5482 38.6091 78.1688C39.5287 77.2491 42.1726 69.4323 44.4717 60.9257C48.1503 47.1312 49.5297 43.9125 56.5419 32.532C65.8532 17.588 67.9223 12.9899 67.9223 7.58703C67.9223 3.56364 65.5083 6.86646e-05 62.9793 6.86646e-05C62.1746 0.115021 60.3354 0.804749 58.726 1.60942Z" fill="black" />
+                <path d="M2.39925 18.3927C-2.31386 23.1058 0.100172 33.1068 8.03199 41.7283C15.0442 49.3153 17.2283 55.1779 17.3433 66.0985C17.3433 76.3294 18.4928 79.4332 21.1367 77.1341C25.6199 73.4556 26.5396 40.004 22.5162 28.5086C18.8377 17.9328 8.14695 12.645 2.39925 18.3927Z" fill="black" />
+                <path d="M71.717 57.362C60.7963 61.0405 52.6346 70.0069 51.0252 79.778C50.1056 85.5257 52.2897 85.1808 59.3019 78.6284C70.1076 68.6274 82.9824 64.6041 92.7535 68.3975C97.5816 70.2368 98.1564 70.2368 99.8807 68.6274C101.49 67.0181 101.375 66.4433 98.3863 62.5349C92.7535 55.1778 83.3273 53.3386 71.717 57.362Z" fill="black" />
+              </svg>
+              {/* sparkle - bottom-left corner, below smiley face */}
+              <svg
+                width="40" height="100" viewBox="0 0 85 160" fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ position: "absolute", rotate: "0deg", bottom: "8px", left: "16px", zIndex: 5 }}
+              >
+                <path d="M23.2503 6.61771C22.0503 10.351 20.8503 15.551 20.317 18.2177C18.8503 26.751 17.6503 27.8177 10.717 27.8177C7.117 27.8177 3.117 28.6177 1.78367 29.6844C-0.616329 31.4177 -0.616329 31.551 1.917 32.751C3.25034 33.551 6.717 34.4844 9.38367 35.0177C12.1837 35.551 14.5837 36.351 14.8503 36.8844C15.117 37.4177 14.317 43.151 13.117 49.6844C10.8503 61.2844 10.8503 66.4844 13.2503 66.4844C14.9837 66.4844 16.1837 63.8177 19.7837 50.4844L23.3837 37.8177L32.9837 37.4177C41.2503 37.151 42.5837 36.751 42.1837 34.751C41.917 33.151 39.3837 31.951 34.0503 30.6177C25.517 28.6177 25.6503 29.0177 27.7837 14.4844C29.917 -0.0489655 26.717 -5.38229 23.2503 6.61771Z" fill="black" />
+                <path d="M53.7836 77.285C53.2502 77.9517 53.2502 85.4184 53.7836 93.685L54.7169 108.618L46.5836 111.152C38.0502 113.685 34.0502 116.618 37.2502 117.818C38.3169 118.085 42.7169 118.618 47.1169 118.752L55.1169 119.152L56.0502 136.485C57.1169 155.285 57.7836 159.818 59.7836 159.818C62.5836 159.818 63.7836 153.952 64.5836 136.485L65.5169 118.218L70.3169 116.352C87.7836 109.552 89.2502 105.818 74.4502 105.818H64.4502L62.7169 97.8184C58.1836 77.685 56.1836 73.1517 53.7836 77.285Z" fill="black" />
               </svg>
 
-              <svg
-                width="40"
-                height="100"
-                viewBox="0 0 85 160"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  position: "absolute",
-                  rotate: "10deg",
-                  bottom: "10px",
-                  left: "60px",
-                  zIndex: 5,
-                }}
-              >
-                <path
-                  d="M23.2503 6.61771C22.0503 10.351 20.8503 15.551 20.317 18.2177C18.8503 26.751 17.6503 27.8177 10.717 27.8177C7.117 27.8177 3.117 28.6177 1.78367 29.6844C-0.616329 31.4177 -0.616329 31.551 1.917 32.751C3.25034 33.551 6.717 34.4844 9.38367 35.0177C12.1837 35.551 14.5837 36.351 14.8503 36.8844C15.117 37.4177 14.317 43.151 13.117 49.6844C10.8503 61.2844 10.8503 66.4844 13.2503 66.4844C14.9837 66.4844 16.1837 63.8177 19.7837 50.4844L23.3837 37.8177L32.9837 37.4177C41.2503 37.151 42.5837 36.751 42.1837 34.751C41.917 33.151 39.3837 31.951 34.0503 30.6177C25.517 28.6177 25.6503 29.0177 27.7837 14.4844C29.917 -0.0489655 26.717 -5.38229 23.2503 6.61771Z"
-                  fill="black"
-                />
-                <path
-                  d="M53.7836 77.285C53.2502 77.9517 53.2502 85.4184 53.7836 93.685L54.7169 108.618L46.5836 111.152C38.0502 113.685 34.0502 116.618 37.2502 117.818C38.3169 118.085 42.7169 118.618 47.1169 118.752L55.1169 119.152L56.0502 136.485C57.1169 155.285 57.7836 159.818 59.7836 159.818C62.5836 159.818 63.7836 153.952 64.5836 136.485L65.5169 118.218L70.3169 116.352C87.7836 109.552 89.2502 105.818 74.4502 105.818H64.4502L62.7169 97.8184C58.1836 77.685 56.1836 73.1517 53.7836 77.285Z"
-                  fill="black"
-                />
-              </svg>
-
-              <div
-                style={{
-                  width: "200px",
-                  height: "230px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "10deg",
-                  zIndex: 1,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  left: "40%",
-                  top: "0",
-                  transform: "translateX(-50%)",
-                }}
-              >
-                <Image
-                  src={"/images/3.jpeg"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={450}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg3}`}>
+                <Image src={"/images/3.jpeg"} alt="Raina 3" width={300} height={450} />
               </div>
-
-              <div
-                style={{
-                  width: "200px",
-                  height: "230px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "-10deg",
-                  zIndex: 0,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  right: "10%",
-                  top: "10rem",
-                }}
-              >
-                <Image
-                  src={"/images/4.png"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={450}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg4}`}>
+                <Image src={"/images/4.png"} alt="Raina 4" width={300} height={450} />
               </div>
-
-              <div
-                style={{
-                  width: "200px",
-                  height: "160px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "3deg",
-                  zIndex: 2,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  bottom: "10%",
-                  right: "10%",
-                  transform: " translateX(-50%)",
-                }}
-              >
-                <Image
-                  src={"/images/5.png"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg5}`}>
+                <Image src={"/images/5.png"} alt="Raina 5" width={300} height={400} />
               </div>
-
-              <div
-                style={{
-                  width: "160px",
-                  height: "200px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "-8deg",
-                  zIndex: 2,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  top: "50%",
-                  left: "10%",
-                  transform: " translateY(-50%)",
-                }}
-              >
-                <Image
-                  src={"/images/6.png"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg6}`}>
+                <Image src={"/images/6.png"} alt="Raina 6" width={300} height={400} />
               </div>
             </div>
           </div>
 
-          {/* Section 3: 40-60 split - Images left, text right */}
+          {/* Section 3: images left, text right */}
           <div className={styles.aboutSection3}>
             <div className={styles.aboutSection3Left}>
+              {/* star SVG - bottom-left clear of photos */}
               <svg
-                width="92"
-                height="40"
-                viewBox="0 0 92 87"
-                fill="none"
+                width="92" height="40" viewBox="0 0 92 87" fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  position: "absolute",
-                  rotate: "10deg",
-                  bottom: "20px",
-                  left: "10px",
-                  zIndex: 5,
-                }}
+                style={{ position: "absolute", rotate: "10deg", bottom: "8px", left: "4px", zIndex: 5 }}
               >
-                <path
-                  d="M76 5.07208C71.2 8.00542 65.3333 11.4721 63.0667 12.6721L58.8 14.8054L53.2 8.53875C49.3333 4.13875 46.8 2.40542 44.8 2.67208C42.2667 3.07208 42 4.13875 41.3333 15.0721L40.6667 27.0721L22.4 35.2054C2.93333 43.8721 0 45.6054 0 48.5388C0 52.1388 6 54.1388 20 55.2054C42.1333 56.6721 40.5333 55.4721 41.3333 71.8721C42 85.0721 42.1333 85.7388 45.0667 86.1388C49.2 86.8054 51.0667 84.9388 58.9333 73.3388C66.1333 62.6721 66 62.6721 76.2667 67.8721C82.8 71.2054 87.4667 71.0721 89.3333 67.7388C91.0667 64.5388 91.0667 64.5388 82.4 52.9388C78.9333 48.0054 76 43.0721 76 42.0054C76 40.8054 79.7333 31.8721 84.1333 22.1388C92.5333 4.00542 93.0667 0.938751 87.2 0.00541687C85.7333 -0.127914 80.8 2.13875 76 5.07208ZM74 23.3388L70.5333 31.0721L67.8667 27.8721C66.5333 26.1388 65.3333 24.1388 65.3333 23.2054C65.3333 21.7388 76.1333 14.1387 77.0667 15.0721C77.3333 15.3388 76 19.0721 74 23.3388ZM50.6667 19.8721C50.6667 20.5388 50.1333 21.0721 49.3333 21.0721C48.6667 21.0721 48 20.1388 48 18.9388C48 17.8721 48.6667 17.3388 49.3333 17.7387C50.1333 18.1387 50.6667 19.0721 50.6667 19.8721ZM61.3333 35.7388C64.8 42.5388 65.0667 44.1388 63.7333 47.0721C62.1333 50.8054 60.4 51.0721 53.0667 48.9388C48 47.6054 48 47.6054 48 40.2721C48 33.4721 48.2667 32.8054 52.4 30.4054C54.6667 28.9388 56.8 27.7388 56.9333 27.7388C57.2 27.7388 59.0667 31.3388 61.3333 35.7388ZM40.5333 40.4054C42.5333 45.8721 38.2667 48.2721 29.3333 46.6721L23.3333 45.6054L30 42.0054C37.7333 38.0054 39.4667 37.7388 40.5333 40.4054ZM55.7333 59.6054C57.3333 60.5388 57.2 61.3388 55.4667 64.5388C54.4 66.6721 52.2667 69.8721 50.8 71.7388L48 75.0721V66.6721C48 58.9388 48.2667 58.4054 51.0667 58.4054C52.6667 58.4054 54.8 58.9388 55.7333 59.6054Z"
-                  fill="black"
-                />
+                <path d="M76 5.07208C71.2 8.00542 65.3333 11.4721 63.0667 12.6721L58.8 14.8054L53.2 8.53875C49.3333 4.13875 46.8 2.40542 44.8 2.67208C42.2667 3.07208 42 4.13875 41.3333 15.0721L40.6667 27.0721L22.4 35.2054C2.93333 43.8721 0 45.6054 0 48.5388C0 52.1388 6 54.1388 20 55.2054C42.1333 56.6721 40.5333 55.4721 41.3333 71.8721C42 85.0721 42.1333 85.7388 45.0667 86.1388C49.2 86.8054 51.0667 84.9388 58.9333 73.3388C66.1333 62.6721 66 62.6721 76.2667 67.8721C82.8 71.2054 87.4667 71.0721 89.3333 67.7388C91.0667 64.5388 91.0667 64.5388 82.4 52.9388C78.9333 48.0054 76 43.0721 76 42.0054C76 40.8054 79.7333 31.8721 84.1333 22.1388C92.5333 4.00542 93.0667 0.938751 87.2 0.00541687C85.7333 -0.127914 80.8 2.13875 76 5.07208Z" fill="black" />
               </svg>
 
-              <div
-                style={{
-                  width: "300px",
-                  height: "220px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  zIndex: 2,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  top: "5%",
-                  left: "50%",
-                  transform: " translateX(-50%)",
-                }}
-              >
-                <Image
-                  src={"/images/7.png"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg7}`}>
+                <Image src={"/images/7.png"} alt="Raina 7" width={600} height={400} />
               </div>
-
-              <div
-                style={{
-                  width: "160px",
-                  height: "200px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "-8deg",
-                  zIndex: 2,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  bottom: "10%",
-                  right: "5%",
-                }}
-              >
-                <Image
-                  src={"/images/9.PNG"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg8}`}>
+                <Image src={"/images/8.png"} alt="Raina 8" width={300} height={400} />
               </div>
-              <div
-                style={{
-                  width: "220px",
-                  height: "180px",
-                  overflow: "hidden",
-                  position: "absolute",
-                  rotate: "8deg",
-                  zIndex: 2,
-                  borderRadius: "24px",
-                  border: "10px solid white",
-                  bottom: "10%",
-                  left: "10%",
-                }}
-              >
-                <Image
-                  src={"/images/8.png"}
-                  alt="Card Sorting"
-                  width={300}
-                  height={400}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+              <div className={`${styles.aboutImgFrame} ${styles.aboutImg9}`}>
+                <Image src={"/images/9.PNG"} alt="Raina 9" width={300} height={400} />
               </div>
             </div>
             <div className={styles.aboutSection3Right}>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                sunt nihil soluta nemo perspiciatis dolor quis repellat aliquid?
-                Dicta quod temporibus omnis illo aliquid harum consectetur
-                molestiae laborum explicabo ut impedit libero reprehenderit,
-                dolore est, hic necessitatibus ipsa corporis eos nisi nam,
-                debitis optio aliquam! Dolores dolor nulla, laborum voluptatem
-                placeat iste adipisci beatae in tenetur, eligendi fugit quisquam
-                recusandae.
+                While it may sound like a serious switching of lanes, I truly felt the benefits of my background in business, while doing UX.
+                A strong sense of product positioning in the market, research and analysis, interacting with and giving presentations to stakeholders (professors), was something that came naturally to me.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Quisquam in deserunt dolor cumque laborum vitae enim suscipit,
-                minima unde. Aliquid doloremque sunt quibusdam, deleniti
-                distinctio culpa sapiente blanditiis, accusantium vitae optio
-                illum. Aut vel, tempore, eaque nostrum sint nesciunt rem
-                molestiae blanditiis quibusdam doloribus reprehenderit
-                voluptatibus obcaecati dolores adipisci animi!
+                The skills I further honed at Humber, were visual design, creative thinking and actual enjoyment in the entire process of ideation, research, low fidelity to high fidelity designs, prototypes and iterations based on testing.
+                I feel a true sense of accomplishment in being able to create experiences that not only solve logical needs of users, but also meet the business requirements of the company, while being visually appealing of course.
               </p>
             </div>
           </div>

@@ -127,7 +127,7 @@ export default function Work() {
             }}
           >
             <Image
-              src="https://picsum.photos/600/400?random=3"
+              src="/work/citysphere/a.svg"
               alt="CitySphere"
               width={600}
               height={400}
