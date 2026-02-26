@@ -21,8 +21,9 @@ export default function BunkBuddy() {
           </div>
 
           <div className={styles["project-hero__right"]}>
+            <div className={styles.heroPreviewCard}></div>
             <Image
-              src="https://picsum.photos/600/400?random=10"
+              src="/work/bunkbuddy/bunkbuddy.svg"
               alt="BunkBuddy Preview"
               width={600}
               height={400}
@@ -336,17 +337,19 @@ export default function BunkBuddy() {
           <div className={styles["design-showcase__annotations"]}>
             <div className={styles["annotation"]}>
               <span className={styles["annotation__number"]}>1</span>
-              <p className={styles["annotation__text"]}>
-                <strong>Toggle Button-</strong> This toggle is a view switcher
-                between two types of content:
-              </p>
-              <ul className={styles["annotation__list"]}>
-                <li>
-                  Roommates: shows individual profiles of people looking for
-                  shared accommodation or roommate match.
-                </li>
-                <li>House: show listings of available rental properties.</li>
-              </ul>
+              <div className={styles["annotation__content"]}>
+                <p className={styles["annotation__text"]}>
+                  <strong>Toggle Button-</strong> This toggle is a view switcher
+                  between two types of content:
+                </p>
+                <ul className={styles["annotation__list"]}>
+                  <li>
+                    Roommates: shows individual profiles of people looking for
+                    shared accommodation or roommate match.
+                  </li>
+                  <li>House: show listings of available rental properties.</li>
+                </ul>
+              </div>
             </div>
 
             <div className={styles["annotation"]}>
@@ -621,33 +624,31 @@ export default function BunkBuddy() {
         </div>
 
         <div className={styles["high-fidelity-showcase"]}>
-          <div className={styles["high-fidelity-showcase__left"]}>
-            <div className={styles["high-fidelity-showcase__screens"]}>
-              <Image
-                src="/hi-fi-1.png"
-                alt="High Fidelity Screen 1"
-                width={280}
-                height={600}
-                className={styles["high-fidelity-showcase__image"]}
-              />
-              <Image
-                src="/hi-fi-2.png"
-                alt="High Fidelity Screen 2"
-                width={280}
-                height={600}
-                className={styles["high-fidelity-showcase__image"]}
-              />
-              <Image
-                src="/hi-fi-3.png"
-                alt="High Fidelity Screen 3"
-                width={280}
-                height={600}
-                className={styles["high-fidelity-showcase__image"]}
-              />
-            </div>
+          <div className={styles["high-fidelity-showcase__screens"]}>
+            <Image
+              src="/hi-fi-1.png"
+              alt="High Fidelity Screen 1"
+              width={280}
+              height={600}
+              className={styles["high-fidelity-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-2.png"
+              alt="High Fidelity Screen 2"
+              width={280}
+              height={600}
+              className={styles["high-fidelity-showcase__image"]}
+            />
+            <Image
+              src="/hi-fi-3.png"
+              alt="High Fidelity Screen 3"
+              width={280}
+              height={600}
+              className={styles["high-fidelity-showcase__image"]}
+            />
           </div>
 
-          <div className={styles["high-fidelity-showcase__right"]}>
+          <div className={styles["high-fidelity-showcase__annotations"]}>
             <div className={styles["high-fidelity-annotation"]}>
               <span className={styles["high-fidelity-annotation__number"]}>
                 1
@@ -1002,10 +1003,10 @@ export default function BunkBuddy() {
               />
             </div>
             <div className={styles["feedback-item__content"]}>
-              <h3 className={styles["feedback-item__number"]}>1.</h3>
-              <h4 className={styles["feedback-item__title"]}>
-                Sharing Options
-              </h4>
+              <div className={styles["feedback-item__header"]}>
+                <h3 className={styles["feedback-item__number"]}>1.</h3>
+                <h4 className={styles["feedback-item__title"]}>Sharing Options</h4>
+              </div>
               <p className={styles["feedback-item__text"]}>
                 Added users&apos; preferred mode of sharing listings: WhatsApp
                 and Email options, alongside the existing Copy Link option.
@@ -1024,8 +1025,10 @@ export default function BunkBuddy() {
               />
             </div>
             <div className={styles["feedback-item__content"]}>
-              <h3 className={styles["feedback-item__number"]}>2.</h3>
-              <h4 className={styles["feedback-item__title"]}>Chat Shortcut</h4>
+              <div className={styles["feedback-item__header"]}>
+                <h3 className={styles["feedback-item__number"]}>2.</h3>
+                <h4 className={styles["feedback-item__title"]}>Chat Shortcut</h4>
+              </div>
               <p className={styles["feedback-item__text"]}>
                 Added a {"'Send Message'"} option on the Matches page, so it is
                 easier for quicker chat initiation, instead of users having to
@@ -1045,10 +1048,10 @@ export default function BunkBuddy() {
               />
             </div>
             <div className={styles["feedback-item__content"]}>
-              <h3 className={styles["feedback-item__number"]}>3.</h3>
-              <h4 className={styles["feedback-item__title"]}>
-                Revisiting Profiles
-              </h4>
+              <div className={styles["feedback-item__header"]}>
+                <h3 className={styles["feedback-item__number"]}>3.</h3>
+                <h4 className={styles["feedback-item__title"]}>Revisiting Profiles</h4>
+              </div>
               <p className={styles["feedback-item__text"]}>
                 Added a {"'Recently Viewed'"} section in the Likes page, so in
                 case users accidently skip past a potential roommate instead of
@@ -1068,10 +1071,10 @@ export default function BunkBuddy() {
               />
             </div>
             <div className={styles["feedback-item__content"]}>
-              <h3 className={styles["feedback-item__number"]}>4.</h3>
-              <h4 className={styles["feedback-item__title"]}>
-                Sorting Saved Options
-              </h4>
+              <div className={styles["feedback-item__header"]}>
+                <h3 className={styles["feedback-item__number"]}>4.</h3>
+                <h4 className={styles["feedback-item__title"]}>Sorting Saved Options</h4>
+              </div>
               <p className={styles["feedback-item__text"]}>
                 Added a toggle in the Saved section between saved roommates and
                 houses. Also added a filter option for users to sort through
@@ -1084,8 +1087,52 @@ export default function BunkBuddy() {
 
       <div className={styles["testing-header"]}>
         <h2 className={styles["testing-header__title"]}>
-          Phase 5 - Final Product & Impact
+          Phase 5 - Final Product &amp; Impact
         </h2>
+      </div>
+
+      <div className={styles["prototype-embed"]}>
+        <iframe
+          style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+          width="800"
+          height="450"
+          src="https://embed.figma.com/proto/sAeXuLiEeAvEYdktJGS4vg/BunkBuddy-Copy?page-id=217%3A2648&node-id=217-2649&p=f&viewport=152%2C-152%2C0.35&scaling=scale-down&content-scaling=fixed&starting-point-node-id=217%3A2649&embed-host=share"
+          allowFullScreen
+        />
+      </div>
+
+      <div className={styles["takeaways-section"]}>
+        <h2 className={styles["takeaways-section__title"]}>My Takeaways</h2>
+        <p className={styles["takeaways-section__text"]}>
+          Designing Bunk Buddy reinforced the importance of building trust and
+          compatibility into digital experiences that impact real-life decisions.
+          Through research, usability testing, and iterative design, we
+          identified that housing is not just about space &mdash; it&apos;s
+          about people, safety, and lifestyle alignment. This project
+          strengthened my ability to translate user pain points into thoughtful,
+          structured solutions that balance usability, emotion, and real-world
+          practicality.
+        </p>
+
+        <h3 className={styles["takeaways-section__subtitle"]}>Future Scope</h3>
+        <ul className={styles["takeaways-section__list"]}>
+          <li>
+            Conduct additional usability testing with a larger and more diverse
+            user group to validate navigation clarity and feature discoverability.
+          </li>
+          <li>
+            Develop high-fidelity micro-interactions (match animation, save
+            confirmation, verification badges) to enhance emotional engagement.
+          </li>
+          <li>
+            Prototype an AI-based compatibility scoring system and test how users
+            interpret and trust that score.
+          </li>
+          <li>
+            Design a roommate agreement and shared expense tracking interface as
+            an extended prototype feature.
+          </li>
+        </ul>
       </div>
     </>
   );
