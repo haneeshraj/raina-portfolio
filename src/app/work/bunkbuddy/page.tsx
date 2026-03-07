@@ -1093,7 +1093,6 @@ export default function BunkBuddy() {
 
       <div className={styles["prototype-embed"]}>
         <iframe
-          style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
           width="800"
           height="450"
           src="https://embed.figma.com/proto/sAeXuLiEeAvEYdktJGS4vg/BunkBuddy-Copy?page-id=217%3A2648&node-id=217-2649&p=f&viewport=152%2C-152%2C0.35&scaling=scale-down&content-scaling=fixed&starting-point-node-id=217%3A2649&embed-host=share"

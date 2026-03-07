@@ -1,0 +1,878 @@
+/* ──────────────────────────────────────────────────────
+   SOLACE – styles.module.scss
+────────────────────────────────────────────────────── */
+
+.page {
+  background-color: #fff2dd;
+}
+
+.container {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+/* ── HERO ─────────────────────────────────────────── */
+.project-hero {
+  padding: clamp(4rem, 7vw, 8rem) 0;
+  position: relative;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 8rem);
+    align-items: center;
+    margin-bottom: clamp(4rem, 6vw, 8rem);
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+    background: linear-gradient(90deg, #e8397d 0%, #f07a3b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__subtitle {
+    font-size: 2.4rem;
+    color: #333;
+    margin: 0;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    display: block;
+  }
+}
+
+.heroPreviewCard {
+  width: 100%;
+  max-width: 58rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid rgba(176, 130, 220, 0.4);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.12);
+
+  min-height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-description {
+  text-align: center;
+
+  &__text {
+    font-size: 2.8rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+}
+
+/* ── TAGS ─────────────────────────────────────────── */
+.tag {
+  padding: 0.9rem 1.6rem;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  &:nth-child(1) {
+    background-color: #d63fa0;
+    color: #ffffff;
+  }
+
+  &:nth-child(2) {
+    background-color: #f07a3b;
+    color: #ffffff;
+  }
+
+  &:nth-child(3) {
+    background-color: #e8397d;
+    color: #ffffff;
+  }
+
+  &:nth-child(4) {
+    background-color: #6a4fc4;
+    color: #ffffff;
+  }
+}
+
+/* ── PROJECT INFO ─────────────────────────────────── */
+.project-info {
+  margin: clamp(4rem, 7vw, 8rem) auto;
+  margin-top: 1rem;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.info-card {
+  background-color: #f3e5f5;
+  border: 2px solid #8b4789;
+  border-radius: 2rem;
+  padding: 3rem;
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  &__detail {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.project-section {
+  margin-bottom: 4rem;
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ── PHASE HEADER ─────────────────────────────────── */
+.project-phase {
+  margin: clamp(5rem, 7vw, 8rem) auto;
+
+  &__header {
+    background: linear-gradient(135deg, #e8a5d9 0%, #b19cd9 100%);
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+}
+
+/* ── RESEARCH ─────────────────────────────────────── */
+.researchBlock {
+  margin-bottom: 4rem;
+}
+
+.researchTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.researchText {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+/* ── STUDIES GRID ─────────────────────────────────── */
+.studiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.studyCard {
+  border-radius: 1.6rem;
+  border: 1px solid rgba(138, 100, 210, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.studyImageWrap {
+  position: relative;
+  width: 100%;
+}
+
+.studyImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.studyCaption {
+  font-size: 1.4rem;
+  color: #5a3fa0;
+  font-style: italic;
+  padding: 1.6rem 1.6rem 1rem;
+  background: #ffffff;
+  margin: 0;
+}
+
+.studyHighlights {
+  padding: 2.4rem 2rem 2rem;
+  flex: 1;
+  background: linear-gradient(160deg, #e8d5ff 0%, #a8cfe8 100%);
+}
+
+.studyHighlightsTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin: 0 0 1rem;
+}
+
+.studyBullets {
+  margin: 0;
+  padding-left: 1.8rem;
+  list-style: disc;
+
+  li {
+    font-size: 1.6rem;
+    color: #1f1f1f;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* ── KEY FEATURES ─────────────────────────────────── */
+.featuresBlock {
+  background: #1a3f7a;
+  border-radius: 2rem;
+  padding: clamp(2.4rem, 4vw, 4rem);
+  margin-bottom: 4rem;
+}
+
+.featuresEyebrow {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 0.6rem;
+}
+
+.featuresTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 3.2rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.featureNumber {
+  font-size: 2.4rem;
+  color: #7ab8f5;
+}
+
+.featureCardTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7ab8f5;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.featureCardText {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── PERSONALITY ──────────────────────────────────── */
+.personalityBlock {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background: #1a3f7a;
+  border-radius: 2rem;
+  padding: clamp(2.4rem, 4vw, 4rem);
+  overflow: hidden;
+}
+
+.personalityImageWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.personalityImage {
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  display: block;
+  object-fit: cover;
+  max-width: 28rem;
+}
+
+.personalityContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.personalityTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.personalitySection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.personalitySectionTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.personalityList {
+  margin: 0;
+  padding-left: 2rem;
+  list-style: disc;
+
+  li {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* ── USER REQUESTS & INTENTS TABLE ───────────────── */
+.intentBlock {
+  margin-bottom: 4rem;
+  background: #1a3f7a;
+  border-radius: 2rem;
+  padding: clamp(2.4rem, 4vw, 4rem);
+  overflow: hidden;
+}
+
+.intentTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 2.8rem;
+}
+
+.intentTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 1.2rem;
+}
+
+.intentTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  min-width: 70rem;
+
+  td {
+    padding: 1.6rem 1.8rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border: 1px solid #1a3f7a;
+    line-height: 1.5;
+    vertical-align: middle;
+    color: #000000;
+    background: #b8d4f4;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr td:last-child {
+    border-right: none;
+  }
+}
+
+.intentRowLabel {
+  font-weight: 700;
+  font-size: 1.6rem !important;
+  background: #0f2d5e !important;
+  color: #ffffff !important;
+  text-align: left !important;
+  white-space: nowrap;
+  width: 14rem;
+  vertical-align: middle !important;
+}
+
+/* ── DESIGN RATIONAL ──────────────────────────────── */
+.rationalBlock {
+  margin-bottom: 4rem;
+}
+
+.rationalTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.rationalText {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+/* ── CONVERSATION FLOW ────────────────────────────── */
+.flowBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.flowDiagramWrap {
+  border-radius: 1.6rem;
+  padding: clamp(2rem, 3vw, 3.2rem);
+  background: #ebe0fa;
+  overflow: hidden;
+}
+
+.flowTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1.6rem;
+}
+
+.flowImageWrap {
+  width: 100%;
+}
+
+.flowImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  display: block;
+  background: #ebe0fa;
+}
+
+.flowLegend {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.flowLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.flowLegendIcon {
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+
+  &--user {
+    background: #ffffff;
+    border: 2px solid #8a64d2;
+    color: #333;
+  }
+
+  &--solace {
+    background: #ffffff;
+    border: 2px solid #5baadc;
+    color: #333;
+  }
+}
+
+.flowNarrative {
+  border-left: 4px solid #8a64d2;
+  border-radius: 0 1.2rem 1.2rem 0;
+  padding: 2rem 2.4rem;
+}
+
+.flowList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #8a64d2;
+      font-size: 2rem;
+    }
+  }
+}
+
+.flowSubList {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0 1.6rem;
+
+  li {
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    padding-left: 1.4rem;
+    position: relative;
+
+    &::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #8a64d2;
+    }
+  }
+}
+
+/* ── VISUAL DESIGN SCREENS ────────────────────────── */
+.screensRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.screenItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.screenImageWrap {
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 5rem;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
+}
+
+.screenImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screenCaption {
+  font-size: 1.5rem;
+  color: #5a3fa0;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── REFLECTION ───────────────────────────────────── */
+.reflectionSection {
+  margin: clamp(5rem, 7vw, 8rem) auto;
+}
+
+.reflectionGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reflectionBlock {
+  border-radius: 2rem;
+  padding: clamp(2.4rem, 3vw, 3.2rem);
+}
+
+.reflectionTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.reflectionText {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+
+/* ─ Tablet (≤ 900px) ─────────────────────────────── */
+@media (max-width: 900px) {
+  .container {
+    width: min(1200px, calc(100% - 2.4rem));
+  }
+
+  /* Hero */
+  .project-hero {
+    padding: 4rem 0;
+
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__title {
+      font-size: 4.8rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+  }
+
+  .heroPreviewCard {
+    max-width: 100%;
+  }
+
+  /* Description */
+  .project-description {
+    &__text {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Info cards */
+  .project-info {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Phase header */
+  .project-phase {
+    &__title {
+      font-size: 2.6rem;
+    }
+  }
+
+  /* Studies */
+  .studiesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Features – 2 columns on tablet */
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featuresTitle {
+    font-size: 2.4rem;
+  }
+
+  /* Personality */
+  .personalityBlock {
+    grid-template-columns: 1fr;
+
+    .personalityImageWrap {
+      order: -1;
+    }
+  }
+
+  .personalityImage {
+    max-width: 22rem;
+  }
+
+  .personalityTitle {
+    font-size: 2.4rem;
+  }
+
+  /* Intent table */
+  .intentTitle {
+    font-size: 2.4rem;
+  }
+
+  /* Screens – 2 columns on tablet */
+  .screensRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─ Mobile (≤ 600px) ─────────────────────────────── */
+@media (max-width: 600px) {
+  /* Hero */
+  .project-hero {
+    &__title {
+      font-size: 3.6rem;
+    }
+
+    &__subtitle {
+      font-size: 1.8rem;
+    }
+  }
+
+  .heroPreviewCard {
+    border-radius: 1.6rem;
+    min-height: 20rem;
+  }
+
+  /* Description */
+  .project-description {
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* Phase header */
+  .project-phase {
+    &__header {
+      padding: 1.6rem 2rem;
+    }
+
+    &__title {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Info cards */
+  .info-card {
+    padding: 2.4rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  /* Section titles */
+  .project-section {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .researchTitle {
+    font-size: 2rem;
+  }
+
+  /* Features – single column on mobile */
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuresTitle {
+    font-size: 2.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* Personality */
+  .personalityBlock {
+    gap: 2.4rem;
+  }
+
+  .personalityImage {
+    max-width: 18rem;
+  }
+
+  .personalityTitle {
+    font-size: 2.2rem;
+  }
+
+  /* Intent */
+  .intentTitle {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .intentBlock {
+    padding: 2rem;
+  }
+
+  /* Flow */
+  .flowTitle {
+    font-size: 2rem;
+  }
+
+  .flowDiagramWrap {
+    padding: 1.6rem;
+  }
+
+  /* Screens – single column on mobile */
+  .screensRow {
+    grid-template-columns: 1fr;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Reflection */
+  .reflectionBlock {
+    padding: 2rem;
+  }
+
+  .reflectionTitle {
+    font-size: 2rem;
+  }
+}
