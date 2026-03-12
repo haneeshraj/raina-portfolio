@@ -33,12 +33,9 @@
   &__title {
     font-size: 6rem;
     font-weight: 700;
-    font-style: italic;
+    font-style: normal;
     margin: 0;
-    background: linear-gradient(90deg, #e8397d 0%, #f07a3b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8b4789;
   }
 
   &__subtitle {
@@ -94,28 +91,28 @@
 
 /* ── TAGS ─────────────────────────────────────────── */
 .tag {
-  padding: 0.9rem 1.6rem;
+  padding: 1rem 2rem;
   border-radius: 2.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 500;
 
   &:nth-child(1) {
-    background-color: #d63fa0;
-    color: #ffffff;
+    background-color: #e8a5d9;
+    color: #333;
   }
 
   &:nth-child(2) {
-    background-color: #f07a3b;
-    color: #ffffff;
+    background-color: #ffd95a;
+    color: #333;
   }
 
   &:nth-child(3) {
-    background-color: #e8397d;
+    background-color: #ff6b6b;
     color: #ffffff;
   }
 
   &:nth-child(4) {
-    background-color: #6a4fc4;
+    background-color: #b19cd9;
     color: #ffffff;
   }
 }

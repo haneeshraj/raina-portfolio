@@ -23,7 +23,7 @@ export default function BunkBuddy() {
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}></div>
             <Image
-              src="/work/bunkbuddy/bunkbuddy.svg"
+              src="/bunkbuddy.svg"
               alt="BunkBuddy Preview"
               width={600}
               height={400}

@@ -651,7 +651,7 @@ export default function Solace() {
             <div className={styles.screenItem}>
               <div className={styles.screenImageWrap}>
                 <Image
-                  src="/work/solace/multiple.svg"
+                  src="/work/solace/multiple.svgn"
                   alt="Multiple responses"
                   width={400}
                   height={800}
