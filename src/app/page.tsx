@@ -261,7 +261,15 @@ export default function Home() {
             />
           </svg>
         </div>
-        <ParallaxGallery />
+        <div className={styles.galleryWrapper}>
+          <ParallaxGallery />
+          <div className={styles.galleryOverlay}>
+            <p className={styles.overlayText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className={styles.aboutSection} id="about">
