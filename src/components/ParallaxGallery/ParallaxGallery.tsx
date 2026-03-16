@@ -18,9 +18,20 @@ const imageNames = [
   "work-scroll5.png",
 ];
 
-const staticRandomImages = Array(12)
-  .fill(null)
-  .map(() => imageNames[Math.floor(Math.random() * imageNames.length)]);
+const staticRandomImages = [
+  imageNames[0],
+  imageNames[1],
+  imageNames[2],
+  imageNames[3],
+  imageNames[4],
+  imageNames[0],
+  imageNames[1],
+  imageNames[2],
+  imageNames[3],
+  imageNames[4],
+  imageNames[0],
+  imageNames[1],
+];
 
 export default function ParallaxGallery({
   images = staticRandomImages,
