@@ -28,7 +28,7 @@ export default function Work() {
       <WorkTimeline>
         <section className={styles["work"]}>
           {/* Project 1 - BunkBuddy */}
-          <WorkItemDot index={0}>
+          <WorkItemDot index={0} totalItems={4}>
             <div className={styles["work__item"]}>
               <div className={styles["work__content"]}>
                 <Link
@@ -62,7 +62,7 @@ export default function Work() {
           </WorkItemDot>
 
           {/* Project 2 - Solace */}
-          <WorkItemDot index={1}>
+          <WorkItemDot index={1} totalItems={4}>
             <div className={styles["work__item"]}>
               <div className={styles["work__content"]}>
                 <Link
@@ -96,7 +96,7 @@ export default function Work() {
           </WorkItemDot>
 
           {/* Project 3 - CitySphere */}
-          <WorkItemDot index={2}>
+          <WorkItemDot index={2} totalItems={4}>
             <div className={styles["work__item"]}>
               <div className={styles["work__content"]}>
                 <Link
@@ -130,7 +130,7 @@ export default function Work() {
           </WorkItemDot>
 
           {/* Project 4 - AGO App */}
-          <WorkItemDot index={3}>
+          <WorkItemDot index={3} totalItems={4}>
             <div className={styles["work__item"]}>
               <div className={styles["work__content"]}>
                 <Link
