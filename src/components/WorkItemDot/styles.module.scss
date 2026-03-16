@@ -1,0 +1,16 @@
+.work-item-dot__container {
+  position: relative;
+  width: 100%;
+}
+
+.work-item-dot__dot {
+  position: absolute;
+  left: 48.8%;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #ffb84d;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}

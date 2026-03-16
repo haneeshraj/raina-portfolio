@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 import Link from "next/link";
 import styles from "./styles.module.scss";
@@ -48,7 +48,7 @@ const Navbar = () => {
           <motion.div
             className={clsx(
               styles["hamburger__line"],
-              styles["hamburger__line--1"]
+              styles["hamburger__line--1"],
             )}
             animate={{
               top: isOpen ? "50%" : "0",
@@ -61,7 +61,7 @@ const Navbar = () => {
           <motion.div
             className={clsx(
               styles["hamburger__line"],
-              styles["hamburger__line--2"]
+              styles["hamburger__line--2"],
             )}
             animate={{
               opacity: isOpen ? 0 : 1,
@@ -71,7 +71,7 @@ const Navbar = () => {
           <motion.div
             className={clsx(
               styles["hamburger__line"],
-              styles["hamburger__line--3"]
+              styles["hamburger__line--3"],
             )}
             animate={{
               bottom: isOpen ? "auto" : "0",
@@ -126,7 +126,7 @@ const Navbar = () => {
                 }}
               >
                 <Link
-                  href="/about"
+                  href="/#about"
                   onClick={() => setIsOpen(false)}
                   style={{
                     // Remove link default styles

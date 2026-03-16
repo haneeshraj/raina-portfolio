@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
+import { useTransform, useScroll, motion, MotionValue } from "motion/react";
 import Image from "next/image";
 import styles from "./ParallaxGallery.module.scss";
 import Lenis from "@studio-freight/lenis";
