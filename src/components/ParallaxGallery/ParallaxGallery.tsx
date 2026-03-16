@@ -10,8 +10,20 @@ interface ParallaxGalleryProps {
   images?: string[];
 }
 
+const imageNames = [
+  "work-scroll1.png",
+  "work-scroll2.png",
+  "work-scroll3.png",
+  "work-scroll4.png",
+  "work-scroll5.png",
+];
+
+const staticRandomImages = Array(12)
+  .fill(null)
+  .map(() => imageNames[Math.floor(Math.random() * imageNames.length)]);
+
 export default function ParallaxGallery({
-  images = Array(12).fill("IMG_8433.png"),
+  images = staticRandomImages,
 }: ParallaxGalleryProps) {
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -54,9 +66,9 @@ export default function ParallaxGallery({
       <div ref={gallery} className={styles.gallery}>
         <div className={styles.galleryWrapper}>
           <Column images={[images[0], images[1], images[2]]} y={y} />
-          <Column images={[images[3], images[4], images[5]]} y={y2} />
-          <Column images={[images[6], images[7], images[8]]} y={y3} />
-          <Column images={[images[9], images[10], images[11]]} y={y4} />
+          <Column images={[images[3], images[4], images[0]]} y={y2} />
+          <Column images={[images[1], images[2], images[3]]} y={y3} />
+          <Column images={[images[4], images[0], images[1]]} y={y4} />
         </div>
       </div>
     </>
