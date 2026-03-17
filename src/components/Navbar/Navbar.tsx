@@ -106,11 +106,7 @@ const Navbar = () => {
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
-                  style={{
-                    // Remove link default styles
-                    color: "white",
-                    textDecoration: "none",
-                  }}
+                  className={styles["navbar__menu-link"]}
                 >
                   Home
                 </Link>
@@ -128,11 +124,7 @@ const Navbar = () => {
                 <Link
                   href="/#about"
                   onClick={() => setIsOpen(false)}
-                  style={{
-                    // Remove link default styles
-                    color: "white",
-                    textDecoration: "none",
-                  }}
+                  className={styles["navbar__menu-link"]}
                 >
                   About
                 </Link>
@@ -150,11 +142,7 @@ const Navbar = () => {
                 <Link
                   href="/work"
                   onClick={() => setIsOpen(false)}
-                  style={{
-                    // Remove link default styles
-                    color: "white",
-                    textDecoration: "none",
-                  }}
+                  className={styles["navbar__menu-link"]}
                 >
                   Work
                 </Link>
@@ -172,11 +160,7 @@ const Navbar = () => {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  style={{
-                    // Remove link default styles
-                    color: "white",
-                    textDecoration: "none",
-                  }}
+                  className={styles["navbar__menu-link"]}
                 >
                   Contact
                 </Link>

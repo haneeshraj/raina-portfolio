@@ -1,0 +1,251 @@
+.footer {
+  position: relative;
+  margin-top: 8rem;
+  background: #eb7176;
+  color: #ffffff;
+}
+
+.footer__notch {
+  position: absolute;
+  top: -2.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 2.2rem solid transparent;
+  border-right: 2.2rem solid transparent;
+  border-bottom: 2.8rem solid #eb7176;
+}
+
+.footer__inner {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5.2rem 4rem 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.footer__logoLink {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.footer__logo {
+  width: 8.4rem;
+  height: auto;
+}
+
+.footer__navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer__navLink {
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+}
+
+.footer__center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.footer__heading {
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.footer__titleSmall {
+  margin: 0;
+  letter-spacing: -2px;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.footer__titleBig {
+  margin: -3rem 0 0;
+  font-size: clamp(5.2rem, 8vw, 7.2rem);
+  letter-spacing: -2px;
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.footer__burst {
+  position: absolute;
+  top: -0.4rem;
+  right: -2.4rem;
+  width: 2.8rem;
+  height: 2.8rem;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: #e4098f;
+  }
+}
+
+.footer__infoLink {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3rem;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  word-break: break-word;
+
+  &:hover,
+  &:focus-visible {
+    color: #ffdce6;
+  }
+}
+
+.footer__infoLink + .footer__infoLink {
+  margin-top: 0.4rem;
+}
+
+.footer__location {
+  margin: 0.6rem 0 0;
+  font-size: 1.8rem;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.6rem;
+}
+
+.footer__hello {
+  margin: 0;
+  font-size: 1.8rem;
+  opacity: 0.95;
+}
+
+.footer__contactButton {
+  color: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 0.8rem;
+  min-width: 17rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #fff;
+    color: #d45f72;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.footer__contactIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 0.8rem;
+    height: 0.8rem;
+    fill: currentColor;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    text-align: center;
+    padding: 4.8rem 3.2rem 4rem;
+  }
+
+  .footer__left,
+  .footer__center,
+  .footer__right {
+    align-items: center;
+  }
+
+  .footer__right {
+    justify-content: center;
+  }
+
+  .footer__burst {
+    right: -1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    margin-top: 6rem;
+  }
+
+  .footer__inner {
+    padding: 4rem 2rem 3.6rem;
+    gap: 2.4rem;
+  }
+
+  .footer__logo {
+    width: 7.2rem;
+  }
+
+  .footer__navLink,
+  .footer__infoLink,
+  .footer__hello,
+  .footer__location {
+    font-size: 1.6rem;
+  }
+
+  .footer__titleSmall {
+    font-size: 2rem;
+  }
+
+  .footer__titleBig {
+    font-size: clamp(4.2rem, 6vw, 5.8rem);
+  }
+
+  .footer__contactButton {
+    min-width: 15rem;
+    font-size: 1.6rem;
+    padding: 0.95rem 1.8rem;
+  }
+}

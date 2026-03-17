@@ -1,0 +1,107 @@
+.contact {
+  padding: 4rem 2rem 0;
+  min-height: 70vh;
+}
+
+.contact__card {
+  max-width: 72rem;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #fff8ee 0%, #fff3f7 100%);
+  border: 1px solid #f2c6d3;
+  border-radius: 2rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  box-shadow: 0 16px 40px rgba(145, 67, 93, 0.12);
+}
+
+.contact__eyebrow {
+  margin: 0;
+  color: #c8447f;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact__title {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-urbanist), sans-serif;
+  font-size: clamp(3.8rem, 7vw, 6rem);
+  line-height: 0.95;
+  color: #131313;
+}
+
+.contact__subtitle {
+  margin: 1.2rem 0 0;
+  font-size: 1.6rem;
+  color: #4d4d4d;
+}
+
+.form {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  color: #2f2f2f;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  border: 1px solid #e5b5c5;
+  border-radius: 1rem;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  background: #fff;
+  color: #131313;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: 2px solid #de77a0;
+  outline-offset: 1px;
+}
+
+.form__button {
+  align-self: flex-start;
+  border: 0;
+  border-radius: 1rem;
+  background: #d45f72;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1.1rem 2.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: #b94d69;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 2rem 1.5rem 0;
+  }
+
+  .contact__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .form__button {
+    width: 100%;
+    text-align: center;
+  }
+}

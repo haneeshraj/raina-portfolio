@@ -8,6 +8,7 @@ import WorkItemDot from "@/components/WorkItemDot/WorkItemDot";
 export default function Work() {
   return (
     <main className={styles["main"]}>
+      <div className={styles["diamondBg"]} aria-hidden="true" />
       <div className={styles["title"]}>
         <h1 className={styles["heading"]}>work</h1>
         <svg

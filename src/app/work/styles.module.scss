@@ -1,3 +1,28 @@
+.main {
+  position: relative;
+}
+
+/* Diamond gradient background, matching home page */
+.diamondBg {
+  --grad-shift: 0%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 220vmax;
+  height: 220vmax;
+  transform: translate(-50%, calc(-50% + var(--grad-shift))) rotate(45deg);
+  background: radial-gradient(
+    ellipse 55% 55% at 50% 50%,
+    #fff2dd 0%,
+    #ffe8f0 60%,
+    #ffdff4 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 .title {
   width: fit-content;
   margin-block: 3rem;

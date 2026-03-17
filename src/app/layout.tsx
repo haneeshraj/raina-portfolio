@@ -5,6 +5,7 @@ import clsx from "clsx";
 import "./globals.css";
 import styles from "./page.module.scss";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Raina Motihar - UX Designer",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
 
         <main className={styles["main"]}>{children}</main>
+        <Footer />
       </body>
     </html>
   );
