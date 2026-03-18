@@ -69,7 +69,7 @@ export default function CitySphere() {
                 <strong>Exploration</strong> — Research, mind mapping, problem-solution mapping.
               </p>
               <p className={styles["info-card__text"]}>
-                <strong>Storyboarding</strong> — Visual description of scenarios and a user's
+                <strong>Storyboarding</strong> — Visual description of scenarios and a user&apos;s
                 interaction with CitySphere.
               </p>
               <p className={styles["info-card__text"]}>
