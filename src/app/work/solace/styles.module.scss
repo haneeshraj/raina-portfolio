@@ -35,7 +35,7 @@
     font-weight: 700;
     font-style: normal;
     margin: 0;
-    color: #8b4789;
+    color: #1A3F7A;
   }
 
   &__subtitle {
@@ -68,7 +68,7 @@
   max-width: 58rem;
   border-radius: 2rem;
   overflow: hidden;
-  border: 2px solid rgba(176, 130, 220, 0.4);
+  border: 2px solid rgba(74, 123, 167, 0.3);
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.12);
 
   min-height: 28rem;
@@ -131,29 +131,52 @@
 }
 
 .info-card {
-  background-color: #f3e5f5;
-  border: 2px solid #8b4789;
-  border-radius: 2rem;
-  padding: 3rem;
+  background: #f0f8fc;
+  border: 1px solid #d4e8f0;
+  border-left: 5px solid #4a7ba7;
+  border-radius: 1.8rem;
+  padding: 4rem;
+  box-shadow: 0 4px 16px rgba(74, 123, 167, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(74, 123, 167, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+    border-color: #c0dce8;
+  }
 
   &__title {
     font-size: 2.4rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #4a7ba7;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    letter-spacing: -0.02em;
   }
 
   &__text {
     font-size: 1.6rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+
+    strong {
+      font-weight: 700;
+      color: #4a7ba7;
+    }
   }
 
   &__detail {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    color: #444;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+
+    strong {
+      font-weight: 700;
+      color: #4a7ba7;
+    }
   }
 }
 
@@ -180,7 +203,7 @@
   margin: clamp(5rem, 7vw, 8rem) auto;
 
   &__header {
-    background: linear-gradient(135deg, #e8a5d9 0%, #b19cd9 100%);
+    background: linear-gradient(135deg, #b8a5e8 0%, #6cc7ff 60%, #b19cd9 100%);
     padding: 2rem 3rem;
     border-radius: 1.5rem;
     margin-bottom: 4rem;

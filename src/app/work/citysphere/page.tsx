@@ -54,26 +54,26 @@ export default function CitySphere() {
                 A virtual reality app created to be used with VR headsets, that
                 lets people explore real cities from the comfort of their home.
               </p>
-              <p className={styles["info-card__detail"]}>Timeline - 3 weeks</p>
+              <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 3 weeks</p>
               <p className={styles["info-card__detail"]}>
-                Tools - Figma, FigJam, Procreate
+                <strong>Tools</strong> — Figma, FigJam, Procreate
               </p>
               <p className={styles["info-card__detail"]}>
-                Team - Product Design Group
+                <strong>Team</strong> — Product Design Group
               </p>
             </div>
 
             <div className={styles["info-card"]}>
               <h3 className={styles["info-card__title"]}>My Contributions</h3>
               <p className={styles["info-card__text"]}>
-                Exploration - Research, mind mapping, problem-solution mapping.
+                <strong>Exploration</strong> — Research, mind mapping, problem-solution mapping.
               </p>
               <p className={styles["info-card__text"]}>
-                Storyboarding - Visual description of scenarios and a user&apos;s
+                <strong>Storyboarding</strong> — Visual description of scenarios and a user's
                 interaction with CitySphere.
               </p>
               <p className={styles["info-card__text"]}>
-                User Interface - Designing high fidelity screens to mimic a VR
+                <strong>User Interface</strong> — Designing high fidelity screens to mimic a VR
                 headset interface.
               </p>
             </div>

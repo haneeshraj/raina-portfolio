@@ -49,25 +49,23 @@ export default function BunkBuddy() {
               young newcomers in the GTA find safe, affordable and compatible
               living options.
             </p>
-            <p className={styles["info-card__detail"]}>Timeline - 15 weeks</p>
-            <p className={styles["info-card__detail"]}>Tools - Figma, FigJam</p>
+            <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 15 weeks</p>
+            <p className={styles["info-card__detail"]}><strong>Tools</strong> — Figma, FigJam</p>
             <p className={styles["info-card__detail"]}>
-              Team - Capstone Group (Muskaan, Kashish Kakkad)
+              <strong>Team</strong> — Capstone Group (Muskaan, Kashish Kakkad)
             </p>
           </div>
 
           <div className={styles["info-card"]}>
             <h3 className={styles["info-card__title"]}>My Contributions</h3>
             <p className={styles["info-card__text"]}>
-              User Research - Survey, data synthesis, user flow diagramming,
-              journey maps.
+              <strong>User Research</strong> — Survey, data synthesis, user flow diagramming, journey maps.
             </p>
             <p className={styles["info-card__text"]}>
-              User Interface - Wireframing, high fidelity designs, interactive
-              prototyping, iterations.
+              <strong>User Interface</strong> — Wireframing, high fidelity designs, interactive prototyping, iterations.
             </p>
             <p className={styles["info-card__text"]}>
-              Usability Testing - Scenario based testing with 4 participants.
+              <strong>Usability Testing</strong> — Scenario based testing with 4 participants.
             </p>
           </div>
         </div>
@@ -930,59 +928,73 @@ export default function BunkBuddy() {
           </h2>
         </div>
 
-        <div className={styles["testing-content"]}>
-          <h3 className={styles["testing-content__subtitle"]}>
-            Usability Testing
-          </h3>
-          <p className={styles["testing-content__text"]}>
-            Moderated usability testing sessions were conducted to evaluate the
-            ease of navigation, clarity of features, and overall user experience
-            of the Bunk Buddy prototype.
-          </p>
-          <p className={styles["testing-content__text"]}>
-            The sample size was 4 participants, ages ranging from 18-30 with a
-            criteria of having searched for a house or housemate in the past
-            year. They were given scenario-based tasks like, Start a
-            conversation with a new match, Find your saved property listings etc
-            and their steps were observed closely. This setup was recorded.
-          </p>
+        <div className={styles["usability-frame"]}>
+          <div className={styles["usability-frame__header"]}>
+            <h3 className={styles["usability-frame__label"]}>USABILITY TESTING</h3>
+          </div>
+          
+          <div className={styles["usability-frame__content"]}>
+            <div className={styles["usability-stat"]}>
+              <h4 className={styles["usability-stat__number"]}>7 Sessions</h4>
+              <p className={styles["usability-stat__text"]}>
+                We conducted 7 usability testing sessions to evaluate the AGO app experience.
+              </p>
+            </div>
+
+            <div className={styles["usability-stat"]}>
+              <h4 className={styles["usability-stat__number"]}>5 Key Tasks</h4>
+              <p className={styles["usability-stat__text"]}>
+                Participants completed 5 key tasks that reflected key app features and user flows.
+              </p>
+            </div>
+
+            <div className={styles["usability-stat"]}>
+              <h4 className={styles["usability-stat__number"]}>Participants</h4>
+              <p className={styles["usability-stat__text"]}>
+                Our participants were primarily aged 18–30, including Humber College students and friends or family members familiar with art galleries.
+              </p>
+            </div>
+
+            <div className={styles["usability-stat"]}>
+              <h4 className={styles["usability-stat__number"]}>In-person + Remote</h4>
+              <p className={styles["usability-stat__text"]}>
+                To ensure flexibility, some sessions were conducted in-person for direct observation, while others were done remotely via screen sharing.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className={styles["key-findings"]}>
           <h3 className={styles["key-findings__title"]}>Key Findings</h3>
-          <ol className={styles["key-findings__list"]}>
-            <li>
-              <strong>Sharing Profiles/Houses</strong>
-              <p>
-                All participants could successfully click on the share button
-                but 2 of them talked about having more options like WhatsApp or
-                Email alongside the Bunk Buddy matches.
+          <div className={styles["key-findings__grid"]}>
+            <div className={styles["finding-card"]}>
+              <h4 className={styles["finding-card__title"]}>Sharing Profiles/Houses</h4>
+              <p className={styles["finding-card__text"]}>
+                All participants could successfully click on the share button but 2 of them talked about having more options like WhatsApp or Email alongside the Bunk Buddy matches.
               </p>
-            </li>
-            <li>
-              <strong>Like & Match Flow</strong>
-              <p>
-                All 4 participants said they liked how the Match confirmation,
-                but 1 wanted the ability to revisit skipped profiles.
+            </div>
+
+            <div className={styles["finding-card"]}>
+              <h4 className={styles["finding-card__title"]}>Like & Match Flow</h4>
+              <p className={styles["finding-card__text"]}>
+                All 4 participants said they liked how the Match confirmation, but 1 wanted the ability to revisit skipped profiles.
               </p>
-            </li>
-            <li>
-              <strong>Chat Initiation</strong>
-              <p>
-                Messaging after a match was smooth for all, though 2
-                participants wanted chat shortcuts directly from the match
-                confirmation screen.
+            </div>
+
+            <div className={styles["finding-card"]}>
+              <h4 className={styles["finding-card__title"]}>Chat Initiation</h4>
+              <p className={styles["finding-card__text"]}>
+                Messaging after a match was smooth for all, though 2 participants wanted chat shortcuts directly from the match confirmation screen.
               </p>
-            </li>
-            <li>
-              <strong>Saved Listings</strong>
-              <p>
-                Users saved listings easily but 3 participants mentioned adding
-                sort/filter options in the Saved section or a way to separate
-                roommates and houses.
+            </div>
+
+            <div className={styles["finding-card"]}>
+              <h4 className={styles["finding-card__title"]}>Saved Listings</h4>
+              <p className={styles["finding-card__text"]}>
+                Users saved listings easily but 3 participants mentioned adding sort/filter options in the Saved section or a way to separate roommates and houses.
               </p>
-            </li>
-          </ol>
+            </div>
+          </div>
         </div>
       </div>
 

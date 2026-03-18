@@ -35,7 +35,7 @@
     font-weight: 700;
     font-style: normal;
     margin: 0;
-    color: #7a1a2e;
+    color: #762828;
   }
 
   &__subtitle {
@@ -129,29 +129,48 @@
 }
 
 .info-card {
-  background-color: #edd9f5;
-  border: 2px solid #8B4789;
-  border-radius: 2rem;
-  padding: 3rem;
+  background-color: #fde6dd;
+  border: 1px solid #f5c9bb;
+  border-left: 5px solid #8B3A3A;
+  border-radius: 1.8rem;
+  padding: 4rem;
+  box-shadow: 0 4px 16px rgba(139, 58, 58, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(139, 58, 58, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+    border-color: #edad99;
+  }
 
   &__title {
     font-size: 2.4rem;
     font-weight: 600;
-    color: #333;
+    color: #8B3A3A;
     margin-bottom: 2rem;
   }
 
   &__text {
     font-size: 1.6rem;
-    color: #333;
+    color: #343434;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+
+    strong {
+      font-weight: 700;
+      color: #8B3A3A;
+    }
   }
 
   &__detail {
-    font-size: 1.4rem;
-    color: #333;
+    font-size: 1.6rem;
+    color: #343434;
     margin-bottom: 0.8rem;
+
+    strong {
+      font-weight: 700;
+      color: #8B3A3A;
+    }
   }
 }
 
@@ -179,7 +198,7 @@
   margin: clamp(5rem, 7vw, 8rem) auto;
 
   &__header {
-    background: linear-gradient(135deg, #f4a1a1 0%, #c4a8d8 100%);
+    background: linear-gradient(135deg, #f5b8c9 0%, #e68a93 50%, #a94848 100%);
     padding: 2rem 3rem;
     border-radius: 1.5rem;
     margin-bottom: 4rem;
@@ -484,17 +503,17 @@
 
 .surveyCardCount {
   font-size: 1.2rem;
-  color: #7b4fa6;
+  color: #8B3A3A;
   margin: 0;
 }
 
 /* ── PHASE 2 HEADER MODIFIER ──────────────────────── */
 .phaseHeaderIdeation {
-  background: linear-gradient(135deg, #a8d8ea 0%, #b8e0a8 100%);
+  background: linear-gradient(135deg, #f5b8c9 0%, #e68a9e 50%, #a94857 100%);
 }
 
 .phaseHeaderVisualDesign {
-  background: linear-gradient(135deg, #fddbd0 0%, #f5a8c8 100%);
+  background: linear-gradient(135deg, #f5b8c9 0%, #e68a9e 50%, #a94857 100%);
 }
 
 /* ── USER PERSONA ──────────────────────────────────── */

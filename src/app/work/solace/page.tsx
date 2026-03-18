@@ -57,25 +57,25 @@ export default function Solace() {
                 stress, track emotions, and access quick support through AI
                 guided activities and check-ins.
               </p>
-              <p className={styles["info-card__detail"]}>Timeline - 3 weeks</p>
+              <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 3 weeks</p>
               <p className={styles["info-card__detail"]}>
-                Tools - Figma, FigJam, Voiceflow
+                <strong>Tools</strong> — Figma, FigJam, Voiceflow
               </p>
               <p className={styles["info-card__detail"]}>
-                Team - Product Design Group (Wajiha, Eman &amp; Amal)
+                <strong>Team</strong> — Product Design Group (Wajiha, Eman &amp; Amal)
               </p>
             </div>
 
             <div className={styles["info-card"]}>
               <h3 className={styles["info-card__title"]}>My Contributions</h3>
               <p className={styles["info-card__text"]}>
-                Desk Research - Competitor analysis. News. Articles. Journals.
+                <strong>Desk Research</strong> — Competitor analysis. News. Articles. Journals.
               </p>
               <p className={styles["info-card__text"]}>
-                AI Personality - Defining character traits for Solace
+                <strong>AI Personality</strong> — Defining character traits for Solace
               </p>
               <p className={styles["info-card__text"]}>
-                User Interface - Designing the logo, high fidelity designs,
+                <strong>User Interface</strong> — Designing the logo, high fidelity designs,
                 interactive prototyping, audio inclusion.
               </p>
             </div>

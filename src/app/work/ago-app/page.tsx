@@ -57,26 +57,26 @@ export default function AGOApp() {
                 created to make visiting, exploring, and learning about art more
                 accessible and engaging.
               </p>
-              <p className={styles["info-card__detail"]}>Timeline - 8 weeks</p>
+              <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 8 weeks</p>
               <p className={styles["info-card__detail"]}>
-                Tools - Figma, FigJam
+                <strong>Tools</strong> — Figma, FigJam
               </p>
               <p className={styles["info-card__detail"]}>
-                Team - Special Topics Team 6
+                <strong>Team</strong> — Special Topics Team 6
               </p>
             </div>
 
             <div className={styles["info-card"]}>
               <h3 className={styles["info-card__title"]}>My Contributions</h3>
               <p className={styles["info-card__text"]}>
-                Research - Market research, surveys, competitive analyses.
+                <strong>Research</strong> — Market research, surveys, competitive analyses.
               </p>
               <p className={styles["info-card__text"]}>
-                User Interface - Wireframing, high fidelity designs, interactive
+                <strong>User Interface</strong> — Wireframing, high fidelity designs, interactive
                 prototyping, iterations.
               </p>
               <p className={styles["info-card__text"]}>
-                Usability Testing - Scenario based testing with 7 participants.
+                <strong>Usability Testing</strong> — Scenario based testing with 7 participants.
               </p>
             </div>
           </div>
