@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 import styles from "./styles.module.scss";
 
@@ -9,58 +10,69 @@ const uiScreens = [
   {
     src: "/work/citysphere/splash.svg",
     title: "Splash Screen",
-    description: "The starting screen welcomes users to CitySphere, allowing them to either Sign In, Register or Continue as a Guest."
+    description:
+      "The starting screen welcomes users to CitySphere, allowing them to either Sign In, Register or Continue as a Guest.",
   },
   {
     src: "/work/citysphere/play.svg",
     title: "Play Area",
-    description: "The first instructional screen helps users safely define their physical interaction zone before the VR session begins."
+    description:
+      "The first instructional screen helps users safely define their physical interaction zone before the VR session begins.",
   },
   {
     src: "/work/citysphere/controllers.svg",
     title: "Using Controllers",
-    description: "The second instructional screen explains the controller navigations to users."
+    description:
+      "The second instructional screen explains the controller navigations to users.",
   },
   {
     src: "/work/citysphere/gestures.svg",
     title: "Hand Gestures",
-    description: "The final instructional screen showcases hand gestures that users can use while in the tour to navigate."
+    description:
+      "The final instructional screen showcases hand gestures that users can use while in the tour to navigate.",
   },
   {
     src: "/work/citysphere/home.svg",
     title: "Home",
-    description: "After the onboarding instructions, users arrive on the home page where they can scroll through the available tours to pick one."
+    description:
+      "After the onboarding instructions, users arrive on the home page where they can scroll through the available tours to pick one.",
   },
   {
     src: "/work/citysphere/details.svg",
     title: "Tour Details",
-    description: "Upon selecting a specific tour, users can see all the details for it including the duration, the sites covered, and the activities."
+    description:
+      "Upon selecting a specific tour, users can see all the details for it including the duration, the sites covered, and the activities.",
   },
   {
     src: "/work/citysphere/customise.svg",
     title: "Tour Customisation",
-    description: "Before starting the tour, users get the option to personalize their virtual visit."
+    description:
+      "Before starting the tour, users get the option to personalize their virtual visit.",
   },
   {
     src: "/work/citysphere/begins.svg",
     title: "Tour Begins",
-    description: "When the users get accustomed to seeing the magnificent view that beholds them, they can find a utility panel that sticks to the left of their vision."
+    description:
+      "When the users get accustomed to seeing the magnificent view that beholds them, they can find a utility panel that sticks to the left of their vision.",
   },
   {
     src: "/work/citysphere/facts.svg",
     title: "Fun Facts",
-    description: "While moving around and viewing the sites, users will come across information icons that can be clicked on using controller point and A button or just their index finger."
+    description:
+      "While moving around and viewing the sites, users will come across information icons that can be clicked on using controller point and A button or just their index finger.",
   },
   {
     src: "/work/citysphere/capture.svg",
     title: "Capture the Moment",
-    description: "When users see something they really like and want to save, they can click on the camera icon on the utility panel to open a camera overlay."
+    description:
+      "When users see something they really like and want to save, they can click on the camera icon on the utility panel to open a camera overlay.",
   },
   {
     src: "/work/citysphere/end.svg",
     title: "End of Tour",
-    description: "Once the user has almost completed the tour, they are shown a notification that displays the remaining time."
-  }
+    description:
+      "Once the user has almost completed the tour, they are shown a notification that displays the remaining time.",
+  },
 ];
 
 export default function CitySphere() {
@@ -131,7 +143,9 @@ export default function CitySphere() {
                 A virtual reality app created to be used with VR headsets, that
                 lets people explore real cities from the comfort of their home.
               </p>
-              <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 3 weeks</p>
+              <p className={styles["info-card__detail"]}>
+                <strong>Timeline</strong> — 3 weeks
+              </p>
               <p className={styles["info-card__detail"]}>
                 <strong>Tools</strong> — Figma, FigJam, Procreate
               </p>
@@ -143,15 +157,16 @@ export default function CitySphere() {
             <div className={styles["info-card"]}>
               <h3 className={styles["info-card__title"]}>My Contributions</h3>
               <p className={styles["info-card__text"]}>
-                <strong>Exploration</strong> — Research, mind mapping, problem-solution mapping.
+                <strong>Exploration</strong> — Research, mind mapping,
+                problem-solution mapping.
               </p>
               <p className={styles["info-card__text"]}>
-                <strong>Storyboarding</strong> — Visual description of scenarios and a user&apos;s
-                interaction with CitySphere.
+                <strong>Storyboarding</strong> — Visual description of scenarios
+                and a user&apos;s interaction with CitySphere.
               </p>
               <p className={styles["info-card__text"]}>
-                <strong>User Interface</strong> — Designing high fidelity screens to mimic a VR
-                headset interface.
+                <strong>User Interface</strong> — Designing high fidelity
+                screens to mimic a VR headset interface.
               </p>
             </div>
           </div>
@@ -319,7 +334,9 @@ export default function CitySphere() {
                   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 320px"
                   className={styles.storyImage}
                 />
-                <h4 className={styles.storyTitle}>Scene 1: Daydreaming at Home</h4>
+                <h4 className={styles.storyTitle}>
+                  Scene 1: Daydreaming at Home
+                </h4>
                 <p className={styles.storyText}>
                   Reyna is planning on going to Toronto for her higher education
                   but has never visited the city. She wonders what it looks like
@@ -353,7 +370,9 @@ export default function CitySphere() {
                   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 320px"
                   className={styles.storyImage}
                 />
-                <h4 className={styles.storyTitle}>Scene 3: Puts on VR Headset</h4>
+                <h4 className={styles.storyTitle}>
+                  Scene 3: Puts on VR Headset
+                </h4>
                 <p className={styles.storyText}>
                   She decides to put on her headset and check for herself to see
                   if such an app exists. To her surprise she comes across
@@ -371,7 +390,9 @@ export default function CitySphere() {
                   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 320px"
                   className={styles.storyImage}
                 />
-                <h4 className={styles.storyTitle}>Scene 4: Intro to CitySphere</h4>
+                <h4 className={styles.storyTitle}>
+                  Scene 4: Intro to CitySphere
+                </h4>
                 <p className={styles.storyText}>
                   On opening the CitySphere app Reyna chooses to continue as a
                   guest because it&apos;s convenient and saves her time.
@@ -440,7 +461,9 @@ export default function CitySphere() {
                   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 320px"
                   className={styles.storyImage}
                 />
-                <h4 className={styles.storyTitle}>Scene 8: Exploring Lakeshore</h4>
+                <h4 className={styles.storyTitle}>
+                  Scene 8: Exploring Lakeshore
+                </h4>
                 <p className={styles.storyText}>
                   Finally the tour begins and Reyna is in awe of the way the
                   city looks! She has a control panel with which she can
@@ -458,7 +481,9 @@ export default function CitySphere() {
                   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 320px"
                   className={styles.storyImage}
                 />
-                <h4 className={styles.storyTitle}>Scene 9: Please Don&apos;t End</h4>
+                <h4 className={styles.storyTitle}>
+                  Scene 9: Please Don&apos;t End
+                </h4>
                 <p className={styles.storyText}>
                   After exploring Lakeshore for more than an hour and looking at
                   so many fun facts, she gets a notification that there are just
@@ -491,23 +516,38 @@ export default function CitySphere() {
             </div>
             <div className={styles.colorPaletteWrapper}>
               <div className={styles.colorSwatchItem}>
-                <div className={styles.colorBar} style={{ backgroundColor: "#3E34BB" }}></div>
+                <div
+                  className={styles.colorBar}
+                  style={{ backgroundColor: "#3E34BB" }}
+                ></div>
                 <div className={styles.colorCodePanel}>#3E34BB</div>
               </div>
               <div className={styles.colorSwatchItem}>
-                <div className={styles.colorBar} style={{ backgroundColor: "#7678ED" }}></div>
+                <div
+                  className={styles.colorBar}
+                  style={{ backgroundColor: "#7678ED" }}
+                ></div>
                 <div className={styles.colorCodePanel}>#7678ED</div>
               </div>
               <div className={styles.colorSwatchItem}>
-                <div className={styles.colorBar} style={{ backgroundColor: "#F6B802" }}></div>
+                <div
+                  className={styles.colorBar}
+                  style={{ backgroundColor: "#F6B802" }}
+                ></div>
                 <div className={styles.colorCodePanel}>#F6B802</div>
               </div>
               <div className={styles.colorSwatchItem}>
-                <div className={styles.colorBar} style={{ backgroundColor: "#F18702" }}></div>
+                <div
+                  className={styles.colorBar}
+                  style={{ backgroundColor: "#F18702" }}
+                ></div>
                 <div className={styles.colorCodePanel}>#F18702</div>
               </div>
               <div className={styles.colorSwatchItem}>
-                <div className={styles.colorBar} style={{ backgroundColor: "#F35B05" }}></div>
+                <div
+                  className={styles.colorBar}
+                  style={{ backgroundColor: "#F35B05" }}
+                ></div>
                 <div className={styles.colorCodePanel}>#F35B05</div>
               </div>
             </div>
@@ -542,17 +582,20 @@ export default function CitySphere() {
           </div>
 
           <div className={styles.uiCarouselContainer}>
-            <button 
-              className={styles.uiArrowPrev} 
+            <button
+              className={styles.uiArrowPrev}
               onClick={handlePrev}
               aria-label="Previous UI screen"
             >
-              ‹
+              <MdChevronLeft />
             </button>
-            
+
             <div className={styles.uiCarouselFrame}>
               <div className={styles.uiImageWrapper}>
-                <div className={styles.uiImageTrack} style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                <div
+                  className={styles.uiImageTrack}
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
                   {uiScreens.map((screen, index) => (
                     <div className={styles.uiSlide} key={index}>
                       <Image
@@ -567,19 +610,23 @@ export default function CitySphere() {
                   ))}
                 </div>
               </div>
-              
+
               <div className={styles.uiCarouselText} key={currentSlide}>
-                <h3 className={styles.uiCarouselTitle}>{uiScreens[currentSlide].title}</h3>
-                <p className={styles.uiCarouselDescription}>{uiScreens[currentSlide].description}</p>
+                <h3 className={styles.uiCarouselTitle}>
+                  {uiScreens[currentSlide].title}
+                </h3>
+                <p className={styles.uiCarouselDescription}>
+                  {uiScreens[currentSlide].description}
+                </p>
               </div>
             </div>
 
-            <button 
-              className={styles.uiArrowNext} 
+            <button
+              className={styles.uiArrowNext}
               onClick={handleNext}
               aria-label="Next UI screen"
             >
-              ›
+              <MdChevronRight />
             </button>
           </div>
         </div>
@@ -594,12 +641,15 @@ export default function CitySphere() {
           <div className={styles.takeawaysBlock}>
             <h3 className={styles.takeawaysTitle}>My Takeaways</h3>
             <p className={styles.takeawaysText}>
-              Working on CitySphere taught me how different designing for VR is compared to traditional apps,
-              especially when it comes to comfort, clarity, and intuitive spatial interaction. I learned to
-              simplify movement, reduce visual clutter, and design UI that feels natural inside a 3D environment.
-              This project helped me think more deeply about accessibility and how immersive technology can remove
-              barriers for people who can&apos;t easily explore new places. Overall, it strengthened my ability to
-              design experiences that feel both engaging and inclusive.
+              Working on CitySphere taught me how different designing for VR is
+              compared to traditional apps, especially when it comes to comfort,
+              clarity, and intuitive spatial interaction. I learned to simplify
+              movement, reduce visual clutter, and design UI that feels natural
+              inside a 3D environment. This project helped me think more deeply
+              about accessibility and how immersive technology can remove
+              barriers for people who can&apos;t easily explore new places.
+              Overall, it strengthened my ability to design experiences that
+              feel both engaging and inclusive.
             </p>
           </div>
 
@@ -608,15 +658,17 @@ export default function CitySphere() {
               <h3 className={styles.futureTitle}>Future Features</h3>
               <ul className={styles.bullets}>
                 <li>
-                  <strong>Multi-User Mode:</strong> Add friends and join tours to explore cities together
+                  <strong>Multi-User Mode:</strong> Add friends and join tours
+                  to explore cities together
                 </li>
                 <li>
-                  <strong>Beyond the GTA:</strong> Add more cities in Canada for users to have a larger
-                  variety of options.
+                  <strong>Beyond the GTA:</strong> Add more cities in Canada for
+                  users to have a larger variety of options.
                 </li>
                 <li>
-                  <strong>Accessibility Adjustment:</strong> Add multiple languages for guides and narration
-                  and subtitles for all tours.
+                  <strong>Accessibility Adjustment:</strong> Add multiple
+                  languages for guides and narration and subtitles for all
+                  tours.
                 </li>
               </ul>
             </div>
@@ -645,4 +697,3 @@ export default function CitySphere() {
     </div>
   );
 }
-
