@@ -62,7 +62,7 @@
   &__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 20rem;
     align-items: center;
 
     @media (max-width: 768px) {
