@@ -638,25 +638,10 @@ export default function CitySphere() {
             </h2>
           </div>
 
-          <div className={styles.takeawaysBlock}>
-            <h3 className={styles.takeawaysTitle}>My Takeaways</h3>
-            <p className={styles.takeawaysText}>
-              Working on CitySphere taught me how different designing for VR is
-              compared to traditional apps, especially when it comes to comfort,
-              clarity, and intuitive spatial interaction. I learned to simplify
-              movement, reduce visual clutter, and design UI that feels natural
-              inside a 3D environment. This project helped me think more deeply
-              about accessibility and how immersive technology can remove
-              barriers for people who can&apos;t easily explore new places.
-              Overall, it strengthened my ability to design experiences that
-              feel both engaging and inclusive.
-            </p>
-          </div>
-
-          <div className={styles.futureFrame}>
-            <div className={styles.futureCopy}>
-              <h3 className={styles.futureTitle}>Future Features</h3>
-              <ul className={styles.bullets}>
+          <div className={styles.reflectionFrame}>
+            <div className={styles.futureSection}>
+              <h3 className={styles.reflectionTitle}>Future Features</h3>
+              <ul className={styles.reflectionBullets}>
                 <li>
                   <strong>Multi-User Mode:</strong> Add friends and join tours
                   to explore cities together
@@ -673,23 +658,34 @@ export default function CitySphere() {
               </ul>
             </div>
 
-            <div className={styles.futureImages}>
-              <Image
-                src="/work/citysphere/future1.png"
-                alt="Two people sitting by a lake"
-                width={600}
-                height={400}
-                sizes="(max-width: 900px) 100vw, 400px"
-                className={styles.futureImg1}
-              />
-              <Image
-                src="/work/citysphere/future2.png"
-                alt="Canadian flag with mountains"
-                width={600}
-                height={400}
-                sizes="(max-width: 900px) 100vw, 400px"
-                className={styles.futureImg2}
-              />
+            <div className={styles.takeawayImageGrid}>
+              <div className={styles.takeawayColumn}>
+                <h3 className={styles.reflectionTitle}>My Takeaways</h3>
+                <p className={styles.reflectionText}>
+                  Working on CitySphere taught me how different designing for VR is
+                  compared to traditional apps, especially when it comes to comfort,
+                  clarity, and intuitive spatial interaction. I learned to simplify
+                  movement, reduce visual clutter, and design UI that feels natural
+                  inside a 3D environment. This project helped me think more deeply
+                  about accessibility and how immersive technology can remove
+                  barriers for people who can&apos;t easily explore new places.
+                  Overall, it strengthened my ability to design experiences that
+                  feel both engaging and inclusive.
+                </p>
+              </div>
+
+              <div className={styles.imageColumn}>
+                <div className={styles.vrImageFrame}>
+                  <Image
+                    src="citysphere/vr.svg"
+                    alt="VR headset"
+                    width={300}
+                    height={300}
+                    sizes="(max-width: 600px) 100vw, 300px"
+                    className={styles.vrImage}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
