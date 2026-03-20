@@ -50,8 +50,8 @@ const Footer = () => {
               </svg>
             </span>
           </div>
-          <a className={styles.footer__infoLink} href="mailto:rainamotihar14@gmail.com">
-            rainamotihar14@gmail.com
+          <a className={styles.footer__infoLink} href="mailto:rainamotihar114@gmail.com">
+            Email
           </a>
           <a
             className={styles.footer__infoLink}
@@ -59,9 +59,9 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            www.linkedin.com/in/raina-motihar-a75672198
+            LinkedIn
           </a>
-          <p className={styles.footer__location}>📍 Toronto</p>
+          <p className={styles.footer__location}>📍 Toronto, CA</p>
         </div>
 
         <div className={styles.footer__right}>
