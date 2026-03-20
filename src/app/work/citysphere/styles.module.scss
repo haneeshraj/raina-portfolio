@@ -8,21 +8,26 @@
 }
 
 .project-hero {
-  padding: clamp(4rem, 7vw, 8rem) 0;
+  padding: 0;
   position: relative;
+  margin-bottom: clamp(3rem, 5vw, 6rem);
 
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(3rem, 6vw, 8rem);
-    align-items: center;
-    margin-bottom: clamp(4rem, 6vw, 8rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    width: min(1200px, calc(100% - 4rem));
+    margin: 0 auto;
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
+    gap: clamp(1.5rem, 2.5vw, 2rem);
+    padding: clamp(3rem, 5vw, 6rem) 0;
+    align-items: flex-start;
+    max-width: 70%;
   }
 
   &__title {
@@ -48,6 +53,7 @@
   &__right {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   &__image {
@@ -60,30 +66,37 @@
 
 .heroPreviewCard {
   width: 100%;
-  max-width: 58rem;
-  border-radius: 2rem;
+  max-width: 100%;
+  border-radius: 1.5rem;
   padding: 0;
   overflow: hidden;
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.12);
+  display: block;
+  line-height: 0;
 }
 
 .project-description {
-  text-align: center;
+  text-align: left;
+  padding: clamp(2rem, 3vw, 4rem) 0;
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
 
   &__text {
     font-size: clamp(1.9rem, 2.2vw, 2.8rem);
     color: #1f1f1f;
     line-height: 1.55;
-    max-width: 92rem;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
   }
 }
 
 .tag {
-  padding: 0.9rem 1.6rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  width: fit-content;
+  display: inline-block;
 
   &:nth-child(1) {
     background-color: #fbdeed;
@@ -184,6 +197,131 @@
     line-height: 1.65;
     margin-bottom: 1rem;
   }
+}
+
+.phaseHeader {
+  background: linear-gradient(135deg, #f8b982 0%, #f0ce5f 60%, #fd7c1a 100%);
+  padding: 2rem 2.6rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3.2rem;
+  border: 1px solid rgba(217, 127, 62, 0.2);
+}
+
+.phaseTitle {
+  font-size: clamp(2.4rem, 2.6vw, 3.2rem);
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+.uiCarouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.uiArrowPrev,
+.uiArrowNext {
+  background: none;
+  border: none;
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  color: #000000;
+  cursor: pointer;
+  padding: 0;
+  width: clamp(2.5rem, 4vw, 3.5rem);
+  height: clamp(2.5rem, 4vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.uiCarouselFrame {
+  background: white;
+  border-radius: 2rem;
+  padding: clamp(2rem, 3vw, 3rem);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.uiImageWrapper {
+  width: 100%;
+  height: auto;
+  min-height: 1300px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: block;
+  line-height: 0;
+  position: relative;
+}
+
+.uiImageTrack {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease-in-out;
+  border-radius: 1.5rem;
+}
+
+.uiSlide {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uiCarouselImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.5rem;
+  line-height: 0;
+}
+
+.uiCarouselText {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.5vw, 1.2rem);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.uiCarouselTitle {
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  font-weight: 700;
+  color: #2d1f6e;
+  margin: 0;
+}
+
+.uiCarouselDescription {
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
 }
 
 .project-phase {
@@ -460,10 +598,222 @@
   margin: 0;
 }
 
+.brandingSection {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.4rem;
+  align-items: stretch;
+  margin-bottom: 2.4rem;
+}
+
+.brandingLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 35rem;
+  height: auto;
+}
+
+.brandingImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.colorPaletteWrapper {
+  display: flex;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+.colorSwatchItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(139, 71, 137, 0.14);
+  min-width: 0;
+}
+
+.colorBar {
+  flex: 1;
+  width: 100%;
+}
+
+.colorCodePanel {
+  background: #ffffff;
+  padding: 1.4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  border-top: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.designImageFrame {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: clamp(1.2rem, 2vw, 1.8rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(139, 71, 137, 0.14);
+  margin-bottom: 2.4rem;
+  overflow: hidden;
+}
+
+.designImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.2rem;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.carouselFrame {
+  background: white;
+  border-radius: 1.5rem;
+  padding: clamp(2rem, 3vw, 3rem);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.4rem;
+  display: none;
+}
+
+.visualFramesGrid {
+  display: none;
+}
+
+.visualWideContainer {
+  width: 100%;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.visualWideImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visualFrame {
+  display: none;
+}
+
+.visualImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.carouselRow1,
+.carouselRow2,
+.carouselRow3 {
+  display: flex;
+  gap: 1.2rem;
+  overflow: hidden;
+}
+
+.carouselRow1 {
+  animation: scrollRight 50s linear infinite;
+}
+
+.carouselRow2 {
+  animation: scrollLeft 50s linear infinite;
+}
+
+.carouselRow3 {
+  animation: scrollRight 50s linear infinite;
+}
+
+.carouselSlide {
+  flex: 0 0 calc(33.333% - 0.8rem);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .uiStack {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+}
+
+.typographyFrame {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2.4rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.typographyHeading {
+  font-family: "Rubik", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.typographyBody {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.typographyLabelHeading {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.typographyLabel {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .uiFrame {

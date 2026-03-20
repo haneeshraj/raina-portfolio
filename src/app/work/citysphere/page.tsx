@@ -1,47 +1,124 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import styles from "./styles.module.scss";
 
+const uiScreens = [
+  {
+    src: "/work/citysphere/splash.svg",
+    title: "Splash Screen",
+    description: "The starting screen welcomes users to CitySphere, allowing them to either Sign In, Register or Continue as a Guest."
+  },
+  {
+    src: "/work/citysphere/play.svg",
+    title: "Play Area",
+    description: "The first instructional screen helps users safely define their physical interaction zone before the VR session begins."
+  },
+  {
+    src: "/work/citysphere/controllers.svg",
+    title: "Using Controllers",
+    description: "The second instructional screen explains the controller navigations to users."
+  },
+  {
+    src: "/work/citysphere/gestures.svg",
+    title: "Hand Gestures",
+    description: "The final instructional screen showcases hand gestures that users can use while in the tour to navigate."
+  },
+  {
+    src: "/work/citysphere/home.svg",
+    title: "Home",
+    description: "After the onboarding instructions, users arrive on the home page where they can scroll through the available tours to pick one."
+  },
+  {
+    src: "/work/citysphere/details.svg",
+    title: "Tour Details",
+    description: "Upon selecting a specific tour, users can see all the details for it including the duration, the sites covered, and the activities."
+  },
+  {
+    src: "/work/citysphere/customise.svg",
+    title: "Tour Customisation",
+    description: "Before starting the tour, users get the option to personalize their virtual visit."
+  },
+  {
+    src: "/work/citysphere/begins.svg",
+    title: "Tour Begins",
+    description: "When the users get accustomed to seeing the magnificent view that beholds them, they can find a utility panel that sticks to the left of their vision."
+  },
+  {
+    src: "/work/citysphere/facts.svg",
+    title: "Fun Facts",
+    description: "While moving around and viewing the sites, users will come across information icons that can be clicked on using controller point and A button or just their index finger."
+  },
+  {
+    src: "/work/citysphere/capture.svg",
+    title: "Capture the Moment",
+    description: "When users see something they really like and want to save, they can click on the camera icon on the utility panel to open a camera overlay."
+  },
+  {
+    src: "/work/citysphere/end.svg",
+    title: "End of Tour",
+    description: "Once the user has almost completed the tour, they are shown a notification that displays the remaining time."
+  }
+];
+
 export default function CitySphere() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === uiScreens.length - 1 ? 0 : prev + 1));
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev === 0 ? uiScreens.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev === uiScreens.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles["project-hero"]}>
-        <div className={styles.container}>
-          <div className={styles["project-hero__content"]}>
-            <div className={styles["project-hero__left"]}>
-              <h1 className={styles["project-hero__title"]}>CitySphere</h1>
-              <p className={styles["project-hero__subtitle"]}>
-                Spatial UI Design for VR Tourism
-              </p>
-              <div className={styles["project-hero__tags"]}>
-                <span className={styles.tag}>User Research</span>
-                <span className={styles.tag}>Storyboarding</span>
-                <span className={styles.tag}>Spatial Design - VR</span>
-                <span className={styles.tag}>High Fidelity Screens</span>
-              </div>
-            </div>
-
-            <div className={styles["project-hero__right"]}>
-              <div className={styles.heroPreviewCard}>
-                <Image
-                  src="/work/citysphere/a.svg"
-                  alt="CitySphere preview"
-                  width={900}
-                  height={560}
-                  priority
-                  sizes="(max-width: 900px) 100vw, 560px"
-                  className={styles["project-hero__image"]}
-                />
-              </div>
+        <div className={styles["project-hero__content"]}>
+          <div className={styles["project-hero__right"]}>
+            <div className={styles.heroPreviewCard}>
+              <Image
+                src="/work/citysphere/a.svg"
+                alt="CitySphere preview"
+                width={1200}
+                height={675}
+                priority
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                className={styles["project-hero__image"]}
+              />
             </div>
           </div>
 
-          <div className={styles["project-description"]}>
-            <p className={styles["project-description__text"]}>
-              CitySphere: designing a virtual reality experience for travel and
-              tourism in the Greater Toronto Area.
+          <div className={styles["project-hero__left"]}>
+            <h1 className={styles["project-hero__title"]}>CitySphere</h1>
+            <p className={styles["project-hero__subtitle"]}>
+              Spatial UI Design for VR Tourism
             </p>
+            <div className={styles["project-hero__tags"]}>
+              <span className={styles.tag}>User Research</span>
+              <span className={styles.tag}>Storyboarding</span>
+              <span className={styles.tag}>Spatial Design - VR</span>
+              <span className={styles.tag}>High Fidelity Screens</span>
+            </div>
           </div>
+        </div>
+
+        <div className={styles["project-description"]}>
+          <p className={styles["project-description__text"]}>
+            CitySphere: designing a virtual reality experience for travel and
+            tourism in the Greater Toronto Area.
+          </p>
         </div>
       </div>
 
@@ -397,315 +474,113 @@ export default function CitySphere() {
         <div className={styles["project-phase"]}>
           <div className={styles["project-phase__header"]}>
             <h2 className={styles["project-phase__title"]}>
-              Phase 3 - User Interface
+              Phase 3 - Visual Design
             </h2>
           </div>
 
-          <div className={styles.uiStack}>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Splash Screen</h3>
-                <p className={styles.uiText}>
-                  The starting screen welcomes users to CitySphere, allowing them to either
-                  Sign In, Register or Continue as a Guest.
-                </p>
-                <p className={styles.uiText}>
-                  This lets users instantly dive into the experience with flexibility without any
-                  compulsory sign-up walls blocking their curiosity.
-                </p>
+          <div className={styles.brandingSection}>
+            <div className={styles.brandingLogo}>
+              <Image
+                src="/work/citysphere/logo.svg"
+                alt="CitySphere logo"
+                width={300}
+                height={200}
+                sizes="(max-width: 600px) 100vw, 300px"
+                className={styles.brandingImage}
+              />
+            </div>
+            <div className={styles.colorPaletteWrapper}>
+              <div className={styles.colorSwatchItem}>
+                <div className={styles.colorBar} style={{ backgroundColor: "#3E34BB" }}></div>
+                <div className={styles.colorCodePanel}>#3E34BB</div>
               </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/splash.svg"
-                  alt="Splash screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
+              <div className={styles.colorSwatchItem}>
+                <div className={styles.colorBar} style={{ backgroundColor: "#7678ED" }}></div>
+                <div className={styles.colorCodePanel}>#7678ED</div>
+              </div>
+              <div className={styles.colorSwatchItem}>
+                <div className={styles.colorBar} style={{ backgroundColor: "#F6B802" }}></div>
+                <div className={styles.colorCodePanel}>#F6B802</div>
+              </div>
+              <div className={styles.colorSwatchItem}>
+                <div className={styles.colorBar} style={{ backgroundColor: "#F18702" }}></div>
+                <div className={styles.colorCodePanel}>#F18702</div>
+              </div>
+              <div className={styles.colorSwatchItem}>
+                <div className={styles.colorBar} style={{ backgroundColor: "#F35B05" }}></div>
+                <div className={styles.colorCodePanel}>#F35B05</div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.designImageFrame}>
+            <Image
+              src="/work/citysphere/visual1.png"
+              alt="Visual design reference"
+              width={1200}
+              height={600}
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className={styles.designImage}
+            />
+          </div>
+
+          <div className={styles.visualWideContainer}>
+            <Image
+              src="/work/citysphere/visual2.svg"
+              alt="Visual Design"
+              width={1200}
+              height={400}
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className={styles.visualWideImage}
+            />
+          </div>
+
+          <div className={styles["project-phase__header"]}>
+            <h2 className={styles["project-phase__title"]}>
+              Phase 4 - User Interface
+            </h2>
+          </div>
+
+          <div className={styles.uiCarouselContainer}>
+            <button 
+              className={styles.uiArrowPrev} 
+              onClick={handlePrev}
+              aria-label="Previous UI screen"
+            >
+              ‹
+            </button>
+            
+            <div className={styles.uiCarouselFrame}>
+              <div className={styles.uiImageWrapper}>
+                <div className={styles.uiImageTrack} style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                  {uiScreens.map((screen, index) => (
+                    <div className={styles.uiSlide} key={index}>
+                      <Image
+                        src={screen.src}
+                        alt={screen.title}
+                        width={1200}
+                        height={800}
+                        sizes="(max-width: 900px) 100vw, 800px"
+                        className={styles.uiCarouselImage}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className={styles.uiCarouselText} key={currentSlide}>
+                <h3 className={styles.uiCarouselTitle}>{uiScreens[currentSlide].title}</h3>
+                <p className={styles.uiCarouselDescription}>{uiScreens[currentSlide].description}</p>
               </div>
             </div>
 
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Play Area</h3>
-                <p className={styles.uiText}>
-                  The first instructional screen helps users safely define their physical
-                  interaction zone before the VR session begins.
-                </p>
-                <p className={styles.uiText}>
-                  CitySphere is compatible with both sitting and standing user states to
-                  allow for better accessibility.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/play.svg"
-                  alt="Play area setup screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Using Controllers</h3>
-                <p className={styles.uiText}>
-                  The second instructional screen explains the controller navigations to users.
-                </p>
-                <ul className={styles.bullets}>
-                  <li>Left Joystick allows for movement forward, backward, left and right.</li>
-                  <li>The X button opens the settings and allows users to exit the tour.</li>
-                  <li>The A button is for selection and confirmation.</li>
-                  <li>The Right Trigger is for point and shoot to teleport further in the chosen direction.</li>
-                </ul>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/controllers.svg"
-                  alt="Using controllers screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Hand Gestures</h3>
-                <p className={styles.uiText}>
-                  The final instructional screen showcases hand gestures that users can use
-                  while in the tour to navigate.
-                </p>
-                <ul className={styles.bullets}>
-                  <li>Pointing with the index finger acts as a selection or confirmation.</li>
-                  <li>Pinching the thumb and index finger open and close allows users to zoom in and out while in the tour.</li>
-                  <li>Thumbs up can be used to save or add a specific spot in the tour to favorites.</li>
-                </ul>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/gestures.svg"
-                  alt="Hand gestures screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Home</h3>
-                <p className={styles.uiText}>
-                  After the onboarding instructions, users arrive on the home page where
-                  they can scroll through the available tours to pick one.
-                </p>
-                <p className={styles.uiText}>
-                  There is also a &ldquo;Take me anywhere&rdquo; button that will randomly select
-                  a tour for the users.
-                </p>
-                <p className={styles.uiText}>
-                  Users also have the option to search for a specific tour and see favorite
-                  tours once they save some tours for later.
-                </p>
-                <p className={styles.uiText}>
-                  Once started, the home page will also display any ongoing tours so users
-                  can pick up where they left off upon resuming.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/home.svg"
-                  alt="Home screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Tour Details</h3>
-                <p className={styles.uiText}>
-                  Upon selecting a specific tour, users can see all the details for it including
-                  the duration, the sites covered, and the activities.
-                </p>
-                <p className={styles.uiText}>
-                  They can swipe through images from the tour to get an idea of what it will
-                  look like. By clicking the heart button they can even save the tour to their
-                  favorites for later.
-                </p>
-                <p className={styles.uiText}>
-                  They can proceed with the tour by clicking the &ldquo;Continue&rdquo; button.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/details.svg"
-                  alt="Tour details screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Tour Customisation</h3>
-                <p className={styles.uiText}>
-                  Before starting the tour, users get the option to personalize their virtual visit.
-                </p>
-                <p className={styles.uiText}>They have toggle options for the following&mdash;</p>
-                <ul className={styles.bullets}>
-                  <li>Sounds, including city noises, nature, ambience and narration.</li>
-                  <li>Virtual guide that explains everything the user looks at and tells local stories.</li>
-                  <li>Night time or day time as per the preference of the user.</li>
-                </ul>
-                <p className={styles.uiText}>
-                  After personalising, the users can finally start the tour.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/customise.svg"
-                  alt="Tour customisation screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Tour Begins</h3>
-                <p className={styles.uiText}>
-                  When the users get accustomed to seeing the magnificent view that beholds them,
-                  they can find a utility panel that sticks to the left of their vision.
-                </p>
-                <p className={styles.uiText}>
-                  This panel features a pause and play option, a sound button to adjust the volume,
-                  a camera to take snapshots, a gallery to view their photos, a settings button and
-                  a home button as well.
-                </p>
-                <p className={styles.uiText}>
-                  When they use the right controller and point in a direction an arrow shows up in
-                  their view and they can shoot with the right trigger to teleport in that direction.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/begins.svg"
-                  alt="Tour begins screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Fun Facts</h3>
-                <p className={styles.uiText}>
-                  While moving around and viewing the sites, users will come across information
-                  icons that can be clicked on using controller point and A button or just their
-                  index finger.
-                </p>
-                <p className={styles.uiText}>
-                  On being clicked, it opens a text popup that gives the users a fun fact or piece
-                  of information that can be narrated based on their sound preferences and settings.
-                </p>
-                <p className={styles.uiText}>
-                  Even if their sound settings are toggled off, they can click on the sound icon
-                  on the popup to have it play out loud.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/facts.svg"
-                  alt="Fun facts popup screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>Capture the Moment</h3>
-                <p className={styles.uiText}>
-                  When users see something they really like and want to save, they can click on the
-                  camera icon on the utility panel to open a camera overlay.
-                </p>
-                <p className={styles.uiText}>
-                  They can move their head around to adjust the frame of the shot and the click the
-                  shutter button at the bottom of their view to capture the moment.
-                </p>
-                <p className={styles.uiText}>
-                  The clicked photos hover in their vision for 3 seconds before saving in the gallery
-                  that can also be accessed from the panel or after the tour from the user&apos;s profile.
-                </p>
-                <p className={styles.uiText}>
-                  Any text popups that are open during the shot are also captured!
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/capture.svg"
-                  alt="Capture the moment screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
-            <div className={styles.uiFrame}>
-              <div className={styles.uiCopy}>
-                <h3 className={styles.uiTitle}>End of Tour</h3>
-                <p className={styles.uiText}>
-                  Once the user has almost completed the tour, they are shown a notification that
-                  displays the remaining time.
-                </p>
-                <p className={styles.uiText}>
-                  The users can then choose to either end the tour, or extend it depending on whether
-                  they want to spend more time in their virtual visit.
-                </p>
-                <p className={styles.uiText}>
-                  They can also just dismiss the notification by clicking x and continue with the
-                  time that&apos;s left before the tour ends.
-                </p>
-              </div>
-              <div className={styles.uiMedia}>
-                <Image
-                  src="/work/citysphere/end.svg"
-                  alt="End of tour notification screen"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 900px) 100vw, 640px"
-                  className={styles.uiImage}
-                />
-              </div>
-            </div>
-
+            <button 
+              className={styles.uiArrowNext} 
+              onClick={handleNext}
+              aria-label="Next UI screen"
+            >
+              ›
+            </button>
           </div>
         </div>
 

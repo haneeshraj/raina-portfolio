@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Urbanist } from "next/font/google";
+import { Poppins, Urbanist, Rubik } from "next/font/google";
 import clsx from "clsx";
 
 import "./globals.css";
