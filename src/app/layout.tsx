@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(poppins.variable, urbanist.variable, "font-sans")}>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <main className={styles["main"]}>{children}</main>
         <Footer />

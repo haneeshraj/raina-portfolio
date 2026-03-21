@@ -377,7 +377,64 @@ export default function Home() {
                 with the subject!
               </p>
             </div>
-            <div className={styles["about__images"]}></div>
+            <div className={styles["about__images"]}>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--3"],
+                )}
+              >
+                <Image
+                  src="/images/3.jpeg"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--4"],
+                )}
+              >
+                <Image
+                  src="/images/4.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--5"],
+                )}
+              >
+                <Image
+                  src="/images/5.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--6"],
+                )}
+              >
+                <Image
+                  src="/images/6.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+            </div>
           </div>
           <div
             className={clsx(
@@ -385,7 +442,50 @@ export default function Home() {
               styles["about__section--3"],
             )}
           >
-            <div className={styles["about__images"]}></div>
+            <div className={styles["about__images"]}>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--7"],
+                )}
+              >
+                <Image
+                  src="/images/7.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--8"],
+                )}
+              >
+                <Image
+                  src="/images/8.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--9"],
+                )}
+              >
+                <Image
+                  src="/images/9.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+            </div>
             <div className={styles["about__content-container"]}>
               <p className={styles["about__text"]}>
                 While it may sound like a serious switching of lanes, I truly
