@@ -50,6 +50,18 @@ const Footer = () => {
               </svg>
             </span>
           </div>
+          <p className={styles.footer__hello}>Say Hello!</p>
+          <Link href="/contact" className={styles.footer__contactButton}>
+            Contact Form
+            <span className={styles.footer__contactIcon} aria-hidden="true">
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 5L14 10L6 15V5Z" />
+              </svg>
+            </span>
+          </Link>
+        </div>
+
+        <div className={styles.footer__right}>
           <a className={styles.footer__infoLink} href="mailto:rainamotihar114@gmail.com">
             Email
           </a>
@@ -62,18 +74,6 @@ const Footer = () => {
             LinkedIn
           </a>
           <p className={styles.footer__location}>📍 Toronto, CA</p>
-        </div>
-
-        <div className={styles.footer__right}>
-          <p className={styles.footer__hello}>say hello!</p>
-          <Link href="/contact" className={styles.footer__contactButton}>
-            contact form
-            <span className={styles.footer__contactIcon} aria-hidden="true">
-              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 5L14 10L6 15V5Z" />
-              </svg>
-            </span>
-          </Link>
         </div>
       </div>
     </footer>

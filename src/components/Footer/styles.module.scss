@@ -122,12 +122,16 @@
   font-size: 1.6rem;
   line-height: 1.3;
   word-break: break-word;
-  margin-top: 2rem;
+  margin-top: 0;
 
   &:hover,
   &:focus-visible {
     color: #ffdce6;
   }
+}
+
+.footer__right .footer__infoLink:first-child {
+  margin-top: 9rem;
 }
 
 .footer__infoLink + .footer__infoLink {
@@ -140,11 +144,12 @@
 }
 
 .footer__right {
+  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  gap: 0;
+  gap: 1rem;
   margin-top: 3rem;
 }
 
@@ -152,8 +157,8 @@
   margin: 0;
   font-size: 1.6rem;
   opacity: 0.95;
-  margin-top: 9rem;
-  margin-bottom: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer__contactButton {
