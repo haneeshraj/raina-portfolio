@@ -137,8 +137,14 @@
   align-items: center;
   justify-content: center;
   z-index: 15;
-  pointer-events: none;
+  pointer-events: auto;
   backdrop-filter: blur(2.5px);
+
+  button {
+    width: auto;
+    padding-inline: 3rem;
+    pointer-events: auto;
+  }
 }
 
 .overlayText {

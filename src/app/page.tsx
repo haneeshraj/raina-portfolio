@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.scss";
 import Button from "@/components/Button/Button";
 import clsx from "clsx";
@@ -9,6 +10,7 @@ import ParallaxGallery from "@/components/ParallaxGallery/ParallaxGallery";
 
 export default function Home() {
   const bgRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     let ticking = false;
@@ -31,6 +33,10 @@ export default function Home() {
 
   const handleResumeClick = () => {
     window.open("/Raina Motihar Resume 2025 design.pdf", "_blank");
+  };
+
+  const handleViewWorkClick = () => {
+    router.push("/work");
   };
 
   return (
@@ -264,10 +270,7 @@ export default function Home() {
         <div className={styles.galleryWrapper}>
           <ParallaxGallery />
           <div className={styles.galleryOverlay}>
-            <p className={styles.overlayText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <Button label="View Work" onClick={handleViewWorkClick} />
           </div>
         </div>
       </section>

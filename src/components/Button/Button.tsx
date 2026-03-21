@@ -1,13 +1,18 @@
 import styles from "./styles.module.scss";
+import clsx from "clsx";
 
 interface ButtonProps {
   label: string;
   onClick?: () => void;
+  isActive?: boolean;
 }
 
-export default function Button({ label, onClick }: ButtonProps) {
+export default function Button({ label, onClick, isActive }: ButtonProps) {
   return (
-    <button className={styles["button"]} onClick={onClick}>
+    <button
+      className={clsx(styles["button"], isActive && styles["button--active"])}
+      onClick={onClick}
+    >
       <span className={styles["button__text"]}>{label}</span>
 
       <svg
