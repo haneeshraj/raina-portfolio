@@ -67,7 +67,7 @@ const Footer = () => {
           </a>
           <a
             className={styles.footer__infoLink}
-            href="https://www.linkedin.com/in/raina-motihar-a75672198"
+            href="https://www.linkedin.com/in/raina-motihar-675672198/"
             target="_blank"
             rel="noreferrer"
           >

@@ -4,10 +4,10 @@ export default function ContactPage() {
   return (
     <section className={styles.contact}>
       <div className={styles.contact__card}>
-        <p className={styles.contact__eyebrow}>Let us connect</p>
-        <h1 className={styles.contact__title}>Contact</h1>
+        <p className={styles.contact__eyebrow}>Like what you see?</p>
+        <h1 className={styles.contact__title}>Get in touch</h1>
         <p className={styles.contact__subtitle}>
-          Share a bit about your project and I will reach out soon.
+          Drop a few details about your vision—I&apos;d love to help you bring it to life.
         </p>
 
         <form className={styles.form}>
