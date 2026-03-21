@@ -23,7 +23,7 @@ export default function BunkBuddy() {
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}></div>
             <Image
-              src="/bunkbuddy.svg"
+              src="/work/bunkbuddy/bunkbuddy.svg"
               alt="BunkBuddy Preview"
               width={600}
               height={400}
@@ -49,8 +49,12 @@ export default function BunkBuddy() {
               young newcomers in the GTA find safe, affordable and compatible
               living options.
             </p>
-            <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 15 weeks</p>
-            <p className={styles["info-card__detail"]}><strong>Tools</strong> — Figma, FigJam</p>
+            <p className={styles["info-card__detail"]}>
+              <strong>Timeline</strong> — 15 weeks
+            </p>
+            <p className={styles["info-card__detail"]}>
+              <strong>Tools</strong> — Figma, FigJam
+            </p>
             <p className={styles["info-card__detail"]}>
               <strong>Team</strong> — Capstone Group (Muskaan, Kashish Kakkad)
             </p>
@@ -59,13 +63,16 @@ export default function BunkBuddy() {
           <div className={styles["info-card"]}>
             <h3 className={styles["info-card__title"]}>My Contributions</h3>
             <p className={styles["info-card__text"]}>
-              <strong>User Research</strong> — Survey, data synthesis, user flow diagramming, journey maps.
+              <strong>User Research</strong> — Survey, data synthesis, user flow
+              diagramming, journey maps.
             </p>
             <p className={styles["info-card__text"]}>
-              <strong>User Interface</strong> — Wireframing, high fidelity designs, interactive prototyping, iterations.
+              <strong>User Interface</strong> — Wireframing, high fidelity
+              designs, interactive prototyping, iterations.
             </p>
             <p className={styles["info-card__text"]}>
-              <strong>Usability Testing</strong> — Scenario based testing with 4 participants.
+              <strong>Usability Testing</strong> — Scenario based testing with 4
+              participants.
             </p>
           </div>
         </div>
@@ -147,7 +154,7 @@ export default function BunkBuddy() {
 
           <div className={styles["affinity-diagram"]}>
             <Image
-              src="/affinity-diagramming.svg"
+              src="/work/bunkbuddy/affinity-diagramming.svg"
               alt="Affinity Diagram"
               width={1200}
               height={400}
@@ -289,7 +296,7 @@ export default function BunkBuddy() {
 
           <div className={styles["paper-sketches__container"]}>
             <Image
-              src="/paper-sketches.png"
+              src="/work/bunkbuddy/paper-sketches.png"
               alt="Paper Sketches"
               width={1200}
               height={900}
@@ -317,14 +324,14 @@ export default function BunkBuddy() {
         <div className={styles["design-showcase"]}>
           <div className={styles["design-showcase__images"]}>
             <Image
-              src="/mid-fid-1.png"
+              src="/work/bunkbuddy/mid-fid-1.png"
               alt="Medium Fidelity Screen 1"
               width={250}
               height={540}
               className={styles["design-showcase__image"]}
             />
             <Image
-              src="/mid-fid-2.png"
+              src="/work/bunkbuddy/mid-fid-2.png"
               alt="Medium Fidelity Screen 2"
               width={250}
               height={540}
@@ -404,21 +411,21 @@ export default function BunkBuddy() {
         <div className={styles["matches-showcase"]}>
           <div className={styles["matches-showcase__screens"]}>
             <Image
-              src="/mid-fid-3.png"
+              src="/work/bunkbuddy/mid-fid-3.png"
               alt="Matches Screen 1"
               width={250}
               height={540}
               className={styles["matches-showcase__image"]}
             />
             <Image
-              src="/mid-fid-4.png"
+              src="/work/bunkbuddy/mid-fid-4.png"
               alt="Filters Screen"
               width={250}
               height={540}
               className={styles["matches-showcase__image"]}
             />
             <Image
-              src="/mid-fid-5.png"
+              src="/work/bunkbuddy/mid-fid-5.png"
               alt="Like Profile Modal"
               width={250}
               height={540}
@@ -465,21 +472,21 @@ export default function BunkBuddy() {
         <div className={styles["messaging-showcase"]}>
           <div className={styles["messaging-showcase__screens"]}>
             <Image
-              src="/mid-fid-6.png"
+              src="/work/bunkbuddy/mid-fid-6.png"
               alt="Matches and Messages Screen"
               width={250}
               height={540}
               className={styles["messaging-showcase__image"]}
             />
             <Image
-              src="/mid-fid-7.png"
+              src="/work/bunkbuddy/mid-fid-7.png"
               alt="You Matched Screen 1"
               width={250}
               height={540}
               className={styles["messaging-showcase__image"]}
             />
             <Image
-              src="/mid-fid-8.png"
+              src="/work/bunkbuddy/mid-fid-8.png"
               alt="You Matched Screen 2"
               width={250}
               height={540}
@@ -533,14 +540,14 @@ export default function BunkBuddy() {
         <div className={styles["chat-likes-showcase"]}>
           <div className={styles["chat-likes-showcase__screens"]}>
             <Image
-              src="/mid-fid-9.png"
+              src="/work/bunkbuddy/mid-fid-9.png"
               alt="Chat Screen"
               width={250}
               height={540}
               className={styles["chat-likes-showcase__image"]}
             />
             <Image
-              src="/mid-fid-10.png"
+              src="/work/bunkbuddy/mid-fid-10.png"
               alt="Likes and Recommended Screen"
               width={250}
               height={540}
@@ -581,14 +588,14 @@ export default function BunkBuddy() {
         <div className={styles["saved-profile-showcase"]}>
           <div className={styles["saved-profile-showcase__screens"]}>
             <Image
-              src="/mid-fid-11.png"
+              src="/work/bunkbuddy/mid-fid-11.png"
               alt="Saved Listings Screen"
               width={250}
               height={540}
               className={styles["saved-profile-showcase__image"]}
             />
             <Image
-              src="/mid-fid-12.png"
+              src="/work/bunkbuddy/mid-fid-12.png"
               alt="Profile Screen"
               width={250}
               height={540}
@@ -624,21 +631,21 @@ export default function BunkBuddy() {
         <div className={styles["high-fidelity-showcase"]}>
           <div className={styles["high-fidelity-showcase__screens"]}>
             <Image
-              src="/hi-fi-1.png"
+              src="/work/bunkbuddy/hi-fi-1.png"
               alt="High Fidelity Screen 1"
               width={280}
               height={600}
               className={styles["high-fidelity-showcase__image"]}
             />
             <Image
-              src="/hi-fi-2.png"
+              src="/work/bunkbuddy/hi-fi-2.png"
               alt="High Fidelity Screen 2"
               width={280}
               height={600}
               className={styles["high-fidelity-showcase__image"]}
             />
             <Image
-              src="/hi-fi-3.png"
+              src="/work/bunkbuddy/hi-fi-3.png"
               alt="High Fidelity Screen 3"
               width={280}
               height={600}
@@ -704,14 +711,14 @@ export default function BunkBuddy() {
         <div className={styles["share-filters-showcase"]}>
           <div className={styles["share-filters-showcase__screens"]}>
             <Image
-              src="/hi-fi-4.png"
+              src="/work/bunkbuddy/hi-fi-4.png"
               alt="Share Screen"
               width={250}
               height={540}
               className={styles["share-filters-showcase__image"]}
             />
             <Image
-              src="/hi-fi-5.png"
+              src="/work/bunkbuddy/hi-fi-5.png"
               alt="Filters Screen"
               width={250}
               height={540}
@@ -769,21 +776,21 @@ export default function BunkBuddy() {
         <div className={styles["matches-messages-showcase"]}>
           <div className={styles["matches-messages-showcase__screens"]}>
             <Image
-              src="/hi-fi-6.png"
+              src="/work/bunkbuddy/hi-fi-6.png"
               alt="Matches and Messages Screen"
               width={250}
               height={540}
               className={styles["matches-messages-showcase__image"]}
             />
             <Image
-              src="/hi-fi-7.png"
+              src="/work/bunkbuddy/hi-fi-7.png"
               alt="You Matched Screen"
               width={250}
               height={540}
               className={styles["matches-messages-showcase__image"]}
             />
             <Image
-              src="/hi-fi-8.png"
+              src="/work/bunkbuddy/hi-fi-8.png"
               alt="Chat Screen"
               width={250}
               height={540}
@@ -842,21 +849,21 @@ export default function BunkBuddy() {
         <div className={styles["likes-saved-profile-showcase"]}>
           <div className={styles["likes-saved-profile-showcase__screens"]}>
             <Image
-              src="/hi-fi-9.png"
+              src="/work/bunkbuddy/hi-fi-9.png"
               alt="Likes and Recommended Screen"
               width={250}
               height={540}
               className={styles["likes-saved-profile-showcase__image"]}
             />
             <Image
-              src="/hi-fi-10.png"
+              src="/work/bunkbuddy/hi-fi-10.png"
               alt="Saved Listings Screen"
               width={250}
               height={540}
               className={styles["likes-saved-profile-showcase__image"]}
             />
             <Image
-              src="/hi-fi-11.png"
+              src="/work/bunkbuddy/hi-fi-11.png"
               alt="Profile Screen"
               width={250}
               height={540}
@@ -930,35 +937,45 @@ export default function BunkBuddy() {
 
         <div className={styles["usability-frame"]}>
           <div className={styles["usability-frame__header"]}>
-            <h3 className={styles["usability-frame__label"]}>USABILITY TESTING</h3>
+            <h3 className={styles["usability-frame__label"]}>
+              USABILITY TESTING
+            </h3>
           </div>
-          
+
           <div className={styles["usability-frame__content"]}>
             <div className={styles["usability-stat"]}>
               <h4 className={styles["usability-stat__number"]}>7 Sessions</h4>
               <p className={styles["usability-stat__text"]}>
-                We conducted 7 usability testing sessions to evaluate the AGO app experience.
+                We conducted 7 usability testing sessions to evaluate the AGO
+                app experience.
               </p>
             </div>
 
             <div className={styles["usability-stat"]}>
               <h4 className={styles["usability-stat__number"]}>5 Key Tasks</h4>
               <p className={styles["usability-stat__text"]}>
-                Participants completed 5 key tasks that reflected key app features and user flows.
+                Participants completed 5 key tasks that reflected key app
+                features and user flows.
               </p>
             </div>
 
             <div className={styles["usability-stat"]}>
               <h4 className={styles["usability-stat__number"]}>Participants</h4>
               <p className={styles["usability-stat__text"]}>
-                Our participants were primarily aged 18–30, including Humber College students and friends or family members familiar with art galleries.
+                Our participants were primarily aged 18–30, including Humber
+                College students and friends or family members familiar with art
+                galleries.
               </p>
             </div>
 
             <div className={styles["usability-stat"]}>
-              <h4 className={styles["usability-stat__number"]}>In-person + Remote</h4>
+              <h4 className={styles["usability-stat__number"]}>
+                In-person + Remote
+              </h4>
               <p className={styles["usability-stat__text"]}>
-                To ensure flexibility, some sessions were conducted in-person for direct observation, while others were done remotely via screen sharing.
+                To ensure flexibility, some sessions were conducted in-person
+                for direct observation, while others were done remotely via
+                screen sharing.
               </p>
             </div>
           </div>
@@ -968,30 +985,41 @@ export default function BunkBuddy() {
           <h3 className={styles["key-findings__title"]}>Key Findings</h3>
           <div className={styles["key-findings__grid"]}>
             <div className={styles["finding-card"]}>
-              <h4 className={styles["finding-card__title"]}>Sharing Profiles/Houses</h4>
+              <h4 className={styles["finding-card__title"]}>
+                Sharing Profiles/Houses
+              </h4>
               <p className={styles["finding-card__text"]}>
-                All participants could successfully click on the share button but 2 of them talked about having more options like WhatsApp or Email alongside the Bunk Buddy matches.
+                All participants could successfully click on the share button
+                but 2 of them talked about having more options like WhatsApp or
+                Email alongside the Bunk Buddy matches.
               </p>
             </div>
 
             <div className={styles["finding-card"]}>
-              <h4 className={styles["finding-card__title"]}>Like & Match Flow</h4>
+              <h4 className={styles["finding-card__title"]}>
+                Like & Match Flow
+              </h4>
               <p className={styles["finding-card__text"]}>
-                All 4 participants said they liked how the Match confirmation, but 1 wanted the ability to revisit skipped profiles.
+                All 4 participants said they liked how the Match confirmation,
+                but 1 wanted the ability to revisit skipped profiles.
               </p>
             </div>
 
             <div className={styles["finding-card"]}>
               <h4 className={styles["finding-card__title"]}>Chat Initiation</h4>
               <p className={styles["finding-card__text"]}>
-                Messaging after a match was smooth for all, though 2 participants wanted chat shortcuts directly from the match confirmation screen.
+                Messaging after a match was smooth for all, though 2
+                participants wanted chat shortcuts directly from the match
+                confirmation screen.
               </p>
             </div>
 
             <div className={styles["finding-card"]}>
               <h4 className={styles["finding-card__title"]}>Saved Listings</h4>
               <p className={styles["finding-card__text"]}>
-                Users saved listings easily but 3 participants mentioned adding sort/filter options in the Saved section or a way to separate roommates and houses.
+                Users saved listings easily but 3 participants mentioned adding
+                sort/filter options in the Saved section or a way to separate
+                roommates and houses.
               </p>
             </div>
           </div>
@@ -1017,7 +1045,9 @@ export default function BunkBuddy() {
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
                 <h3 className={styles["feedback-item__number"]}>1.</h3>
-                <h4 className={styles["feedback-item__title"]}>Sharing Options</h4>
+                <h4 className={styles["feedback-item__title"]}>
+                  Sharing Options
+                </h4>
               </div>
               <p className={styles["feedback-item__text"]}>
                 Added users&apos; preferred mode of sharing listings: WhatsApp
@@ -1039,7 +1069,9 @@ export default function BunkBuddy() {
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
                 <h3 className={styles["feedback-item__number"]}>2.</h3>
-                <h4 className={styles["feedback-item__title"]}>Chat Shortcut</h4>
+                <h4 className={styles["feedback-item__title"]}>
+                  Chat Shortcut
+                </h4>
               </div>
               <p className={styles["feedback-item__text"]}>
                 Added a {"'Send Message'"} option on the Matches page, so it is
@@ -1062,7 +1094,9 @@ export default function BunkBuddy() {
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
                 <h3 className={styles["feedback-item__number"]}>3.</h3>
-                <h4 className={styles["feedback-item__title"]}>Revisiting Profiles</h4>
+                <h4 className={styles["feedback-item__title"]}>
+                  Revisiting Profiles
+                </h4>
               </div>
               <p className={styles["feedback-item__text"]}>
                 Added a {"'Recently Viewed'"} section in the Likes page, so in
@@ -1085,7 +1119,9 @@ export default function BunkBuddy() {
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
                 <h3 className={styles["feedback-item__number"]}>4.</h3>
-                <h4 className={styles["feedback-item__title"]}>Sorting Saved Options</h4>
+                <h4 className={styles["feedback-item__title"]}>
+                  Sorting Saved Options
+                </h4>
               </div>
               <p className={styles["feedback-item__text"]}>
                 Added a toggle in the Saved section between saved roommates and
@@ -1116,9 +1152,9 @@ export default function BunkBuddy() {
         <h2 className={styles["takeaways-section__title"]}>My Takeaways</h2>
         <p className={styles["takeaways-section__text"]}>
           Designing Bunk Buddy reinforced the importance of building trust and
-          compatibility into digital experiences that impact real-life decisions.
-          Through research, usability testing, and iterative design, we
-          identified that housing is not just about space &mdash; it&apos;s
+          compatibility into digital experiences that impact real-life
+          decisions. Through research, usability testing, and iterative design,
+          we identified that housing is not just about space &mdash; it&apos;s
           about people, safety, and lifestyle alignment. This project
           strengthened my ability to translate user pain points into thoughtful,
           structured solutions that balance usability, emotion, and real-world
@@ -1129,15 +1165,16 @@ export default function BunkBuddy() {
         <ul className={styles["takeaways-section__list"]}>
           <li>
             Conduct additional usability testing with a larger and more diverse
-            user group to validate navigation clarity and feature discoverability.
+            user group to validate navigation clarity and feature
+            discoverability.
           </li>
           <li>
             Develop high-fidelity micro-interactions (match animation, save
             confirmation, verification badges) to enhance emotional engagement.
           </li>
           <li>
-            Prototype an AI-based compatibility scoring system and test how users
-            interpret and trust that score.
+            Prototype an AI-based compatibility scoring system and test how
+            users interpret and trust that score.
           </li>
           <li>
             Design a roommate agreement and shared expense tracking interface as
