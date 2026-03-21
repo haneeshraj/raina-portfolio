@@ -1035,7 +1035,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/iterated-1.png"
+                src="/work/bunkbuddy/iterated-1.png"
                 alt="Sharing Options"
                 width={300}
                 height={650}
@@ -1059,7 +1059,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/iterated-2.png"
+                src="/work/bunkbuddy/iterated-2.png"
                 alt="Chat Shortcut"
                 width={300}
                 height={650}
@@ -1084,7 +1084,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/iterated-3.png"
+                src="/work/bunkbuddy/iterated-3.png"
                 alt="Revisiting Profiles"
                 width={300}
                 height={650}
@@ -1109,7 +1109,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/iterated-4.png"
+                src="/work/bunkbuddy/iterated-4.png"
                 alt="Sorting Saved Options"
                 width={300}
                 height={650}
