@@ -274,6 +274,143 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* About section */}
+      <section className={styles.about} id="about">
+        <div className={styles["about__heading"]}>
+          <div className={styles["about__heading-small"]}>a little bit</div>
+          <div className={styles["about__heading-big"]}>about me</div>
+          <span className={styles["about__heading-icon"]}>
+            <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#F297A4"
+            >
+              <path d="M24 2L27.5 15.5L38.5 7.5L33 20L46 24L33 28L38.5 40.5L27.5 32.5L24 46L20.5 32.5L9.5 40.5L15 28L2 24L15 20L9.5 7.5L20.5 15.5L24 2Z" />
+            </svg>
+          </span>
+        </div>
+
+        <div className={styles["about__content"]}>
+          <div
+            className={clsx(
+              styles["about__section"],
+              styles["about__section--1"],
+            )}
+          >
+            <div className={styles["about__images"]}>
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--1"],
+                )}
+              >
+                <Image
+                  src="/images/one.png"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>{" "}
+              <div
+                className={clsx(
+                  styles["about__image"],
+                  styles["about__image--2"],
+                )}
+              >
+                <Image
+                  src="/images/2.jpg"
+                  alt="Raina's portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40rem"
+                  priority
+                />
+              </div>
+            </div>
+            <div className={styles["about__content-container"]}>
+              <p className={styles["about__text"]}>
+                I&apos;m a recent graduate from the User Experience Design
+                postgraduate program at Humber Polytechnic, based in Toronto.
+                This extensive course taught me endless skills like visual
+                design principles, deep rooted user research, from interviews to
+                usability testing, and modern tech design for VR/AR, and so much
+                more.
+              </p>
+              <br />
+              <br />
+              <p className={styles["about__text"]}>
+                I was born and raised in New Delhi, the capital of India, a
+                country rife with culture, color and celebrations. The city and
+                my family molded me into a creatively expressive person with a
+                passion for art. This art manifests in so many forms in my life,
+                from paintings to pumpkin carvings, henna tattoos and even
+                dyeing stars on my friends&apos; hair!
+              </p>
+            </div>
+          </div>
+          <div
+            className={clsx(
+              styles["about__section"],
+              styles["about__section--2"],
+            )}
+          >
+            <div className={styles["about__content-container"]}>
+              {" "}
+              <p className={styles["about__text"]}>
+                For the longest time I only treated this passion for art as a
+                hobby, and ended up studying Business Administration,
+                specializing in Digital Marketing. It was only during the
+                pandemic that I delved deeper into Digital Art, Illustrations,
+                and Graphic Design by self-learning and also interning and
+                freelancing for some companies.
+              </p>
+              <br />
+              <br />
+              <p className={styles["about__text"]}>
+                When came the time to decide what I wanted to pursue further in
+                my postgraduation, I took some time off to decide. I worked as a
+                Social Media Marketing and Web Development Executive for an
+                educational institute, simultaneously researched various fields
+                and niches within design. I took up Google&apos;s UX Design
+                Certificate online as a trial and just like that fell in love
+                with the subject!
+              </p>
+            </div>
+            <div className={styles["about__images"]}></div>
+          </div>
+          <div
+            className={clsx(
+              styles["about__section"],
+              styles["about__section--3"],
+            )}
+          >
+            <div className={styles["about__images"]}></div>
+            <div className={styles["about__content-container"]}>
+              <p className={styles["about__text"]}>
+                While it may sound like a serious switching of lanes, I truly
+                felt the benefits of my background in business, while doing UX.
+                A strong sense of product positioning in the market, research
+                and analysis, interacting with and giving presentations to
+                stakeholders (professors), was something that came naturally to
+                me.
+              </p>
+              <br />
+              <br />
+              <p className={styles["about__text"]}>
+                The skills I further honed at Humber, were visual design,
+                creative thinking and actual enjoyment in the entire process of
+                ideation, research, low fidelity to high fidelity designs,
+                prototypes and iterations based on testing. I feel a true sense
+                of accomplishment in being able to create experiences that not
+                only solve logical needs of users, but also meet the business
+                requirements of the company, while being visually appealing of
+                course.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
