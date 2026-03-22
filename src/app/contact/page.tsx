@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabaseClient } from "@/lib/supabase";
 import styles from "./styles.module.scss";
 
 export default function ContactPage() {
@@ -26,6 +26,7 @@ export default function ContactPage() {
     setMessage("");
 
     try {
+      const supabase = getSupabaseClient();
       const { error } = await supabase
         .from("contact_messages")
         .insert([formData]);
@@ -35,8 +36,17 @@ export default function ContactPage() {
       setMessage("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      let errorMessage = "Unknown error occurred";
+      
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (typeof error === "object" && error !== null) {
+        // Handle Supabase errors and other objects
+        errorMessage = (error as any).message || JSON.stringify(error);
+      }
+      
       setMessage("Error sending message. Please try again.");
-      console.error("Error:", error);
+      console.error("Error:", errorMessage);
     } finally {
       setLoading(false);
     }
