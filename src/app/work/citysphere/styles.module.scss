@@ -488,7 +488,7 @@
 
 .takeawayImageGrid {
   display: grid;
-  grid-template-columns: 1.8fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: clamp(2.8rem, 4vw, 4rem);
   align-items: start;
   width: 100%;
@@ -502,9 +502,9 @@
 
 .imageColumn {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 .reflectionLeft {

@@ -666,6 +666,19 @@ export default function CitySphere() {
             </div>
 
             <div className={styles.takeawayImageGrid}>
+              <div className={styles.imageColumn}>
+                <div className={styles.vrImageFrame}>
+                  <Image
+                    src="citysphere/vr.svg"
+                    alt="VR headset"
+                    width={300}
+                    height={300}
+                    sizes="(max-width: 600px) 100vw, 300px"
+                    className={styles.vrImage}
+                  />
+                </div>
+              </div>
+
               <div className={styles.takeawayColumn}>
                 <h3 className={styles.reflectionTitle}>My Takeaways</h3>
                 <p className={styles.reflectionText}>
@@ -679,19 +692,6 @@ export default function CitySphere() {
                   Overall, it strengthened my ability to design experiences that
                   feel both engaging and inclusive.
                 </p>
-              </div>
-
-              <div className={styles.imageColumn}>
-                <div className={styles.vrImageFrame}>
-                  <Image
-                    src="citysphere/vr.svg"
-                    alt="VR headset"
-                    width={300}
-                    height={300}
-                    sizes="(max-width: 600px) 100vw, 300px"
-                    className={styles.vrImage}
-                  />
-                </div>
               </div>
             </div>
           </div>
