@@ -1,5 +1,6 @@
 .navbar {
-  width: 100vw;
+  left: 0;
+  right: 0;
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -22,7 +23,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
     height: 100vh;
     background-color: #e77295;
     z-index: 999;
