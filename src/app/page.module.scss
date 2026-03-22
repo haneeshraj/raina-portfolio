@@ -236,6 +236,10 @@
   &__text {
     font-size: 1.6rem;
     text-align: justify;
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 
   &__content {
@@ -300,10 +304,11 @@
 
     &--3 {
       aspect-ratio: 7/4;
-      width: 11rem;
+      width: 9rem;
+      transform: rotate(10deg);
       position: absolute;
       top: 4rem;
-      right: 6rem;
+      right: 7rem;
       z-index: -1;
     }
 
