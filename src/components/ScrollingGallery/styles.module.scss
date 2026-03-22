@@ -1,0 +1,142 @@
+.scrollingGalleryContainer {
+  display: flex;
+  gap: 1.2rem;
+  height: 100%;
+  width: 65%;
+  align-items: stretch;
+  justify-content: center;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  top: 0;
+}
+
+.column {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.scrollTrackDown,
+.scrollTrackUp {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.scrollTrackDown {
+  animation-name: scrollDown;
+}
+
+.scrollTrackUp {
+  animation-name: scrollUp;
+}
+
+.imageWrapperSquare {
+  flex-shrink: 0;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background: #f0ece8;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.imageWrapperPortrait {
+  flex-shrink: 0;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background: #f0ece8;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .scrollingGalleryContainer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 0.8rem;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .column {
+    height: 100%;
+  }
+
+  .scrollTrackDown,
+  .scrollTrackUp {
+    gap: 1rem;
+    padding: 0.4rem;
+  }
+
+  .imageWrapperSquare {
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5rem;
+  }
+
+  .imageWrapperPortrait {
+    aspect-ratio: 9 / 16;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .scrollingGalleryContainer {
+    width: 55%;
+    padding: 1rem;
+    gap: 0.6rem;
+    right: 0;
+  }
+
+  .scrollTrackDown,
+  .scrollTrackUp {
+    gap: 0.6rem;
+    padding: 0.3rem;
+  }
+
+  .imageWrapperSquare {
+    border-radius: 0.4rem;
+  }
+
+  .imageWrapperPortrait {
+    border-radius: 0.4rem;
+  }
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import styles from "./styles.module.scss";
+import ScrollingGallery from "@/components/ScrollingGallery/ScrollingGallery";
 
 export default function AGOApp() {
   return (
@@ -11,13 +12,25 @@ export default function AGOApp() {
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}>
               <div className={styles["project-hero__gradient"]} />
-              <Image
-                src="/work/ago-app/ago-logo.svg"
-                alt="AGO logo"
-                width={80}
-                height={80}
-                className={styles["hero-logo"]}
-              />
+              <div className={styles["hero-logo-container"]}>
+                <Image
+                  src="/work/ago-app/ago-logo.svg"
+                  alt="AGO logo"
+                  width={80}
+                  height={80}
+                  className={styles["hero-logo"]}
+                />
+                <div className={styles["hero-logo-text"]}>
+                  <p>
+                    An accessible
+                    <br />
+                    digital
+                    <br />
+                    experience
+                  </p>
+                </div>
+              </div>
+              <ScrollingGallery />
             </div>
           </div>
 
