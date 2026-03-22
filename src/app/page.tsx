@@ -478,7 +478,7 @@ export default function Home() {
                 )}
               >
                 <Image
-                  src="/images/9.png"
+                  src="/images/9.PNG"
                   alt="Raina's portrait"
                   fill
                   sizes="(max-width: 768px) 100%, 40rem"
