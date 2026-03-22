@@ -309,7 +309,7 @@ export default function Home() {
                   src="/images/one.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>{" "}
@@ -323,7 +323,7 @@ export default function Home() {
                   src="/images/2.jpg"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -388,7 +388,7 @@ export default function Home() {
                   src="/images/3.jpeg"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -402,7 +402,7 @@ export default function Home() {
                   src="/images/4.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -416,7 +416,7 @@ export default function Home() {
                   src="/images/5.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -430,7 +430,7 @@ export default function Home() {
                   src="/images/6.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -453,7 +453,7 @@ export default function Home() {
                   src="/images/7.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -467,7 +467,7 @@ export default function Home() {
                   src="/images/8.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
@@ -481,7 +481,7 @@ export default function Home() {
                   src="/images/9.png"
                   alt="Raina's portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40rem"
+                  sizes="(max-width: 768px) 100%, 40rem"
                   priority
                 />
               </div>
