@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 import "./globals.css";
 import styles from "./page.module.scss";
+import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(poppins.variable, urbanist.variable, "font-sans")}>
-        {/* <Navbar /> */}
+        <Navbar />
 
         <main className={styles["main"]}>{children}</main>
         <Footer />
