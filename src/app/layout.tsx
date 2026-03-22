@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins, Urbanist, Rubik } from "next/font/google";
+import { Poppins, Urbanist } from "next/font/google";
 import clsx from "clsx";
 
 import "./globals.css";
 import styles from "./page.module.scss";
-import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { getSupabaseClient } from "@/lib/supabase";
+import type { Database } from "@/lib/database.types";
 import styles from "./styles.module.scss";
 
 export default function ContactPage() {
@@ -29,7 +30,7 @@ export default function ContactPage() {
       const supabase = getSupabaseClient();
       const { error } = await supabase
         .from("contact_messages")
-        .insert([formData]);
+        .insert([formData] as unknown as Database["public"]["Tables"]["contact_messages"]["Insert"][]);
 
       if (error) throw error;
 
@@ -42,7 +43,7 @@ export default function ContactPage() {
         errorMessage = error.message;
       } else if (typeof error === "object" && error !== null) {
         // Handle Supabase errors and other objects
-        errorMessage = (error as any).message || JSON.stringify(error);
+        errorMessage = (error as Record<string, unknown>).message as string || JSON.stringify(error);
       }
       
       setMessage("Error sending message. Please try again.");
