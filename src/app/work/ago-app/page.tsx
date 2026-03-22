@@ -7,42 +7,40 @@ export default function AGOApp() {
     <div className={styles.page}>
       {/* ── HERO ─────────────────────────────────────────── */}
       <div className={styles["project-hero"]}>
-        <div className={styles.container}>
-          <div className={styles["project-hero__content"]}>
-            <div className={styles["project-hero__left"]}>
-              <h1 className={styles["project-hero__title"]}>AGO App</h1>
-              <p className={styles["project-hero__subtitle"]}>
-                Redesigning the Gallery experience
-              </p>
-              <div className={styles["project-hero__tags"]}>
-                <span className={styles.tag}>User Research</span>
-                <span className={styles.tag}>Wireframing</span>
-                <span className={styles.tag}>Interaction Design</span>
-                <span className={styles.tag}>Usability Testing</span>
-              </div>
-            </div>
-
-            <div className={styles["project-hero__right"]}>
-              <div className={styles.heroPreviewCard}>
-                <Image
-                  src="/work/ago-app/hero.svg"
-                  alt="AGO App preview"
-                  width={900}
-                  height={560}
-                  priority
-                  sizes="(max-width: 900px) 100vw, 560px"
-                  className={styles["project-hero__image"]}
-                />
-              </div>
+        <div className={styles["project-hero__content"]}>
+          <div className={styles["project-hero__right"]}>
+            <div className={styles.heroPreviewCard}>
+              <Image
+                src="/work/ago-app/hero.svg"
+                alt="AGO App preview"
+                width={900}
+                height={560}
+                priority
+                sizes="(max-width: 900px) 100vw, 560px"
+                className={styles["project-hero__image"]}
+              />
             </div>
           </div>
 
-          <div className={styles["project-description"]}>
-            <p className={styles["project-description__text"]}>
-              AGO: designing an app that enhances the experience of visiting and
-              exploring the AGO.
+          <div className={styles["project-hero__left"]}>
+            <h1 className={styles["project-hero__title"]}>AGO App</h1>
+            <p className={styles["project-hero__subtitle"]}>
+              Redesigning the Gallery experience
             </p>
+            <div className={styles["project-hero__tags"]}>
+              <span className={styles.tag}>User Research</span>
+              <span className={styles.tag}>Wireframing</span>
+              <span className={styles.tag}>Interaction Design</span>
+              <span className={styles.tag}>Usability Testing</span>
+            </div>
           </div>
+        </div>
+
+        <div className={styles["project-description"]}>
+          <p className={styles["project-description__text"]}>
+            AGO: designing an app that enhances the experience of visiting and
+            exploring the AGO.
+          </p>
         </div>
       </div>
 

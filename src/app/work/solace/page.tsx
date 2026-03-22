@@ -7,42 +7,40 @@ export default function Solace() {
     <div className={styles.page}>
       {/* ── HERO ─────────────────────────────────────────── */}
       <div className={styles["project-hero"]}>
-        <div className={styles.container}>
-          <div className={styles["project-hero__content"]}>
-            <div className={styles["project-hero__left"]}>
-              <h1 className={styles["project-hero__title"]}>Solace</h1>
-              <p className={styles["project-hero__subtitle"]}>
-                Voice User Interface for AI Therapy
-              </p>
-              <div className={styles["project-hero__tags"]}>
-                <span className={styles.tag}>Desk Research</span>
-                <span className={styles.tag}>Wireframing</span>
-                <span className={styles.tag}>AI Personality Design</span>
-                <span className={styles.tag}>High Fidelity Prototype</span>
-              </div>
-            </div>
-
-            <div className={styles["project-hero__right"]}>
-              <div className={styles.heroPreviewCard}>
-                <Image
-                  src="/work/solace/hero.png"
-                  alt="Solace preview"
-                  width={900}
-                  height={560}
-                  priority
-                  sizes="(max-width: 900px) 100vw, 560px"
-                  className={styles["project-hero__image"]}
-                />
-              </div>
+        <div className={styles["project-hero__content"]}>
+          <div className={styles["project-hero__right"]}>
+            <div className={styles.heroPreviewCard}>
+              <Image
+                src="/work/solace/hero.png"
+                alt="Solace preview"
+                width={900}
+                height={560}
+                priority
+                sizes="(max-width: 900px) 100vw, 560px"
+                className={styles["project-hero__image"]}
+              />
             </div>
           </div>
 
-          <div className={styles["project-description"]}>
-            <p className={styles["project-description__text"]}>
-              Solace: designing a voice user interface for an AI driven mental
-              health companion.
+          <div className={styles["project-hero__left"]}>
+            <h1 className={styles["project-hero__title"]}>Solace</h1>
+            <p className={styles["project-hero__subtitle"]}>
+              Voice User Interface for AI Therapy
             </p>
+            <div className={styles["project-hero__tags"]}>
+              <span className={styles.tag}>Desk Research</span>
+              <span className={styles.tag}>Wireframing</span>
+              <span className={styles.tag}>AI Personality Design</span>
+              <span className={styles.tag}>High Fidelity Prototype</span>
+            </div>
           </div>
+        </div>
+
+        <div className={styles["project-description"]}>
+          <p className={styles["project-description__text"]}>
+            Solace: designing a voice user interface for an AI driven mental
+            health companion.
+          </p>
         </div>
       </div>
 

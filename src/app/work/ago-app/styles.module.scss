@@ -13,33 +13,39 @@
 
 /* ── HERO ─────────────────────────────────────────── */
 .project-hero {
-  padding: clamp(4rem, 7vw, 8rem) 0;
+  padding: 0;
   position: relative;
+  margin-bottom: clamp(3rem, 5vw, 6rem);
 
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(3rem, 6vw, 8rem);
-    align-items: center;
-    margin-bottom: clamp(4rem, 6vw, 8rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    width: min(1200px, calc(100% - 4rem));
+    margin: 0 auto;
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
+    gap: clamp(1.5rem, 2.5vw, 2rem);
+    padding: clamp(3rem, 5vw, 6rem) 0;
+    align-items: flex-start;
+    max-width: 70%;
   }
 
   &__title {
-    font-size: 6rem;
+    font-size: clamp(3.4rem, 5vw, 6rem);
     font-weight: 700;
     font-style: normal;
     margin: 0;
     color: #762828;
+    letter-spacing: -0.02em;
   }
 
   &__subtitle {
-    font-size: 2.4rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
     color: #333;
     margin: 0;
   }
@@ -53,6 +59,7 @@
   &__right {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   &__image {
@@ -65,34 +72,36 @@
 
 .heroPreviewCard {
   width: 100%;
-  max-width: 58rem;
-  border-radius: 2rem;
+  max-width: 100%;
+  border-radius: 1.5rem;
+  padding: 0;
   overflow: hidden;
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.12);
-  min-height: 28rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  line-height: 0;
 }
 
 .project-description {
-  text-align: center;
+  text-align: left;
+  padding: clamp(2rem, 3vw, 4rem) 0;
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
 
   &__text {
-    font-size: 2.8rem;
+    font-size: clamp(1.9rem, 2.2vw, 2.8rem);
     color: #333;
-    line-height: 1.6;
-    max-width: 90rem;
-    margin: 0 auto;
+    line-height: 1.55;
+    max-width: none;
+    margin: 0;
   }
 }
 
 /* ── TAGS ─────────────────────────────────────────── */
 .tag {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 2.5rem;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
 
   &:nth-child(1) {
     background-color: #f4a1a1;

@@ -7,6 +7,20 @@ export default function BunkBuddy() {
     <>
       <div className={styles["project-hero"]}>
         <div className={styles["project-hero__content"]}>
+          <div className={styles["project-hero__right"]}>
+            <div className={styles.heroPreviewCard}>
+              <Image
+                src="/work/bunkbuddy/bunkbuddy.svg"
+                alt="BunkBuddy Preview"
+                width={900}
+                height={560}
+                priority
+                sizes="(max-width: 900px) 100vw, 560px"
+                className={styles["project-hero__image"]}
+              />
+            </div>
+          </div>
+
           <div className={styles["project-hero__left"]}>
             <h1 className={styles["project-hero__title"]}>BunkBuddy</h1>
             <p className={styles["project-hero__subtitle"]}>
@@ -18,17 +32,6 @@ export default function BunkBuddy() {
               <span className={styles["tag"]}>Usability Testing</span>
               <span className={styles["tag"]}>High Fidelity Prototype</span>
             </div>
-          </div>
-
-          <div className={styles["project-hero__right"]}>
-            <div className={styles.heroPreviewCard}></div>
-            <Image
-              src="/work/bunkbuddy/bunkbuddy.svg"
-              alt="BunkBuddy Preview"
-              width={600}
-              height={400}
-              className={styles["project-hero__image"]}
-            />
           </div>
         </div>
 
