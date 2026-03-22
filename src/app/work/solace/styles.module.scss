@@ -68,6 +68,17 @@
     border-radius: 0;
     display: block;
   }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    display: block;
+    mix-blend-mode: screen;
+  }
 }
 
 .heroPreviewCard {
@@ -79,6 +90,7 @@
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.12);
   display: block;
   line-height: 0;
+  position: relative;
 }
 
 .project-description {

@@ -11,13 +11,22 @@ export default function Solace() {
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}>
               <Image
-                src="/work/solace/hero.png"
+                src="/work/solace/solace-thumbnail-bg.svg"
                 alt="Solace preview"
                 width={900}
                 height={560}
                 priority
                 sizes="(max-width: 900px) 100vw, 560px"
                 className={styles["project-hero__image"]}
+              />
+              <Image
+                src="/work/solace/solace.gif"
+                alt="Solace animation"
+                width={900}
+                height={560}
+                priority
+                sizes="(max-width: 900px) 100vw, 560px"
+                className={styles["project-hero__overlay"]}
               />
             </div>
           </div>

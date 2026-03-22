@@ -10,14 +10,13 @@ export default function AGOApp() {
         <div className={styles["project-hero__content"]}>
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}>
+              <div className={styles["project-hero__gradient"]} />
               <Image
-                src="/work/ago-app/hero.svg"
-                alt="AGO App preview"
-                width={900}
-                height={560}
-                priority
-                sizes="(max-width: 900px) 100vw, 560px"
-                className={styles["project-hero__image"]}
+                src="/work/ago-app/ago-logo.svg"
+                alt="AGO logo"
+                width={80}
+                height={80}
+                className={styles["hero-logo"]}
               />
             </div>
           </div>

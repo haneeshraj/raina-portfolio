@@ -100,14 +100,21 @@ export default function CitySphere() {
         <div className={styles["project-hero__content"]}>
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}>
-              <Image
-                src="/work/citysphere/a.svg"
-                alt="CitySphere preview"
+              <video
+                src="/work/citysphere/citysphere-thumbnail.mp4"
                 width={1200}
                 height={675}
-                priority
-                sizes="(max-width: 1200px) 100vw, 1200px"
+                autoPlay
+                muted
+                loop
                 className={styles["project-hero__image"]}
+              />
+              <Image
+                src="/work/citysphere/citysphere thumbnail overlay.png"
+                alt="CitySphere overlay"
+                width={600}
+                height={337}
+                className={styles["project-hero__overlay"]}
               />
             </div>
           </div>
