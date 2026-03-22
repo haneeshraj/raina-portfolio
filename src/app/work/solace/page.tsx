@@ -64,26 +64,31 @@ export default function Solace() {
                 stress, track emotions, and access quick support through AI
                 guided activities and check-ins.
               </p>
-              <p className={styles["info-card__detail"]}><strong>Timeline</strong> — 3 weeks</p>
+              <p className={styles["info-card__detail"]}>
+                <strong>Timeline</strong> — 3 weeks
+              </p>
               <p className={styles["info-card__detail"]}>
                 <strong>Tools</strong> — Figma, FigJam, Voiceflow
               </p>
               <p className={styles["info-card__detail"]}>
-                <strong>Team</strong> — Product Design Group (Wajiha, Eman &amp; Amal)
+                <strong>Team</strong> — Product Design Group (Wajiha, Eman &amp;
+                Amal)
               </p>
             </div>
 
             <div className={styles["info-card"]}>
               <h3 className={styles["info-card__title"]}>My Contributions</h3>
               <p className={styles["info-card__text"]}>
-                <strong>Desk Research</strong> — Competitor analysis. News. Articles. Journals.
+                <strong>Desk Research</strong> — Competitor analysis. News.
+                Articles. Journals.
               </p>
               <p className={styles["info-card__text"]}>
-                <strong>AI Personality</strong> — Defining character traits for Solace
+                <strong>AI Personality</strong> — Defining character traits for
+                Solace
               </p>
               <p className={styles["info-card__text"]}>
-                <strong>User Interface</strong> — Designing the logo, high fidelity designs,
-                interactive prototyping, audio inclusion.
+                <strong>User Interface</strong> — Designing the logo, high
+                fidelity designs, interactive prototyping, audio inclusion.
               </p>
             </div>
           </div>
@@ -471,10 +476,18 @@ export default function Solace() {
               <h3 className={styles.flowTitle}>Conversation Flow</h3>
               <div className={styles.flowLegend}>
                 <div className={styles.flowLegendItem}>
-                  <div className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--user"]}`}>User</div>
+                  <div
+                    className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--user"]}`}
+                  >
+                    User
+                  </div>
                 </div>
                 <div className={styles.flowLegendItem}>
-                  <div className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--solace"]}`}>Solace</div>
+                  <div
+                    className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--solace"]}`}
+                  >
+                    Solace
+                  </div>
                 </div>
               </div>
               <div className={styles.flowImageWrap}>
@@ -509,8 +522,8 @@ export default function Solace() {
                       interactions and offers sympathy.
                     </li>
                     <li>
-                      If the user doesn&apos;t want to talk further, Solace
-                      asks if there&apos;s anything else it can do.
+                      If the user doesn&apos;t want to talk further, Solace asks
+                      if there&apos;s anything else it can do.
                     </li>
                     <li>
                       If Solace detects a lot of emotional turbulence it offers
@@ -525,10 +538,18 @@ export default function Solace() {
             <div className={styles.flowDiagramWrap}>
               <div className={styles.flowLegend}>
                 <div className={styles.flowLegendItem}>
-                  <div className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--user"]}`}>User</div>
+                  <div
+                    className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--user"]}`}
+                  >
+                    User
+                  </div>
                 </div>
                 <div className={styles.flowLegendItem}>
-                  <div className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--solace"]}`}>Solace</div>
+                  <div
+                    className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--solace"]}`}
+                  >
+                    Solace
+                  </div>
                 </div>
               </div>
               <div className={styles.flowImageWrap}>
@@ -553,8 +574,8 @@ export default function Solace() {
                 <li>
                   If the user further refuses, Solace can offer starting a
                   conversation with a friend, or if it observes threat to the
-                  user&apos;s stability and safety, it alerts authorities of their
-                  condition.
+                  user&apos;s stability and safety, it alerts authorities of
+                  their condition.
                 </li>
               </ul>
             </div>
@@ -562,10 +583,18 @@ export default function Solace() {
             <div className={styles.flowDiagramWrap}>
               <div className={styles.flowLegend}>
                 <div className={styles.flowLegendItem}>
-                  <div className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--user"]}`}>User</div>
+                  <div
+                    className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--user"]}`}
+                  >
+                    User
+                  </div>
                 </div>
                 <div className={styles.flowLegendItem}>
-                  <div className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--solace"]}`}>Solace</div>
+                  <div
+                    className={`${styles.flowLegendIcon} ${styles["flowLegendIcon--solace"]}`}
+                  >
+                    Solace
+                  </div>
                 </div>
               </div>
               <div className={styles.flowImageWrap}>
@@ -658,7 +687,7 @@ export default function Solace() {
             <div className={styles.screenItem}>
               <div className={styles.screenImageWrap}>
                 <Image
-                  src="/work/solace/multiple.svgn"
+                  src="/work/solace/multiple.svg"
                   alt="Multiple responses"
                   width={400}
                   height={800}
@@ -697,10 +726,11 @@ export default function Solace() {
               <p className={styles.reflectionText}>
                 Moving forward, I would explore deeper personalization using
                 mood patterns and long-term behavior insights. I&apos;d also
-                like to expand the emotional toolkit with more guided activities,
-                audio-based grounding, and crisis-support pathways. Conducting
-                broader user testing with diverse age groups would help validate
-                emotional tone and accessibility across different needs.
+                like to expand the emotional toolkit with more guided
+                activities, audio-based grounding, and crisis-support pathways.
+                Conducting broader user testing with diverse age groups would
+                help validate emotional tone and accessibility across different
+                needs.
               </p>
             </div>
           </div>

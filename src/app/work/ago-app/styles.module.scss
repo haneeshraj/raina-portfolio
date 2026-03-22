@@ -72,7 +72,14 @@
   &__gradient {
     width: 100%;
     height: 675px;
-    background: linear-gradient(to top, #7E0F0F 0%, #892525 7%, #973F3F 15%, #D3AEAE 44%, #FFFFFF 78%);
+    background: linear-gradient(
+      to top,
+      #7e0f0f 0%,
+      #892525 7%,
+      #973f3f 15%,
+      #d3aeae 44%,
+      #ffffff 78%
+    );
     display: block;
   }
 }
@@ -157,14 +164,18 @@
 .info-card {
   background-color: #fde6dd;
   border: 1px solid #f5c9bb;
-  border-left: 5px solid #8B3A3A;
+  border-left: 5px solid #8b3a3a;
   border-radius: 1.8rem;
   padding: 4rem;
-  box-shadow: 0 4px 16px rgba(139, 58, 58, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 4px 16px rgba(139, 58, 58, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    box-shadow: 0 12px 32px rgba(139, 58, 58, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 12px 32px rgba(139, 58, 58, 0.12),
+      0 4px 12px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
     border-color: #edad99;
   }
@@ -172,7 +183,7 @@
   &__title {
     font-size: 2.4rem;
     font-weight: 600;
-    color: #8B3A3A;
+    color: #8b3a3a;
     margin-bottom: 2rem;
   }
 
@@ -184,7 +195,7 @@
 
     strong {
       font-weight: 700;
-      color: #8B3A3A;
+      color: #8b3a3a;
     }
   }
 
@@ -195,7 +206,7 @@
 
     strong {
       font-weight: 700;
-      color: #8B3A3A;
+      color: #8b3a3a;
     }
   }
 }
@@ -299,9 +310,15 @@
   width: fit-content;
 }
 
-.rmTagOrange { background-color: #f5a623; }
-.rmTagGreen  { background-color: #b5e38a; }
-.rmTagPurple { background-color: #c4a0e8; }
+.rmTagOrange {
+  background-color: #f5a623;
+}
+.rmTagGreen {
+  background-color: #b5e38a;
+}
+.rmTagPurple {
+  background-color: #c4a0e8;
+}
 
 .rmDuration {
   font-size: 4.8rem;
@@ -331,8 +348,12 @@
   padding: clamp(2.8rem, 4vw, 5rem);
 }
 
-.splitPink     { background-color: #fddbd0; }
-.splitLavender { background-color: #ede0f5; }
+.splitPink {
+  background-color: #fddbd0;
+}
+.splitLavender {
+  background-color: #ede0f5;
+}
 
 .splitOrange {
   background-color: #f5a623;
@@ -463,10 +484,18 @@
   outline: 0.5px solid rgba(0, 0, 0, 0.35);
 }
 
-.swotCellGreen  { background-color: #c8e6c9; }
-.swotCellBlue   { background-color: #bbdefb; }
-.swotCellYellow { background-color: #fff9c4; }
-.swotCellSalmon { background-color: #ffcdd2; }
+.swotCellGreen {
+  background-color: #c8e6c9;
+}
+.swotCellBlue {
+  background-color: #bbdefb;
+}
+.swotCellYellow {
+  background-color: #fff9c4;
+}
+.swotCellSalmon {
+  background-color: #ffcdd2;
+}
 
 .swotCellTitle {
   font-size: 1.6rem;
@@ -529,7 +558,7 @@
 
 .surveyCardCount {
   font-size: 1.2rem;
-  color: #8B3A3A;
+  color: #8b3a3a;
   margin: 0;
 }
 
@@ -582,7 +611,9 @@
   gap: 2rem;
 }
 
-.personaBentoBackground { grid-area: background; }
+.personaBentoBackground {
+  grid-area: background;
+}
 
 .personaBentoPain {
   grid-area: painpoints;
@@ -751,7 +782,7 @@
   height: auto;
   display: block;
   border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
 /* ── JOURNEY MAP ──────────────────────────────────── */
@@ -772,7 +803,7 @@
 }
 
 .journeyBigTitle {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: clamp(2.4rem, 2.5vw, 3.2rem);
   font-weight: 900;
   letter-spacing: 0.05em;
@@ -1050,7 +1081,13 @@
   width: 100%;
   border-radius: 2rem;
   overflow: hidden;
-  background: linear-gradient(135deg, #4a1520 0%, #7a2a2a 35%, #9e3d2a 65%, #6b2c1a 100%);
+  background: linear-gradient(
+    135deg,
+    #4a1520 0%,
+    #7a2a2a 35%,
+    #9e3d2a 65%,
+    #6b2c1a 100%
+  );
   padding: clamp(2.4rem, 4vw, 4rem);
   display: flex;
   flex-direction: column;
@@ -1234,7 +1271,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1.2rem;
     left: 2.4rem;

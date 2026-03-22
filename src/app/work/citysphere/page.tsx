@@ -682,15 +682,16 @@ export default function CitySphere() {
               <div className={styles.takeawayColumn}>
                 <h3 className={styles.reflectionTitle}>My Takeaways</h3>
                 <p className={styles.reflectionText}>
-                  Working on CitySphere taught me how different designing for VR is
-                  compared to traditional apps, especially when it comes to comfort,
-                  clarity, and intuitive spatial interaction. I learned to simplify
-                  movement, reduce visual clutter, and design UI that feels natural
-                  inside a 3D environment. This project helped me think more deeply
-                  about accessibility and how immersive technology can remove
-                  barriers for people who can&apos;t easily explore new places.
-                  Overall, it strengthened my ability to design experiences that
-                  feel both engaging and inclusive.
+                  Working on CitySphere taught me how different designing for VR
+                  is compared to traditional apps, especially when it comes to
+                  comfort, clarity, and intuitive spatial interaction. I learned
+                  to simplify movement, reduce visual clutter, and design UI
+                  that feels natural inside a 3D environment. This project
+                  helped me think more deeply about accessibility and how
+                  immersive technology can remove barriers for people who
+                  can&apos;t easily explore new places. Overall, it strengthened
+                  my ability to design experiences that feel both engaging and
+                  inclusive.
                 </p>
               </div>
             </div>
