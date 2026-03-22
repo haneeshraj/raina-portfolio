@@ -1041,6 +1041,7 @@ export default function BunkBuddy() {
                 height={650}
                 className={styles["feedback-item__image"]}
               />
+              <div className={styles["feedback-item__rectangle-1"]}></div>
             </div>
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
@@ -1065,6 +1066,7 @@ export default function BunkBuddy() {
                 height={650}
                 className={styles["feedback-item__image"]}
               />
+              <div className={styles["feedback-item__rectangle-2"]}></div>
             </div>
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
@@ -1090,6 +1092,7 @@ export default function BunkBuddy() {
                 height={650}
                 className={styles["feedback-item__image"]}
               />
+              <div className={styles["feedback-item__rectangle-3"]}></div>
             </div>
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>
@@ -1115,6 +1118,7 @@ export default function BunkBuddy() {
                 height={650}
                 className={styles["feedback-item__image"]}
               />
+              <div className={styles["feedback-item__rectangle-4"]}></div>
             </div>
             <div className={styles["feedback-item__content"]}>
               <div className={styles["feedback-item__header"]}>

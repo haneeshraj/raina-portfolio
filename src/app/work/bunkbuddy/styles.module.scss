@@ -110,12 +110,16 @@
   border-left: 5px solid #8b4789;
   border-radius: 1.8rem;
   padding: 4rem;
-  box-shadow: 0 4px 16px rgba(139, 71, 137, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 4px 16px rgba(139, 71, 137, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 
   &:hover {
-    box-shadow: 0 12px 32px rgba(139, 71, 137, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 12px 32px rgba(139, 71, 137, 0.12),
+      0 4px 12px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
     border-color: #dcc0dc;
   }
@@ -1171,6 +1175,36 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  position: relative;
+
+  &__rectangle-1 {
+    position: absolute;
+    width: 30rem;
+    height: 5rem;
+    outline: 3px solid #b218e5;
+    bottom: 11.5rem;
+  }
+  &__rectangle-2 {
+    position: absolute;
+    width: 30rem;
+    height: 5rem;
+    outline: 3px solid #b218e5;
+    bottom: 25.5rem;
+  }
+  &__rectangle-3 {
+    position: absolute;
+    width: 30rem;
+    height: 5rem;
+    outline: 3px solid #b218e5;
+    bottom: 34.5rem;
+  }
+  &__rectangle-4 {
+    position: absolute;
+    width: 30rem;
+    height: 5rem;
+    outline: 3px solid #b218e5;
+    top: 5.5rem;
+  }
 
   &__image-container {
     width: 100%;
@@ -1291,11 +1325,15 @@
   border-left: 5px solid #8b4789;
   border-radius: 1.8rem;
   padding: 3rem;
-  box-shadow: 0 4px 16px rgba(139, 71, 137, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 4px 16px rgba(139, 71, 137, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    box-shadow: 0 12px 32px rgba(139, 71, 137, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 12px 32px rgba(139, 71, 137, 0.12),
+      0 4px 12px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
     border-color: #dcc0dc;
   }
