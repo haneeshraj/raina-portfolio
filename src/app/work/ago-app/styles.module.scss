@@ -1292,7 +1292,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 4rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .kfGroup {
@@ -1312,9 +1312,10 @@
 
 /* single image per side — large, natural proportions */
 .kfScreen {
-  width: clamp(30rem, 38vw, 50rem);
+  width: clamp(20rem, 35vw, 50rem);
   height: auto;
   display: block;
+  max-width: 100%;
 }
 
 /* multiple images per side — fixed aspect so all match */
@@ -1495,6 +1496,35 @@
   .journeyPersonaInfo {
     max-width: 100%;
   }
+
+  .kfBeforeAfter {
+    gap: 2.4rem;
+  }
+
+  .kfScreen {
+    width: clamp(18rem, 40vw, 45rem);
+  }
+
+  .kfArrow {
+    display: none;
+  }
+
+  .metricsNote {
+    font-size: 1.4rem;
+  }
+
+  .metricsHead {
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .metricsTable {
+    font-size: 1.4rem;
+  }
+
+  .metricsCell {
+    padding: 0.8rem 1.2rem;
+  }
 }
 
 /* ─ Mobile (≤ 600px) ─────────────────────────────── */
@@ -1579,14 +1609,169 @@
   }
 
   .persona {
-    padding: 2rem;
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .personaBentoCard {
+    padding: 1.6rem;
+  }
+
+  .personaAvatarImg {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .personaAvatarInfo {
+    gap: 0.4rem;
   }
 
   .personaName {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+  }
+
+  .personaBentoCardTitle {
+    font-size: 1.6rem;
+    margin: 0 0 1rem;
+  }
+
+  .personaCardList li {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
   }
 
   .medFiGrid {
     grid-template-columns: 1fr;
+  }
+
+  .metricsTableWrap {
+    overflow-x: visible;
+    border-radius: 0;
+    border: none;
+  }
+
+  .metricsTable {
+    width: 100%;
+    display: block;
+    border-collapse: separate;
+  }
+
+  .metricsTable thead {
+    display: none;
+  }
+
+  .metricsTable tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .metricsRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #f5b89a;
+    border-radius: 1.2rem;
+    border: 1px solid #e89a7f;
+    overflow: hidden;
+
+    &:not(:last-child) td {
+      border-bottom: 1px solid #e89a7f;
+    }
+
+    td {
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
+
+  .metricsCell {
+    padding: 1rem 1.2rem;
+    border: none;
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    &:first-child {
+      font-weight: 600;
+      color: #111;
+      padding: 1.2rem 1.2rem 0.8rem;
+      grid-column: 1 / -1;
+      margin-bottom: 0.4rem;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      position: relative;
+      padding-top: 2.2rem;
+    }
+
+    &:nth-child(2)::before {
+      content: "Success Rate";
+      position: absolute;
+      top: 0.6rem;
+      left: 1.2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #8b3a3a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    &:nth-child(3)::before {
+      content: "Avg. Time";
+      position: absolute;
+      top: 0.6rem;
+      left: 1.2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #8b3a3a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .takeawaysBlock {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .takeawaysCard {
+    padding: 1.6rem;
+  }
+
+  .takeawaysEyebrow {
+    font-size: 1.6rem;
+  }
+
+  .takeawaysText {
+    font-size: 1.5rem;
+  }
+
+  .metricsHead {
+    display: none;
+  }
+
+  .kfBeforeAfter {
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-content: center;
+  }
+
+  .kfScreen {
+    width: clamp(15rem, 85vw, 35rem);
+    max-width: 100%;
+  }
+
+  .kfGroup {
+    flex-shrink: 1;
+    width: 100%;
+  }
+
+  .kfArrow {
+    transform: rotate(90deg);
+    font-size: 2.4rem;
+    margin: 0.6rem 0;
   }
 }
