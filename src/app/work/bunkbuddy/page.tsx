@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import BeforeAfterSlider from "@/components/BeforeAfterSlider/BeforeAfterSlider";
 import styles from "./styles.module.scss";
 
 export default function BunkBuddy() {
@@ -178,7 +179,7 @@ export default function BunkBuddy() {
 
         <div className={styles["journey-map"]}>
           <Image
-            src="/journey-map.png"
+            src="/work/bunkbuddy/journey-map.png"
             alt="Journey Map: Searching for a Room & Roommates"
             width={1200}
             height={800}
@@ -241,48 +242,36 @@ export default function BunkBuddy() {
           </p>
 
           <div className={styles["co-creation__images"]}>
-            <div className={styles["co-creation__image-container"]}>
-              <h4 className={styles["co-creation__label"]}>BEFORE</h4>
-              <Image
-                src="/card-sorting-before.png"
-                alt="Co-creation workshop before"
-                width={600}
-                height={500}
-                className={styles["co-creation__image"]}
-              />
-            </div>
+            <BeforeAfterSlider
+              beforeImage="/work/bunkbuddy/card-sort-before.png"
+              afterImage="/work/bunkbuddy/card-sort-after.png"
+              beforeAlt="Co-creation workshop before"
+              afterAlt="Co-creation workshop after"
+              width={900}
+              height={700}
+            />
+          </div>
 
-            <div className={styles["co-creation__image-container"]}>
-              <h4 className={styles["co-creation__label"]}>AFTER</h4>
-              <Image
-                src="/card-sorting-after.png"
-                alt="Co-creation workshop after"
-                width={600}
-                height={500}
-                className={styles["co-creation__image"]}
-              />
-            </div>
-            <div className={styles["info-architecture"]}>
-              <h2 className={styles["info-architecture__title"]}>
-                Information Architecture
-              </h2>
-              <p className={styles["info-architecture__text"]}>
-                Based on insights from card sorting and other research, a
-                sitemap and content hierarchy was created that ensured that
-                users could efficiently find what they were looking for. This
-                structure aimed to organize the app in a clear, logical way that
-                supported easy navigation and task completion.
-              </p>
+          <div className={styles["info-architecture"]}>
+            <h2 className={styles["info-architecture__title"]}>
+              Information Architecture
+            </h2>
+            <p className={styles["info-architecture__text"]}>
+              Based on insights from card sorting and other research, a
+              sitemap and content hierarchy was created that ensured that
+              users could efficiently find what they were looking for. This
+              structure aimed to organize the app in a clear, logical way that
+              supported easy navigation and task completion.
+            </p>
 
-              <div className={styles["info-architecture__diagram"]}>
-                <Image
-                  src="/info-architecture.png"
-                  alt="Information Architecture Diagram"
-                  width={1200}
-                  height={600}
-                  className={styles["info-architecture__image"]}
-                />
-              </div>
+            <div className={styles["info-architecture__diagram"]}>
+              <Image
+                src="/work/bunkbuddy/info-architecture.png"
+                alt="Information Architecture Diagram"
+                width={1200}
+                height={600}
+                className={styles["info-architecture__image"]}
+              />
             </div>
           </div>
         </div>
@@ -324,608 +313,274 @@ export default function BunkBuddy() {
           visual polish.
         </p>
 
-        <div className={styles["design-showcase"]}>
-          <div className={styles["design-showcase__images"]}>
-            <Image
-              src="/work/bunkbuddy/mid-fid-1.png"
-              alt="Medium Fidelity Screen 1"
-              width={250}
-              height={540}
-              className={styles["design-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-2.png"
-              alt="Medium Fidelity Screen 2"
-              width={250}
-              height={540}
-              className={styles["design-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["design-showcase__annotations"]}>
-            <div className={styles["annotation"]}>
-              <span className={styles["annotation__number"]}>1</span>
-              <div className={styles["annotation__content"]}>
-                <p className={styles["annotation__text"]}>
-                  <strong>Toggle Button-</strong> This toggle is a view switcher
-                  between two types of content:
-                </p>
-                <ul className={styles["annotation__list"]}>
-                  <li>
-                    Roommates: shows individual profiles of people looking for
-                    shared accommodation or roommate match.
-                  </li>
-                  <li>House: show listings of available rental properties.</li>
-                </ul>
+        <div className={styles["med-fi-frame"]}>
+          <div className={styles["med-fi-grid"]}>
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid1.svg"
+                  alt="Explore Profiles"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
               </div>
+              <p className={styles["med-fi-caption"]}>Explore Profiles</p>
             </div>
 
-            <div className={styles["annotation"]}>
-              <span className={styles["annotation__number"]}>2</span>
-              <p className={styles["annotation__text"]}>
-                <strong>Profile Card-</strong> This is a preview card for a
-                roommate listing. It gives users a snapshot of someone
-                potentially compatible to live with. Swiping right will like the
-                profile and swiping left will skip.
-              </p>
-            </div>
-
-            <div className={styles["annotation"]}>
-              <span className={styles["annotation__number"]}>3</span>
-              <p className={styles["annotation__text"]}>
-                <strong>Verification Badge Icon-</strong> Indicates that the
-                user profile has gone through a verification process (e.g., ID
-                verification or phone verification) which adds a layer of trust
-                for safety, important in roommate matching scenarios.
-              </p>
-            </div>
-
-            <div className={styles["annotation"]}>
-              <span className={styles["annotation__number"]}>4</span>
-              <p className={styles["annotation__text"]}>
-                <strong>Navigation Menu-</strong> Serves as the primary
-                navigation method for the app which allows users to switch
-                between core sections.
-              </p>
-            </div>
-
-            <div className={styles["annotation"]}>
-              <span className={styles["annotation__number"]}>5</span>
-              <p className={styles["annotation__text"]}>
-                <strong>House Card-</strong> This card acts as a summary of a
-                rental listing, presenting key data at a glance. Swiping right
-                will like the listing and swiping left will skip.
-              </p>
-            </div>
-
-            <div className={styles["annotation"]}>
-              <span className={styles["annotation__number"]}>6</span>
-              <p className={styles["annotation__text"]}>
-                <strong>Share Icon-</strong> Tap the share icon to trigger the
-                share modal (Screen 3), where the user can select from a list of
-                people they&apos;ve recently chatted with, or tap
-                {"Copy Link"} to manually send/share elsewhere.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles["matches-section"]}>
-        <div className={styles["matches-showcase"]}>
-          <div className={styles["matches-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/mid-fid-3.png"
-              alt="Matches Screen 1"
-              width={250}
-              height={540}
-              className={styles["matches-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-4.png"
-              alt="Filters Screen"
-              width={250}
-              height={540}
-              className={styles["matches-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-5.png"
-              alt="Like Profile Modal"
-              width={250}
-              height={540}
-              className={styles["matches-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["matches-showcase__annotations"]}>
-            <div className={styles["match-annotation"]}>
-              <span className={styles["match-annotation__number"]}>7</span>
-              <p className={styles["match-annotation__text"]}>
-                <strong>Basic / Advanced Tabs -</strong> A toggle between two
-                filter modes. {'"Basic"'} includes general filters like age,
-                budget, and verification. Tapping on {'"Advanced"'} would reveal
-                more detailed criteria like gender preference, smoking or pet
-                policies.
-              </p>
-            </div>
-
-            <div className={styles["match-annotation"]}>
-              <span className={styles["match-annotation__number"]}>8</span>
-              <p className={styles["match-annotation__text"]}>
-                <strong>Verified Toggle -</strong> A switch that filters the
-                results to show only verified users or listings. When toggled
-                ON, only profiles/listings that have gone through verification
-                will appear in search results, increasing safety and trust.
-              </p>
-            </div>
-
-            <div className={styles["match-annotation"]}>
-              <span className={styles["match-annotation__number"]}>9</span>
-              <p className={styles["match-annotation__text"]}>
-                <strong>Like Profile Modal -</strong> A pop-up that appears when
-                a user swipes right on a profile. It confirms the action with a
-                message such as {'"Like this profile?"'} and prompts the user to
-                proceed or cancel.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles["messaging-section"]}>
-        <div className={styles["messaging-showcase"]}>
-          <div className={styles["messaging-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/mid-fid-6.png"
-              alt="Matches and Messages Screen"
-              width={250}
-              height={540}
-              className={styles["messaging-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-7.png"
-              alt="You Matched Screen 1"
-              width={250}
-              height={540}
-              className={styles["messaging-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-8.png"
-              alt="You Matched Screen 2"
-              width={250}
-              height={540}
-              className={styles["messaging-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["messaging-showcase__annotations"]}>
-            <div className={styles["messaging-annotation"]}>
-              <span className={styles["messaging-annotation__number"]}>10</span>
-              <p className={styles["messaging-annotation__text"]}>
-                <strong>Matches Tab -</strong> A separate tab that shows users
-                with whom there has been a mutual like or match. Tapping a match
-                here can initiate a conversation if one hasn&apos;t started yet.
-              </p>
-            </div>
-
-            <div className={styles["messaging-annotation"]}>
-              <span className={styles["messaging-annotation__number"]}>11</span>
-              <p className={styles["messaging-annotation__text"]}>
-                <strong>Messages Tab -</strong> Displays a list of existing
-                conversations with other users. Tapping on a message card opens
-                the chat screen (Screen 7).
-              </p>
-            </div>
-
-            <div className={styles["messaging-annotation"]}>
-              <span className={styles["messaging-annotation__number"]}>12</span>
-              <p className={styles["messaging-annotation__text"]}>
-                <strong>{'"YOU MATCHED!"'} Banner -</strong> Appears when two
-                users like each other, confirming a successful match. This
-                celebratory screen encourages the user to take the next step in
-                engaging with their new match.
-              </p>
-            </div>
-
-            <div className={styles["messaging-annotation"]}>
-              <span className={styles["messaging-annotation__number"]}>13</span>
-              <p className={styles["messaging-annotation__text"]}>
-                <strong>{'"YOU MATCHED!"'} Banner -</strong> Appears when the
-                house lister and you like each other, confirming a successful
-                match. This celebratory screen encourages the user to take the
-                next step in engaging with their new match.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles["chat-likes-section"]}>
-        <div className={styles["chat-likes-showcase"]}>
-          <div className={styles["chat-likes-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/mid-fid-9.png"
-              alt="Chat Screen"
-              width={250}
-              height={540}
-              className={styles["chat-likes-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-10.png"
-              alt="Likes and Recommended Screen"
-              width={250}
-              height={540}
-              className={styles["chat-likes-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["chat-likes-showcase__annotations"]}>
-            <div className={styles["chat-likes-annotation"]}>
-              <span className={styles["chat-likes-annotation__number"]}>
-                14
-              </span>
-              <p className={styles["chat-likes-annotation__text"]}>
-                <strong>Likes Tab -</strong> Shows profiles of people who have
-                liked you but whom you haven&apos;t interacted with yet. These
-                are incoming likes, giving users the opportunity to browse
-                through people who have already expressed interest. You can then
-                choose to like them back to create a match or ignore the
-                profile.
-              </p>
-            </div>
-
-            <div className={styles["chat-likes-annotation"]}>
-              <span className={styles["chat-likes-annotation__number"]}>
-                15
-              </span>
-              <p className={styles["chat-likes-annotation__text"]}>
-                <strong>Recommended Tab -</strong> Displays listings or profiles
-                tailored to the user based on preferences, location, and past
-                likes. Uses card format for easy swiping or tapping.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles["saved-profile-section"]}>
-        <div className={styles["saved-profile-showcase"]}>
-          <div className={styles["saved-profile-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/mid-fid-11.png"
-              alt="Saved Listings Screen"
-              width={250}
-              height={540}
-              className={styles["saved-profile-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/mid-fid-12.png"
-              alt="Profile Screen"
-              width={250}
-              height={540}
-              className={styles["saved-profile-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["saved-profile-showcase__annotations"]}>
-            <div className={styles["saved-profile-annotation"]}>
-              <span className={styles["saved-profile-annotation__number"]}>
-                16
-              </span>
-              <p className={styles["saved-profile-annotation__text"]}>
-                <strong>Saved Listings -</strong> This section is for profiles
-                or listings the user has chosen to save for later viewing.
-                Tapping on any saved item opens the full listing or profile,
-                allowing users to re-evaluate or contact the other party.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles["high-fidelity-section"]}>
-        <div className={styles["high-fidelity-header"]}>
-          <h2 className={styles["high-fidelity-header__title"]}>
-            High Fidelity
-          </h2>
-          <p className={styles["high-fidelity-header__subtitle"]}>
-            add text here
-          </p>
-        </div>
-
-        <div className={styles["high-fidelity-showcase"]}>
-          <div className={styles["high-fidelity-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/hi-fi-1.png"
-              alt="High Fidelity Screen 1"
-              width={280}
-              height={600}
-              className={styles["high-fidelity-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-2.png"
-              alt="High Fidelity Screen 2"
-              width={280}
-              height={600}
-              className={styles["high-fidelity-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-3.png"
-              alt="High Fidelity Screen 3"
-              width={280}
-              height={600}
-              className={styles["high-fidelity-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["high-fidelity-showcase__annotations"]}>
-            <div className={styles["high-fidelity-annotation"]}>
-              <span className={styles["high-fidelity-annotation__number"]}>
-                1
-              </span>
-              <div className={styles["high-fidelity-annotation__content"]}>
-                <p className={styles["high-fidelity-annotation__text"]}>
-                  Users can click on the toggle button to switch between
-                  Roommates and Houses
-                </p>
-                <ul className={styles["high-fidelity-annotation__list"]}>
-                  <li>
-                    Roommates: shows individual profiles of people looking for
-                    shared accommodation or roommate match.
-                  </li>
-                  <li>House: show listings of available rental properties.</li>
-                </ul>
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid2.svg"
+                  alt="Filter Preferences"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
               </div>
+              <p className={styles["med-fi-caption"]}>Filter Preferences</p>
             </div>
 
-            <div className={styles["high-fidelity-annotation"]}>
-              <span className={styles["high-fidelity-annotation__number"]}>
-                2
-              </span>
-              <p className={styles["high-fidelity-annotation__text"]}>
-                Users can swipe left to go through profiles of roommates or
-                houses.
-              </p>
-            </div>
-
-            <div className={styles["high-fidelity-annotation"]}>
-              <span className={styles["high-fidelity-annotation__number"]}>
-                3
-              </span>
-              <p className={styles["high-fidelity-annotation__text"]}>
-                Users can swipe right to like a profile or listing.
-              </p>
-            </div>
-
-            <div className={styles["high-fidelity-annotation"]}>
-              <span className={styles["high-fidelity-annotation__number"]}>
-                4
-              </span>
-              <div className={styles["high-fidelity-annotation__content"]}>
-                <p className={styles["high-fidelity-annotation__text"]}>
-                  Upon swiping right, a pop-up shows to confirm that they want
-                  to like the profile
-                </p>
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid3.svg"
+                  alt="Share Profile"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
               </div>
+              <p className={styles["med-fi-caption"]}>Share Profile</p>
+            </div>
+
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid4.svg"
+                  alt="Like a Profile"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
+              </div>
+              <p className={styles["med-fi-caption"]}>Like a Profile</p>
+            </div>
+
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid5.svg"
+                  alt="Chat Section"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
+              </div>
+              <p className={styles["med-fi-caption"]}>Chat Section</p>
+            </div>
+
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid6.svg"
+                  alt="Match Confirmed"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
+              </div>
+              <p className={styles["med-fi-caption"]}>Match Confirmed</p>
+            </div>
+
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid7.svg"
+                  alt="Conversation"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
+              </div>
+              <p className={styles["med-fi-caption"]}>Conversation</p>
+            </div>
+
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid8.svg"
+                  alt="Liked Section"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
+              </div>
+              <p className={styles["med-fi-caption"]}>Liked Section</p>
+            </div>
+
+            <div className={styles["med-fi-item"]}>
+              <div className={styles["med-fi-image-wrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbmid9.svg"
+                  alt="User Profile"
+                  width={300}
+                  height={550}
+                  className={styles["med-fi-image"]}
+                />
+              </div>
+              <p className={styles["med-fi-caption"]}>User Profile</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div className={styles["share-filters-section"]}>
-        <div className={styles["share-filters-showcase"]}>
-          <div className={styles["share-filters-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/hi-fi-4.png"
-              alt="Share Screen"
-              width={250}
-              height={540}
-              className={styles["share-filters-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-5.png"
-              alt="Filters Screen"
-              width={250}
-              height={540}
-              className={styles["share-filters-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["share-filters-showcase__annotations"]}>
-            <div className={styles["share-filters-annotation"]}>
-              <span className={styles["share-filters-annotation__number"]}>
-                5
-              </span>
-              <p className={styles["share-filters-annotation__text"]}>
-                Clicking on the share button, pulls up a modal with the
-                user&apos;s matches, for them to share a listing or another
-                roommate&apos;s profile with them.
-              </p>
+      <div className={styles["hiFiBlock"]}>
+        <div className={styles["hiFiFrame"]}>
+          <p className={styles["hiFiEyebrow"]}>High Fidelity Screens</p>
+          <div className={styles["hiFiGrid"]}>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh1.png"
+                  alt="Screen 1"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Toggle & Browse</p>
             </div>
-
-            <div className={styles["share-filters-annotation"]}>
-              <span className={styles["share-filters-annotation__number"]}>
-                6
-              </span>
-              <p className={styles["share-filters-annotation__text"]}>
-                They can even click on copy link if they want to share the
-                profile or listing outside of the BunkBuddy app.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh2.png"
+                  alt="Screen 2"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Swipe Profiles</p>
             </div>
-
-            <div className={styles["share-filters-annotation"]}>
-              <span className={styles["share-filters-annotation__number"]}>
-                7
-              </span>
-              <p className={styles["share-filters-annotation__text"]}>
-                Clicking on the filters button opens a list of filter options.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh3.png"
+                  alt="Screen 3"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Like Confirmation</p>
             </div>
-
-            <div className={styles["share-filters-annotation"]}>
-              <span className={styles["share-filters-annotation__number"]}>
-                8
-              </span>
-              <p className={styles["share-filters-annotation__text"]}>
-                There is a toggle for users to switch between basic and advanced
-                filter setting options. Users can drag to adjust it to their
-                preferred values or tap on the number and manually enter a
-                value.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh4.png"
+                  alt="Screen 4"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Share Options</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles["matches-messages-section"]}>
-        <div className={styles["matches-messages-showcase"]}>
-          <div className={styles["matches-messages-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/hi-fi-6.png"
-              alt="Matches and Messages Screen"
-              width={250}
-              height={540}
-              className={styles["matches-messages-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-7.png"
-              alt="You Matched Screen"
-              width={250}
-              height={540}
-              className={styles["matches-messages-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-8.png"
-              alt="Chat Screen"
-              width={250}
-              height={540}
-              className={styles["matches-messages-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["matches-messages-showcase__annotations"]}>
-            <div className={styles["matches-messages-annotation"]}>
-              <span className={styles["matches-messages-annotation__number"]}>
-                9
-              </span>
-              <p className={styles["matches-messages-annotation__text"]}>
-                The toggle switch allows users to switch between ongoing
-                conversations and matches with Roommates or Properties.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh5.png"
+                  alt="Screen 5"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Filter Settings</p>
             </div>
-
-            <div className={styles["matches-messages-annotation"]}>
-              <span className={styles["matches-messages-annotation__number"]}>
-                10
-              </span>
-              <p className={styles["matches-messages-annotation__text"]}>
-                Matches Tab – A separate tab that shows users with whom there
-                has been a mutual like or match. Tapping a match here can
-                initiate a conversation if one hasn&apos;t started yet.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh6.png"
+                  alt="Screen 6"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Matches & Messages</p>
             </div>
-
-            <div className={styles["matches-messages-annotation"]}>
-              <span className={styles["matches-messages-annotation__number"]}>
-                11
-              </span>
-              <p className={styles["matches-messages-annotation__text"]}>
-                Messages Tab – Displays a list of existing conversations with
-                other users. Tapping on a message card opens the chat screen
-                (13).
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh7.png"
+                  alt="Screen 7"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>You Matched!</p>
             </div>
-
-            <div className={styles["matches-messages-annotation"]}>
-              <span className={styles["matches-messages-annotation__number"]}>
-                12
-              </span>
-              <p className={styles["matches-messages-annotation__text"]}>
-                {'"YOU MATCHED!"'} Banner – Appears when two users like each
-                other, confirming a successful match. This celebratory screen
-                encourages the user to take the next step in engaging with their
-                new match.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh8.png"
+                  alt="Screen 8"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Chat Screen</p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles["likes-saved-profile-section"]}>
-        <div className={styles["likes-saved-profile-showcase"]}>
-          <div className={styles["likes-saved-profile-showcase__screens"]}>
-            <Image
-              src="/work/bunkbuddy/hi-fi-9.png"
-              alt="Likes and Recommended Screen"
-              width={250}
-              height={540}
-              className={styles["likes-saved-profile-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-10.png"
-              alt="Saved Listings Screen"
-              width={250}
-              height={540}
-              className={styles["likes-saved-profile-showcase__image"]}
-            />
-            <Image
-              src="/work/bunkbuddy/hi-fi-11.png"
-              alt="Profile Screen"
-              width={250}
-              height={540}
-              className={styles["likes-saved-profile-showcase__image"]}
-            />
-          </div>
-
-          <div className={styles["likes-saved-profile-showcase__annotations"]}>
-            <div className={styles["likes-saved-profile-annotation"]}>
-              <span
-                className={styles["likes-saved-profile-annotation__number"]}
-              >
-                14
-              </span>
-              <p className={styles["likes-saved-profile-annotation__text"]}>
-                Likes Tab - Shows profiles of people who have liked you but whom
-                you haven&apos;t interacted with yet. Users can then choose to
-                like them back to create a match or ignore them.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh9.png"
+                  alt="Screen 9"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Likes Tab</p>
             </div>
-
-            <div className={styles["likes-saved-profile-annotation"]}>
-              <span
-                className={styles["likes-saved-profile-annotation__number"]}
-              >
-                15
-              </span>
-              <p className={styles["likes-saved-profile-annotation__text"]}>
-                Recommended Tab – Displays listings or profiles tailored to the
-                user based on preferences, location, and past likes. Uses card
-                format for easy swiping or tapping.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh10.png"
+                  alt="Screen 10"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Saved Listings</p>
             </div>
-
-            <div className={styles["likes-saved-profile-annotation"]}>
-              <span
-                className={styles["likes-saved-profile-annotation__number"]}
-              >
-                16
-              </span>
-              <p className={styles["likes-saved-profile-annotation__text"]}>
-                Saved Listings – This section is for profiles or listings the
-                user has chosen to save for later viewing. Tapping on any saved
-                item opens the full listing or profile, allowing users to
-                re-evaluate or contact the other party.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh11.png"
+                  alt="Screen 11"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>User Profile</p>
             </div>
-
-            <div className={styles["likes-saved-profile-annotation"]}>
-              <span
-                className={styles["likes-saved-profile-annotation__number"]}
-              >
-                17
-              </span>
-              <p className={styles["likes-saved-profile-annotation__text"]}>
-                Profile – The user can set up their profile by adding a photo,
-                name, bio, phone number and email ID. They can come back and
-                edit it at any point.
-              </p>
+            <div className={styles["medFiItem"]}>
+              <div className={styles["hiFiImageWrap"]}>
+                <Image
+                  src="/work/bunkbuddy/bbhigh12.png"
+                  alt="Screen 12"
+                  width={400}
+                  height={600}
+                  className={styles["hiFiImage"]}
+                />
+              </div>
+              <p className={styles["hiFiCaption"]}>Iterated Design</p>
             </div>
           </div>
         </div>
@@ -1038,7 +693,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/work/bunkbuddy/iterated-1.png"
+                src="/work/bunkbuddy/bbiterated1.png"
                 alt="Sharing Options"
                 width={300}
                 height={650}
@@ -1063,7 +718,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/work/bunkbuddy/iterated-2.png"
+                src="/work/bunkbuddy/bbiterated2.png"
                 alt="Chat Shortcut"
                 width={300}
                 height={650}
@@ -1089,7 +744,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/work/bunkbuddy/iterated-3.png"
+                src="/work/bunkbuddy/bbiterated3.png"
                 alt="Revisiting Profiles"
                 width={300}
                 height={650}
@@ -1115,7 +770,7 @@ export default function BunkBuddy() {
           <div className={styles["feedback-item"]}>
             <div className={styles["feedback-item__image-container"]}>
               <Image
-                src="/work/bunkbuddy/iterated-4.png"
+                src="/work/bunkbuddy/bbiterated4.png"
                 alt="Sorting Saved Options"
                 width={300}
                 height={650}

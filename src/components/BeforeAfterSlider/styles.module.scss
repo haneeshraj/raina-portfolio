@@ -1,0 +1,128 @@
+.before-after-slider {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  user-select: none;
+
+  &:active {
+    outline: none;
+  }
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.before-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.after-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: width 0.1s ease-out;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+
+  img {
+    display: block;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  pointer-events: none;
+
+  .before-image & {
+    right: 1.5rem;
+    z-index: 1;
+  }
+
+  .after-image & {
+    left: 1.5rem;
+    z-index: 6;
+  }
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    inset 0 0 5px rgba(255, 255, 255, 0.3);
+  cursor: grab;
+  z-index: 10;
+  transition: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.divider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.2rem;
+    background-color: #333;
+  }
+
+  &::before {
+    right: 0.8rem;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    left: 0.8rem;
+    transform: rotate(45deg);
+  }
+
+  .divider:hover & {
+    background-color: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+}
