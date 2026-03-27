@@ -6,6 +6,7 @@ import "./globals.css";
 import styles from "./page.module.scss";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Raina Motihar - UX Designer",
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(poppins.variable, urbanist.variable, "font-sans")}>
+        <SmoothScroll />
         <Navbar />
 
         <main className={styles["main"]}>{children}</main>
