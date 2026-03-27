@@ -1,9 +1,49 @@
-import Image from "next/image";
+"use client";
 
-import BeforeAfterSlider from "@/components/BeforeAfterSlider/BeforeAfterSlider";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+
 import styles from "./styles.module.scss";
 
+const cardSortImages = [
+  {
+    src: "/work/bunkbuddy/card-sort-before.png",
+    title: "Before",
+    description: "Initial card sorting by participants",
+  },
+  {
+    src: "/work/bunkbuddy/card-sort-after.png",
+    title: "After",
+    description: "Organized categories from co-creation workshop",
+  },
+];
+
 export default function BunkBuddy() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) =>
+        prev === cardSortImages.length - 1 ? 0 : prev + 1,
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) =>
+      prev === 0 ? cardSortImages.length - 1 : prev - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) =>
+      prev === cardSortImages.length - 1 ? 0 : prev + 1,
+    );
+  };
+
   return (
     <>
       <div className={styles["project-hero"]}>
@@ -242,14 +282,54 @@ export default function BunkBuddy() {
           </p>
 
           <div className={styles["co-creation__images"]}>
-            <BeforeAfterSlider
-              beforeImage="/work/bunkbuddy/card-sort-before.png"
-              afterImage="/work/bunkbuddy/card-sort-after.png"
-              beforeAlt="Co-creation workshop before"
-              afterAlt="Co-creation workshop after"
-              width={900}
-              height={700}
-            />
+            <div className={styles.carouselContainer}>
+              <button
+                className={styles.carouselArrowPrev}
+                onClick={handlePrev}
+                aria-label="Previous card sort image"
+              >
+                <MdChevronLeft />
+              </button>
+
+              <div className={styles.carouselFrame}>
+                <div className={styles.imageWrapper}>
+                  <div
+                    className={styles.imageTrack}
+                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  >
+                    {cardSortImages.map((image, index) => (
+                      <div className={styles.slide} key={index}>
+                        <Image
+                          src={image.src}
+                          alt={image.title}
+                          width={900}
+                          height={700}
+                          sizes="(max-width: 900px) 100vw, 700px"
+                          className={styles.carouselImage}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.carouselText} key={currentSlide}>
+                  <h3 className={styles.carouselTitle}>
+                    {cardSortImages[currentSlide].title}
+                  </h3>
+                  <p className={styles.carouselDescription}>
+                    {cardSortImages[currentSlide].description}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                className={styles.carouselArrowNext}
+                onClick={handleNext}
+                aria-label="Next card sort image"
+              >
+                <MdChevronRight />
+              </button>
+            </div>
           </div>
 
           <div className={styles["info-architecture"]}>
@@ -257,11 +337,11 @@ export default function BunkBuddy() {
               Information Architecture
             </h2>
             <p className={styles["info-architecture__text"]}>
-              Based on insights from card sorting and other research, a
-              sitemap and content hierarchy was created that ensured that
-              users could efficiently find what they were looking for. This
-              structure aimed to organize the app in a clear, logical way that
-              supported easy navigation and task completion.
+              Based on insights from card sorting and other research, a sitemap
+              and content hierarchy was created that ensured that users could
+              efficiently find what they were looking for. This structure aimed
+              to organize the app in a clear, logical way that supported easy
+              navigation and task completion.
             </p>
 
             <div className={styles["info-architecture__diagram"]}>

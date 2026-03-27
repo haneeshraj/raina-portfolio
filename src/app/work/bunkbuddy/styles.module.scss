@@ -110,13 +110,13 @@
 
 .project-info {
   margin: 8rem auto;
-
   margin-top: 1rem;
+  width: min(1200px, calc(100% - 4rem));
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(2rem, 4vw, 4rem);
     margin-bottom: 6rem;
   }
 }
@@ -126,7 +126,7 @@
   border: 1px solid #e8d5e8;
   border-left: 5px solid #8b4789;
   border-radius: 1.8rem;
-  padding: 4rem;
+  padding: clamp(2rem, 3vw, 4rem);
   box-shadow:
     0 4px 16px rgba(139, 71, 137, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
@@ -142,19 +142,19 @@
   }
 
   &__title {
-    font-size: 2.4rem;
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
     font-weight: 700;
     color: #8b4789;
-    margin-bottom: 2.5rem;
+    margin-bottom: clamp(1.5rem, 2.5vw, 2.5rem);
     margin-top: 0;
     letter-spacing: -0.02em;
   }
 
   &__text {
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1.6vw, 1.6rem);
     color: #444;
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: clamp(1rem, 2vw, 2rem);
 
     strong {
       font-weight: 700;
@@ -163,9 +163,9 @@
   }
 
   &__detail {
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1.6vw, 1.6rem);
     color: #444;
-    margin-bottom: 1.2rem;
+    margin-bottom: clamp(0.8rem, 1.2vw, 1.2rem);
     line-height: 1.7;
 
     strong {
@@ -176,25 +176,26 @@
 }
 
 .project-section {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 3vw, 4rem);
 
   &__title {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 2.8vw, 2.8rem);
     font-weight: 600;
     color: #333;
-    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
   }
 
   &__text {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 1.8vw, 1.8rem);
     color: #333;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
   }
 }
 
 .project-phase {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__header {
     background: linear-gradient(135deg, #e8a5d9 0%, #b19cd9 100%);
@@ -242,6 +243,7 @@
 }
 .journey-section {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
     font-size: 3.2rem;
@@ -273,6 +275,7 @@
 
 .key-insights {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
     font-size: 3.2rem;
@@ -357,6 +360,7 @@
 
 .info-architecture {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
     font-size: 2.4rem;
@@ -388,6 +392,7 @@
 
 .paper-sketches {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
     font-size: 2.4rem;
@@ -416,18 +421,19 @@
 
 .medium-fidelity {
   margin: 4rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
-    font-size: 2.4rem;
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
     font-weight: 600;
     color: #333;
     margin-bottom: 0.5rem;
   }
 
   &__subtitle {
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
     color: #666;
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2rem, 3vw, 4rem);
   }
 }
 
@@ -435,15 +441,15 @@
   width: 100%;
   border-radius: 2rem;
   background-color: #f8f4f9;
-  padding: 4rem;
+  padding: clamp(2rem, 3vw, 4rem);
   overflow: hidden;
 }
 
 .med-fi-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.4rem;
-  padding: 0 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.5rem, 2.4vw, 2.4rem);
+  padding: clamp(0rem, 2vw, 2rem);
 }
 
 .med-fi-item {
@@ -454,7 +460,7 @@
 }
 
 .med-fi-image-wrap {
-  width: 82%;
+  width: clamp(70%, 82%, 100%);
   border-radius: 1.6rem;
   overflow: hidden;
   background-color: #e8d5e8;
@@ -472,7 +478,7 @@
 }
 
 .med-fi-caption {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   color: #8b4789;
   font-weight: 600;
   text-align: center;
@@ -573,7 +579,8 @@
 }
 
 .hiFiBlock {
-  margin-bottom: 4rem;
+  margin: 4rem auto;
+  width: min(1200px, calc(100% - 4rem));
 }
 
 .hiFiFrame {
@@ -594,7 +601,7 @@
 }
 
 .hiFiEyebrow {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.8rem);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -604,7 +611,7 @@
 }
 
 .hiFiImageWrap {
-  width: 82%;
+  width: clamp(70%, 82%, 100%);
   border-radius: 1.6rem;
   overflow: hidden;
   background-color: rgba(255, 235, 220, 0.12);
@@ -615,7 +622,7 @@
 }
 
 .hiFiCaption {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
   color: #d4a8be;
   font-style: italic;
   text-align: center;
@@ -624,9 +631,9 @@
 
 .hiFiGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.4rem;
-  padding: 0 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.5rem, 2.4vw, 2.4rem);
+  padding: clamp(0rem, 2vw, 2rem);
 }
 
 .hiFiImage {
@@ -902,13 +909,14 @@
 
 .testing-section {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 }
 
 .testing-header {
   background: linear-gradient(135deg, #e8a5d9 0%, #b19cd9 100%);
-  padding: 2rem 3rem;
+  padding: clamp(1.5rem, 2.5vw, 3rem) clamp(2rem, 3vw, 3rem);
   border-radius: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 3vw, 4rem);
 
   &__title {
     font-size: 3.2rem;
@@ -922,6 +930,7 @@
   display: flex;
   justify-content: center;
   margin: 4rem auto 8rem;
+  width: min(1200px, calc(100% - 4rem));
 
   iframe {
     border-radius: 1rem;
@@ -998,56 +1007,57 @@
 
 .implemented-feedback-section {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
-    font-size: 3.2rem;
+    font-size: clamp(2.4rem, 3.2vw, 3.2rem);
     font-weight: 600;
     color: #333;
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2rem, 3vw, 4rem);
   }
 }
 
 .feedback-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-  row-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  row-gap: clamp(3rem, 5vw, 6rem);
 }
 
 .feedback-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1.5rem, 3vw, 3rem);
   position: relative;
 
   &__rectangle-1 {
     position: absolute;
-    width: 30rem;
-    height: 5rem;
+    width: clamp(20rem, 80vw, 30rem);
+    height: clamp(3rem, 5vw, 5rem);
     outline: 3px solid #b218e5;
-    bottom: 13rem;
+    bottom: clamp(8rem, 15vw, 13rem);
   }
   &__rectangle-2 {
     position: absolute;
-    width: 30rem;
-    height: 5rem;
+    width: clamp(20rem, 80vw, 30rem);
+    height: clamp(3rem, 5vw, 5rem);
     outline: 3px solid #b218e5;
-    bottom: 26.5rem;
+    bottom: clamp(16rem, 30vw, 26.5rem);
   }
   &__rectangle-3 {
     position: absolute;
-    width: 30rem;
-    height: 5rem;
+    width: clamp(20rem, 80vw, 30rem);
+    height: clamp(3rem, 5vw, 5rem);
     outline: 3px solid #b218e5;
-    bottom: 34.5rem;
+    bottom: clamp(21rem, 40vw, 34.5rem);
   }
   &__rectangle-4 {
     position: absolute;
-    width: 30rem;
-    height: 5rem;
+    width: clamp(20rem, 80vw, 30rem);
+    height: clamp(3rem, 5vw, 5rem);
     outline: 3px solid #b218e5;
-    top: 6.5rem;
+    top: clamp(4rem, 8vw, 6.5rem);
   }
 
   &__image-container {
@@ -1057,17 +1067,18 @@
   }
 
   &__image {
-    width: 25.6rem;
-    height: 52.3rem;
+    width: clamp(20rem, 60vw, 25.6rem);
+    height: auto;
+    aspect-ratio: 256 / 523;
     object-fit: cover;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    border-radius: 3.5rem;
+    border-radius: clamp(2rem, 4vw, 3.5rem);
   }
 
   &__content {
     text-align: center;
     width: 100%;
-    max-width: 35.2rem;
+    max-width: clamp(280px, 90vw, 35.2rem);
   }
 
   &__header {
@@ -1076,10 +1087,11 @@
     justify-content: center;
     gap: 0.6rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
   }
 
   &__number {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
     font-weight: 700;
     color: #333;
     margin: 0;
@@ -1087,9 +1099,16 @@
   }
 
   &__title {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
     font-weight: 700;
     color: #333;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+    color: #444;
+    line-height: 1.7;
     margin: 0;
   }
 }
@@ -1098,19 +1117,19 @@
   background: #faf5f0;
   border: 1px solid #e8d8d0;
   border-radius: 2.4rem;
-  padding: 4.5rem;
+  padding: clamp(2rem, 3vw, 4.5rem);
   margin-bottom: 6rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .usability-frame__header {
-  margin-bottom: 3.5rem;
+  margin-bottom: clamp(2rem, 3vw, 3.5rem);
   border-bottom: 2px solid #e8a5d9;
-  padding-bottom: 2rem;
+  padding-bottom: clamp(1.5rem, 2vw, 2rem);
 }
 
 .usability-frame__label {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
   font-weight: 700;
   letter-spacing: 0.15em;
   color: #8b4789;
@@ -1120,8 +1139,8 @@
 
 .usability-frame__content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
 }
 
 .usability-stat {
@@ -1130,7 +1149,7 @@
   gap: 1rem;
 
   &__number {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 3vw, 2.8rem);
     font-weight: 700;
     color: #8b4789;
     margin: 0;
@@ -1138,7 +1157,7 @@
   }
 
   &__text {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 1.6vw, 1.5rem);
     color: #444;
     line-height: 1.7;
     margin: 0;
@@ -1149,17 +1168,17 @@
   margin-bottom: 6rem;
 
   &__title {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 2.8vw, 2.8rem);
     font-weight: 700;
     color: #8b4789;
-    margin-bottom: 3rem;
+    margin-bottom: clamp(2rem, 3vw, 3rem);
     letter-spacing: -0.01em;
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 }
 
@@ -1168,7 +1187,7 @@
   border: 1px solid #e8d5e8;
   border-left: 5px solid #8b4789;
   border-radius: 1.8rem;
-  padding: 3rem;
+  padding: clamp(2rem, 3vw, 3rem);
   box-shadow:
     0 4px 16px rgba(139, 71, 137, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
@@ -1183,7 +1202,7 @@
   }
 
   &__title {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
     font-weight: 700;
     color: #8b4789;
     margin-bottom: 1.2rem;
@@ -1191,7 +1210,7 @@
   }
 
   &__text {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 1.6vw, 1.5rem);
     color: #444;
     line-height: 1.7;
     margin: 0;
@@ -1200,6 +1219,7 @@
 
 .takeaways-section {
   margin: 8rem auto;
+  width: min(1200px, calc(100% - 4rem));
 
   &__title {
     font-size: 2.4rem;
@@ -1234,5 +1254,179 @@
       color: #444;
       line-height: 1.8;
     }
+  }
+}
+
+// Carousel Styles
+.carouselContainer {
+  position: relative;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.carouselArrowPrev,
+.carouselArrowNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: clamp(2rem, 3vw, 2rem);
+  cursor: pointer;
+  padding: 0;
+  width: clamp(2.5rem, 4vw, 3.5rem);
+  height: clamp(2.5rem, 4vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: #8b4789;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  z-index: 10;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.15);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+}
+
+.carouselArrowPrev {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.carouselArrowNext {
+  right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.carouselFrame {
+  background: white;
+  border-radius: 2rem;
+  padding: clamp(2rem, 3vw, 3rem);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: block;
+  line-height: 0;
+  position: relative;
+}
+
+.imageTrack {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease-in-out;
+  border-radius: 1.5rem;
+}
+
+.slide {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.5rem;
+  line-height: 0;
+}
+
+.carouselText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carouselTitle {
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  font-weight: 700;
+  color: #8b4789;
+  margin: 0;
+}
+
+.carouselDescription {
+  font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    margin-bottom: clamp(2rem, 3vw, 3rem);
+  }
+
+  .carouselFrame {
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+
+  .carouselTitle {
+    margin-bottom: 0.5rem;
+  }
+
+  .carouselDescription {
+    line-height: 1.6;
+  }
+
+  // Responsive grid layouts
+  .med-fi-grid,
+  .hiFiGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .med-fi-item,
+  .medFiItem {
+    gap: clamp(0.5rem, 1vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .med-fi-grid,
+  .hiFiGrid {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .med-fi-image-wrap,
+  .hiFiImageWrap {
+    width: 100%;
+  }
+
+  .medium-fidelity {
+    &__subtitle {
+      margin-bottom: clamp(1.5rem, 2vw, 2rem);
+    }
+  }
+
+  .hiFiFrame {
+    gap: clamp(1.5rem, 2vw, 2.4rem);
   }
 }
