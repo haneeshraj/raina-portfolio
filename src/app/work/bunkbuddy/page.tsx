@@ -515,8 +515,8 @@ export default function BunkBuddy() {
         </div>
       </div>
       <div className={styles["hiFiBlock"]}>
+        <h3 className={styles["hiFiEyebrow"]}>High Fidelity Screens</h3>
         <div className={styles["hiFiFrame"]}>
-          <p className={styles["hiFiEyebrow"]}>High Fidelity Screens</p>
           <div className={styles["hiFiGrid"]}>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -667,8 +667,8 @@ export default function BunkBuddy() {
       </div>
 
       <div className={styles["testing-section"]}>
-        <div className={styles["testing-header"]}>
-          <h2 className={styles["testing-header__title"]}>
+        <div className={styles["testing-section__header"]}>
+          <h2 className={styles["testing-section__title"]}>
             Phase 4 - Testing & Iteration
           </h2>
         </div>
@@ -875,10 +875,12 @@ export default function BunkBuddy() {
         </div>
       </div>
 
-      <div className={styles["testing-header"]}>
-        <h2 className={styles["testing-header__title"]}>
-          Phase 5 - Final Product &amp; Impact
-        </h2>
+      <div className={styles["testing-section"]}>
+        <div className={styles["testing-section__header"]}>
+          <h2 className={styles["testing-section__title"]}>
+            Phase 5 - Final Product &amp; Impact
+          </h2>
+        </div>
       </div>
 
       <div className={styles["prototype-embed"]}>
