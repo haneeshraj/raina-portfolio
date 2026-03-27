@@ -195,7 +195,6 @@
 
 .project-phase {
   margin: 8rem auto;
-  width: min(1200px, calc(100% - 4rem));
 
   &__header {
     background: linear-gradient(135deg, #e8a5d9 0%, #b19cd9 100%);
@@ -274,8 +273,8 @@
 }
 
 .key-insights {
-  margin: 8rem auto;
-  width: min(1200px, calc(100% - 4rem));
+  margin-block: 2rem;
+  width: 100%;
 
   &__title {
     font-size: 3.2rem;
@@ -359,8 +358,8 @@
 }
 
 .info-architecture {
-  margin: 8rem auto;
-  width: min(1200px, calc(100% - 4rem));
+  margin-block: 8rem;
+  width: 100%;
 
   &__title {
     font-size: 2.4rem;
@@ -391,8 +390,8 @@
 }
 
 .paper-sketches {
-  margin: 8rem auto;
-  width: min(1200px, calc(100% - 4rem));
+  margin-block: 8rem;
+  width: 100%;
 
   &__title {
     font-size: 2.4rem;
@@ -450,6 +449,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: clamp(1.5rem, 2.4vw, 2.4rem);
   padding: clamp(0rem, 2vw, 2rem);
+  justify-items: center;
 }
 
 .med-fi-item {
@@ -459,8 +459,16 @@
   gap: 1rem;
 }
 
+.medFiItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .med-fi-image-wrap {
-  width: clamp(70%, 82%, 100%);
+  max-width: clamp(200px, 82vw, 320px);
   border-radius: 1.6rem;
   overflow: hidden;
   background-color: #e8d5e8;
@@ -611,10 +619,9 @@
 }
 
 .hiFiImageWrap {
-  width: clamp(70%, 82%, 100%);
+  max-width: clamp(200px, 82vw, 320px);
   border-radius: 1.6rem;
   overflow: hidden;
-  background-color: rgba(255, 235, 220, 0.12);
   min-height: 16rem;
   display: flex;
   align-items: center;
@@ -634,6 +641,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: clamp(1.5rem, 2.4vw, 2.4rem);
   padding: clamp(0rem, 2vw, 2rem);
+  justify-items: center;
 }
 
 .hiFiImage {
@@ -1028,42 +1036,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(1.5rem, 3vw, 3rem);
-  position: relative;
+  gap: 3rem;
 
   &__rectangle-1 {
     position: absolute;
-    width: clamp(20rem, 80vw, 30rem);
-    height: clamp(3rem, 5vw, 5rem);
+    width: 30rem;
+    height: 5rem;
     outline: 3px solid #b218e5;
-    bottom: clamp(8rem, 15vw, 13rem);
+    bottom: 1rem;
   }
   &__rectangle-2 {
     position: absolute;
-    width: clamp(20rem, 80vw, 30rem);
-    height: clamp(3rem, 5vw, 5rem);
+    width: 30rem;
+    height: 5rem;
     outline: 3px solid #b218e5;
-    bottom: clamp(16rem, 30vw, 26.5rem);
+    bottom: 14rem;
   }
   &__rectangle-3 {
     position: absolute;
-    width: clamp(20rem, 80vw, 30rem);
-    height: clamp(3rem, 5vw, 5rem);
+    width: 30rem;
+    height: 5rem;
     outline: 3px solid #b218e5;
-    bottom: clamp(21rem, 40vw, 34.5rem);
+    bottom: 40.5rem;
   }
   &__rectangle-4 {
     position: absolute;
-    width: clamp(20rem, 80vw, 30rem);
-    height: clamp(3rem, 5vw, 5rem);
+    width: 30rem;
+    height: 5rem;
     outline: 3px solid #b218e5;
-    top: clamp(4rem, 8vw, 6.5rem);
+    top: 6.5rem;
   }
 
   &__image-container {
-    width: 100%;
+    width: fit-content;
+    height: 520px;
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   &__image {
@@ -1139,7 +1148,7 @@
 
 .usability-frame__content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(2rem, 4vw, 4rem);
 }
 
@@ -1405,6 +1414,10 @@
   .med-fi-item,
   .medFiItem {
     gap: clamp(0.5rem, 1vw, 1rem);
+  }
+
+  .usability-frame__content {
+    grid-template-columns: 1fr;
   }
 }
 
