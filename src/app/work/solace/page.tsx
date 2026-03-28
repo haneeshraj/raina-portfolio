@@ -20,7 +20,7 @@ export default function Solace() {
                 className={styles["project-hero__image"]}
               />
               <Image
-                src="/work/solace/solace.gif"
+                src="/work/solace/Solace.gif"
                 alt="Solace animation"
                 width={900}
                 height={560}
@@ -38,10 +38,21 @@ export default function Solace() {
               Voice User Interface for AI Therapy
             </p>
             <div className={styles["project-hero__tags"]}>
-              <span className={styles["tag"]} data-tag="Desk Research">Desk Research</span>
-              <span className={styles["tag"]} data-tag="User Flow Design">User Flow Design</span>
-              <span className={styles["tag"]} data-tag="AI Personality Design">AI Personality Design</span>
-              <span className={styles["tag"]} data-tag="High Fidelity Prototype">High Fidelity Prototype</span>
+              <span className={styles["tag"]} data-tag="Desk Research">
+                Desk Research
+              </span>
+              <span className={styles["tag"]} data-tag="User Flow Design">
+                User Flow Design
+              </span>
+              <span className={styles["tag"]} data-tag="AI Personality Design">
+                AI Personality Design
+              </span>
+              <span
+                className={styles["tag"]}
+                data-tag="High Fidelity Prototype"
+              >
+                High Fidelity Prototype
+              </span>
             </div>
           </div>
         </div>
