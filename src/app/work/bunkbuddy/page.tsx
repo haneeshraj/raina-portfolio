@@ -68,10 +68,10 @@ export default function BunkBuddy() {
               Enhancing housemate hunting
             </p>
             <div className={styles["project-hero__tags"]}>
-              <span className={styles["tag"]}>User Flow Design</span>
-              <span className={styles["tag"]}>Wireframing</span>
-              <span className={styles["tag"]}>Usability Testing</span>
-              <span className={styles["tag"]}>High Fidelity Prototype</span>
+              <span className={styles["tag"]} data-tag="User Flow Design">User Flow Design</span>
+              <span className={styles["tag"]} data-tag="Wireframing">Wireframing</span>
+              <span className={styles["tag"]} data-tag="Usability Testing">Usability Testing</span>
+              <span className={styles["tag"]} data-tag="High Fidelity Prototype">High Fidelity Prototype</span>
             </div>
           </div>
         </div>

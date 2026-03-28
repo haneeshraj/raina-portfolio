@@ -125,10 +125,10 @@ export default function CitySphere() {
               Spatial UI Design for VR Tourism
             </p>
             <div className={styles["project-hero__tags"]}>
-              <span className={styles.tag}>User Research</span>
-              <span className={styles.tag}>Storyboarding</span>
-              <span className={styles.tag}>Spatial Design - VR</span>
-              <span className={styles.tag}>High Fidelity Screens</span>
+              <span className={styles["tag"]} data-tag="User Research">User Research</span>
+              <span className={styles["tag"]} data-tag="Storyboarding">Storyboarding</span>
+              <span className={styles["tag"]} data-tag="Spatial Design">Spatial Design</span>
+              <span className={styles["tag"]} data-tag="High Fidelity UI Design">High Fidelity UI Design</span>
             </div>
           </div>
         </div>

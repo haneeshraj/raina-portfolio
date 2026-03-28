@@ -26,6 +26,7 @@ export default function Solace() {
                 height={560}
                 priority
                 sizes="(max-width: 900px) 100vw, 560px"
+                unoptimized
                 className={styles["project-hero__overlay"]}
               />
             </div>
@@ -37,10 +38,10 @@ export default function Solace() {
               Voice User Interface for AI Therapy
             </p>
             <div className={styles["project-hero__tags"]}>
-              <span className={styles.tag}>Desk Research</span>
-              <span className={styles.tag}>Wireframing</span>
-              <span className={styles.tag}>AI Personality Design</span>
-              <span className={styles.tag}>High Fidelity Prototype</span>
+              <span className={styles["tag"]} data-tag="Desk Research">Desk Research</span>
+              <span className={styles["tag"]} data-tag="User Flow Design">User Flow Design</span>
+              <span className={styles["tag"]} data-tag="AI Personality Design">AI Personality Design</span>
+              <span className={styles["tag"]} data-tag="High Fidelity Prototype">High Fidelity Prototype</span>
             </div>
           </div>
         </div>

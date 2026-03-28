@@ -40,10 +40,10 @@ export default function AGOApp() {
               Redesigning the Gallery experience
             </p>
             <div className={styles["project-hero__tags"]}>
-              <span className={styles.tag}>User Research</span>
-              <span className={styles.tag}>Wireframing</span>
-              <span className={styles.tag}>Interaction Design</span>
-              <span className={styles.tag}>Usability Testing</span>
+              <span className={styles["tag"]} data-tag="User Research">User Research</span>
+              <span className={styles["tag"]} data-tag="Wireframing">Wireframing</span>
+              <span className={styles["tag"]} data-tag="Usability Testing">Usability Testing</span>
+              <span className={styles["tag"]} data-tag="High Fidelity Prototype">High Fidelity Prototype</span>
             </div>
           </div>
         </div>

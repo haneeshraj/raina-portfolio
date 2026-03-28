@@ -51,11 +51,11 @@
 .work {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 12rem;
   margin-bottom: 8rem;
 
   @media (max-width: 1024px) {
-    gap: 6rem;
+    gap: 12rem;
     padding: 0 1.5rem;
   }
 
@@ -98,7 +98,7 @@
   }
 
   &__title {
-    font-size: 3.6rem;
+    font-size: 4.2rem;
     font-weight: 600;
     color: #8b4789;
     margin: 0;
@@ -111,7 +111,7 @@
   }
 
   &__subtitle {
-    font-size: 1.6rem;
+    font-size: 1.95rem;
     color: #666;
     margin: 0;
     line-height: 1.5;
@@ -126,20 +126,59 @@
 }
 
 .tag {
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   white-space: nowrap;
   transition: background-color 0.3s ease;
+  font-weight: 500;
 
-  &:nth-child(odd) {
+  // E8A5D9 - User Flow Design, Spatial Design
+  &[data-tag="User Flow Design"],
+  &[data-tag="Spatial Design"] {
     background-color: #e8a5d9;
-    color: #5a4056;
+    color: #333333;
   }
 
-  &:nth-child(even) {
+  // FFD95A - Wireframing, Storyboarding, AI Personality Design
+  &[data-tag="Wireframing"],
+  &[data-tag="Storyboarding"],
+  &[data-tag="AI Personality Design"] {
     background-color: #ffd95a;
-    color: #5a4040;
+    color: #333333;
+  }
+
+  // A8DAFF - Usability Testing
+  &[data-tag="Usability Testing"] {
+    background-color: #a8daff;
+    color: #333333;
+  }
+
+  // CC94E4 - High Fidelity Prototype, High Fidelity UI Design
+  &[data-tag="High Fidelity Prototype"],
+  &[data-tag="High-Fidelity Prototype"],
+  &[data-tag="High Fidelity UI Design"],
+  &[data-tag="High-Fidelity UI Design"] {
+    background-color: #cc94e4;
+    color: #333333;
+  }
+
+  // B8FFA8 - Desk Research, User Research
+  &[data-tag="Desk Research"],
+  &[data-tag="User Research"] {
+    background-color: #b8ffa8;
+    color: #333333;
+  }
+
+  // Fallback for unmapped tags
+  &:nth-child(odd):not([data-tag]) {
+    background-color: #e8a5d9;
+    color: #333333;
+  }
+
+  &:nth-child(even):not([data-tag]) {
+    background-color: #ffd95a;
+    color: #333333;
   }
 
   @media (max-width: 480px) {
