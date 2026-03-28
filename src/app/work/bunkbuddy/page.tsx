@@ -8,14 +8,14 @@ import styles from "./styles.module.scss";
 
 const cardSortImages = [
   {
-    src: "/work/bunkbuddy/card-sort-before.png",
+    src: "/work/bunkbuddy/cardsort-b.svg",
     title: "Before",
-    description: "Initial card sorting by participants",
+    description: "Initial shuffled card sorting given to participants",
   },
   {
-    src: "/work/bunkbuddy/card-sort-after.png",
+    src: "/work/bunkbuddy/cardsort-a.svg",
     title: "After",
-    description: "Organized categories from co-creation workshop",
+    description: "Organized categories from participants of co-creation workshop",
   },
 ];
 
@@ -229,36 +229,48 @@ export default function BunkBuddy() {
 
         <div className={styles["key-insights"]}>
           <h2 className={styles["key-insights__title"]}>Key Insights</h2>
-          <ul className={styles["key-insights__list"]}>
-            <li>
-              <strong>Lifestyle Compatibility is Critical:</strong> A majority
-              of users emphasized habits like noise tolerance, cleanliness, and
-              sleep schedule. Compatibility was rated equally or more important
-              than rent or location.
-            </li>
-            <li>
-              <strong>Trust is a Major Barrier:</strong> Scams and unsafe
-              profiles were the top concerns, especially on platforms like
-              Kijiji and Facebook Marketplace. Users strongly preferred verified
-              profiles, video intros, and past roommate reviews.
-            </li>
-            <li>
-              <strong>Existing Tools Are Fragmented:</strong> People used
-              multiple tools (FB, Kijiji, Roomies) to find both listings and
-              roommates separately. No platform offers a one-stop solution with
-              matching + safety + lifestyle filters.
-            </li>
-            <li>
-              <strong>Swipe-Based UI is Appealing:</strong> Over 70% respondents
-              said they&apos;d use a swipe-style roommate/living space matcher.
-            </li>
-            <li>
-              <strong>Users Want Transparency & Control:</strong> Need to feel
-              in control of filtering, chatting, and making informed decisions.
-              Past negative experiences make users cautious but open to
-              better-designed solutions
-            </li>
-          </ul>
+          <div className={styles["key-insights__grid"]}>
+            <div className={styles["insight-card"]}>
+              <h3 className={styles["insight-card__title"]}>
+                Lifestyle Compatibility is Critical
+              </h3>
+              <p className={styles["insight-card__text"]}>
+                A majority of users emphasized habits like noise tolerance,
+                cleanliness, and sleep schedule. Compatibility was rated
+                equally or more important than rent or location.
+              </p>
+            </div>
+            <div className={styles["insight-card"]}>
+              <h3 className={styles["insight-card__title"]}>
+                Trust is a Major Barrier
+              </h3>
+              <p className={styles["insight-card__text"]}>
+                Scams and unsafe profiles were the top concerns, especially on
+                platforms like Kijiji and Facebook Marketplace. Users strongly
+                preferred verified profiles, video intros, and past roommate
+                reviews.
+              </p>
+            </div>
+            <div className={styles["insight-card"]}>
+              <h3 className={styles["insight-card__title"]}>
+                Existing Tools Are Fragmented
+              </h3>
+              <p className={styles["insight-card__text"]}>
+                People used multiple tools (FB, Kijiji, Roomies) to find both
+                listings and roommates separately. No platform offers a
+                one-stop solution with matching + safety + lifestyle filters.
+              </p>
+            </div>
+            <div className={styles["insight-card"]}>
+              <h3 className={styles["insight-card__title"]}>
+                Swipe-Based UI is Appealing
+              </h3>
+              <p className={styles["insight-card__text"]}>
+                Over 70% respondents said they&apos;d use a swipe-style
+                roommate/living space matcher.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className={styles["project-phase"]}>
@@ -515,7 +527,10 @@ export default function BunkBuddy() {
         </div>
       </div>
       <div className={styles["hiFiBlock"]}>
-        <h3 className={styles["hiFiEyebrow"]}>High Fidelity Screens</h3>
+        <h3 className={styles["hiFiTitle"]}>High Fidelity</h3>
+        <p className={styles["hiFiSubtitle"]}>
+          These high-fidelity screens showcase the final visual design, incorporating all research insights to create a polished, intuitive interface that meets user needs and expectations.
+        </p>
         <div className={styles["hiFiFrame"]}>
           <div className={styles["hiFiGrid"]}>
             <div className={styles["medFiItem"]}>
@@ -673,14 +688,13 @@ export default function BunkBuddy() {
           </h2>
         </div>
 
-        <div className={styles["usability-frame"]}>
-          <div className={styles["usability-frame__header"]}>
-            <h3 className={styles["usability-frame__label"]}>
-              USABILITY TESTING
-            </h3>
-          </div>
+        <div className={styles["usability-testing-section"]}>
+          <h3 className={styles["usability-testing-section__title"]}>
+            Usability Testing
+          </h3>
 
-          <div className={styles["usability-frame__content"]}>
+          <div className={styles["usability-frame"]}>
+            <div className={styles["usability-frame__content"]}>
             <div className={styles["usability-stat"]}>
               <h4 className={styles["usability-stat__number"]}>7 Sessions</h4>
               <p className={styles["usability-stat__text"]}>
@@ -718,8 +732,9 @@ export default function BunkBuddy() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className={styles["key-findings"]}>
+      <div className={styles["key-findings"]}>
           <h3 className={styles["key-findings__title"]}>Key Findings</h3>
           <div className={styles["key-findings__grid"]}>
             <div className={styles["finding-card"]}>
@@ -893,38 +908,45 @@ export default function BunkBuddy() {
       </div>
 
       <div className={styles["takeaways-section"]}>
-        <h2 className={styles["takeaways-section__title"]}>My Takeaways</h2>
-        <p className={styles["takeaways-section__text"]}>
-          Designing Bunk Buddy reinforced the importance of building trust and
-          compatibility into digital experiences that impact real-life
-          decisions. Through research, usability testing, and iterative design,
-          we identified that housing is not just about space &mdash; it&apos;s
-          about people, safety, and lifestyle alignment. This project
-          strengthened my ability to translate user pain points into thoughtful,
-          structured solutions that balance usability, emotion, and real-world
-          practicality.
-        </p>
+        <div className={styles["takeaways-grid"]}>
+          <div className={styles["takeaways-frame"]}>
+            <h2 className={styles["takeaways-frame__title"]}>My Takeaways</h2>
+            <p className={styles["takeaways-frame__text"]}>
+              Designing Bunk Buddy reinforced the importance of building trust
+              and compatibility into digital experiences that impact real-life
+              decisions. Through research, usability testing, and iterative
+              design, we identified that housing is not just about space
+              &mdash; it&apos;s about people, safety, and lifestyle alignment.
+              This project strengthened my ability to translate user pain
+              points into thoughtful, structured solutions that balance
+              usability, emotion, and real-world practicality.
+            </p>
+          </div>
 
-        <h3 className={styles["takeaways-section__subtitle"]}>Future Scope</h3>
-        <ul className={styles["takeaways-section__list"]}>
-          <li>
-            Conduct additional usability testing with a larger and more diverse
-            user group to validate navigation clarity and feature
-            discoverability.
-          </li>
-          <li>
-            Develop high-fidelity micro-interactions (match animation, save
-            confirmation, verification badges) to enhance emotional engagement.
-          </li>
-          <li>
-            Prototype an AI-based compatibility scoring system and test how
-            users interpret and trust that score.
-          </li>
-          <li>
-            Design a roommate agreement and shared expense tracking interface as
-            an extended prototype feature.
-          </li>
-        </ul>
+          <div className={styles["takeaways-frame"]}>
+            <h3 className={styles["takeaways-frame__title"]}>Future Scope</h3>
+            <ul className={styles["takeaways-frame__list"]}>
+              <li>
+                Conduct additional usability testing with a larger and more
+                diverse user group to validate navigation clarity and feature
+                discoverability.
+              </li>
+              <li>
+                Develop high-fidelity micro-interactions (match animation, save
+                confirmation, verification badges) to enhance emotional
+                engagement.
+              </li>
+              <li>
+                Prototype an AI-based compatibility scoring system and test how
+                users interpret and trust that score.
+              </li>
+              <li>
+                Design a roommate agreement and shared expense tracking
+                interface as an extended prototype feature.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </>
   );
