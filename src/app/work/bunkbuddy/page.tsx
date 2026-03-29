@@ -52,6 +52,7 @@ export default function BunkBuddy() {
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}>
               <Image
+                unoptimized
                 src="/work/bunkbuddy/bunkbuddy-thumb.gif"
                 alt="BunkBuddy Preview"
                 width={900}
