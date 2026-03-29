@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
 
   const handleResumeClick = () => {
-    window.open("/Raina Motihar Resume 2025 design.pdf", "_blank");
+    window.open("/Raina Motihar UX Resume.pdf", "_blank");
   };
 
   const handleViewWorkClick = () => {
