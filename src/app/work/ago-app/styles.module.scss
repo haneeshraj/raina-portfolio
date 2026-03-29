@@ -32,8 +32,6 @@
     gap: clamp(1.5rem, 2.5vw, 2rem);
     padding: clamp(3rem, 5vw, 6rem) 0;
     align-items: flex-start;
-    max-width: 60%;
-    padding-right: 3rem;
   }
 
   &__title {
@@ -99,7 +97,7 @@
 
 .hero-logo-container {
   position: absolute;
-  left: 8rem;
+  left: clamp(2rem, 6vw, 8rem);
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -118,13 +116,22 @@
 }
 
 .hero-logo-text {
+  display: inline-block;
   position: relative;
   top: auto;
   left: auto;
   z-index: 10;
+  width: max-content;
+
+  @media (max-width: 768px) {
+    top: -2rem;
+  }
 
   p {
     margin: 0;
+    display: block;
+    width: max-content;
+
     font-size: clamp(1rem, 2.5vw, 2.4rem);
     font-weight: 600;
     color: #333;
