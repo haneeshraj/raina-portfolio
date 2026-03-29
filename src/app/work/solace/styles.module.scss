@@ -115,51 +115,51 @@
   font-weight: 600;
   transition: background-color 0.3s ease;
 
-  // E8A5D9 - User Flow Design, Spatial Design
+  // E494D3 - User Flow Design, Spatial Design
   &[data-tag="User Flow Design"],
   &[data-tag="Spatial Design"] {
-    background-color: #e8a5d9;
+    background-color: #e494d3;
     color: #333333;
   }
 
-  // FFD95A - Wireframing, Storyboarding, AI Personality Design
+  // FBDF80 - Wireframing, Storyboarding, AI Personality Design
   &[data-tag="Wireframing"],
   &[data-tag="Storyboarding"],
   &[data-tag="AI Personality Design"] {
-    background-color: #ffd95a;
+    background-color: #fbdf80;
     color: #333333;
   }
 
-  // A8DAFF - Usability Testing
+  // 9DBBF0 - Usability Testing
   &[data-tag="Usability Testing"] {
-    background-color: #a8daff;
+    background-color: #9dbbf0;
     color: #333333;
   }
 
-  // CC94E4 - High Fidelity Prototype, High Fidelity UI Design
+  // B194E4 - High Fidelity Prototype, High Fidelity UI Design
   &[data-tag="High Fidelity Prototype"],
   &[data-tag="High-Fidelity Prototype"],
   &[data-tag="High Fidelity UI Design"],
   &[data-tag="High-Fidelity UI Design"] {
-    background-color: #cc94e4;
+    background-color: #b194e4;
     color: #333333;
   }
 
-  // B8FFA8 - Desk Research, User Research
+  // A3E494 - Desk Research, User Research
   &[data-tag="Desk Research"],
   &[data-tag="User Research"] {
-    background-color: #b8ffa8;
+    background-color: #a3e494;
     color: #333333;
   }
 
   // Fallback for unmapped tags
   &:nth-child(1):not([data-tag]) {
-    background-color: #e8a5d9;
+    background-color: #e494d3;
     color: #333;
   }
 
   &:nth-child(2):not([data-tag]) {
-    background-color: #ffd95a;
+    background-color: #fbdf80;
     color: #333;
   }
 
@@ -169,7 +169,7 @@
   }
 
   &:nth-child(4):not([data-tag]) {
-    background-color: #b19cd9;
+    background-color: #b194e4;
     color: #ffffff;
   }
 }
