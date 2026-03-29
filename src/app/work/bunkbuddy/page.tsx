@@ -15,7 +15,8 @@ const cardSortImages = [
   {
     src: "/work/bunkbuddy/cardsort-a.svg",
     title: "After",
-    description: "Organized categories from participants of co-creation workshop",
+    description:
+      "Organized categories from participants of co-creation workshop",
   },
 ];
 
@@ -51,7 +52,7 @@ export default function BunkBuddy() {
           <div className={styles["project-hero__right"]}>
             <div className={styles.heroPreviewCard}>
               <Image
-                src="/work/bunkbuddy/bunkbuddy.svg"
+                src="/work/bunkbuddy/bunkbuddy-thumb.gif"
                 alt="BunkBuddy Preview"
                 width={900}
                 height={560}
@@ -68,10 +69,21 @@ export default function BunkBuddy() {
               Enhancing housemate hunting
             </p>
             <div className={styles["project-hero__tags"]}>
-              <span className={styles["tag"]} data-tag="User Flow Design">User Flow Design</span>
-              <span className={styles["tag"]} data-tag="Wireframing">Wireframing</span>
-              <span className={styles["tag"]} data-tag="Usability Testing">Usability Testing</span>
-              <span className={styles["tag"]} data-tag="High Fidelity Prototype">High Fidelity Prototype</span>
+              <span className={styles["tag"]} data-tag="User Flow Design">
+                User Flow Design
+              </span>
+              <span className={styles["tag"]} data-tag="Wireframing">
+                Wireframing
+              </span>
+              <span className={styles["tag"]} data-tag="Usability Testing">
+                Usability Testing
+              </span>
+              <span
+                className={styles["tag"]}
+                data-tag="High Fidelity Prototype"
+              >
+                High Fidelity Prototype
+              </span>
             </div>
           </div>
         </div>
@@ -236,8 +248,8 @@ export default function BunkBuddy() {
               </h3>
               <p className={styles["insight-card__text"]}>
                 A majority of users emphasized habits like noise tolerance,
-                cleanliness, and sleep schedule. Compatibility was rated
-                equally or more important than rent or location.
+                cleanliness, and sleep schedule. Compatibility was rated equally
+                or more important than rent or location.
               </p>
             </div>
             <div className={styles["insight-card"]}>
@@ -257,8 +269,8 @@ export default function BunkBuddy() {
               </h3>
               <p className={styles["insight-card__text"]}>
                 People used multiple tools (FB, Kijiji, Roomies) to find both
-                listings and roommates separately. No platform offers a
-                one-stop solution with matching + safety + lifestyle filters.
+                listings and roommates separately. No platform offers a one-stop
+                solution with matching + safety + lifestyle filters.
               </p>
             </div>
             <div className={styles["insight-card"]}>
@@ -529,7 +541,9 @@ export default function BunkBuddy() {
       <div className={styles["hiFiBlock"]}>
         <h3 className={styles["hiFiTitle"]}>High Fidelity</h3>
         <p className={styles["hiFiSubtitle"]}>
-          These high-fidelity screens showcase the final visual design, incorporating all research insights to create a polished, intuitive interface that meets user needs and expectations.
+          These high-fidelity screens showcase the final visual design,
+          incorporating all research insights to create a polished, intuitive
+          interface that meets user needs and expectations.
         </p>
         <div className={styles["hiFiFrame"]}>
           <div className={styles["hiFiGrid"]}>
@@ -695,46 +709,50 @@ export default function BunkBuddy() {
 
           <div className={styles["usability-frame"]}>
             <div className={styles["usability-frame__content"]}>
-            <div className={styles["usability-stat"]}>
-              <h4 className={styles["usability-stat__number"]}>7 Sessions</h4>
-              <p className={styles["usability-stat__text"]}>
-                We conducted 7 usability testing sessions to evaluate the AGO
-                app experience.
-              </p>
-            </div>
+              <div className={styles["usability-stat"]}>
+                <h4 className={styles["usability-stat__number"]}>7 Sessions</h4>
+                <p className={styles["usability-stat__text"]}>
+                  We conducted 7 usability testing sessions to evaluate the AGO
+                  app experience.
+                </p>
+              </div>
 
-            <div className={styles["usability-stat"]}>
-              <h4 className={styles["usability-stat__number"]}>5 Key Tasks</h4>
-              <p className={styles["usability-stat__text"]}>
-                Participants completed 5 key tasks that reflected key app
-                features and user flows.
-              </p>
-            </div>
+              <div className={styles["usability-stat"]}>
+                <h4 className={styles["usability-stat__number"]}>
+                  5 Key Tasks
+                </h4>
+                <p className={styles["usability-stat__text"]}>
+                  Participants completed 5 key tasks that reflected key app
+                  features and user flows.
+                </p>
+              </div>
 
-            <div className={styles["usability-stat"]}>
-              <h4 className={styles["usability-stat__number"]}>Participants</h4>
-              <p className={styles["usability-stat__text"]}>
-                Our participants were primarily aged 18–30, including Humber
-                College students and friends or family members familiar with art
-                galleries.
-              </p>
-            </div>
+              <div className={styles["usability-stat"]}>
+                <h4 className={styles["usability-stat__number"]}>
+                  Participants
+                </h4>
+                <p className={styles["usability-stat__text"]}>
+                  Our participants were primarily aged 18–30, including Humber
+                  College students and friends or family members familiar with
+                  art galleries.
+                </p>
+              </div>
 
-            <div className={styles["usability-stat"]}>
-              <h4 className={styles["usability-stat__number"]}>
-                In-person + Remote
-              </h4>
-              <p className={styles["usability-stat__text"]}>
-                To ensure flexibility, some sessions were conducted in-person
-                for direct observation, while others were done remotely via
-                screen sharing.
-              </p>
+              <div className={styles["usability-stat"]}>
+                <h4 className={styles["usability-stat__number"]}>
+                  In-person + Remote
+                </h4>
+                <p className={styles["usability-stat__text"]}>
+                  To ensure flexibility, some sessions were conducted in-person
+                  for direct observation, while others were done remotely via
+                  screen sharing.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className={styles["key-findings"]}>
+        <div className={styles["key-findings"]}>
           <h3 className={styles["key-findings__title"]}>Key Findings</h3>
           <div className={styles["key-findings__grid"]}>
             <div className={styles["finding-card"]}>
@@ -915,11 +933,11 @@ export default function BunkBuddy() {
               Designing Bunk Buddy reinforced the importance of building trust
               and compatibility into digital experiences that impact real-life
               decisions. Through research, usability testing, and iterative
-              design, we identified that housing is not just about space
-              &mdash; it&apos;s about people, safety, and lifestyle alignment.
-              This project strengthened my ability to translate user pain
-              points into thoughtful, structured solutions that balance
-              usability, emotion, and real-world practicality.
+              design, we identified that housing is not just about space &mdash;
+              it&apos;s about people, safety, and lifestyle alignment. This
+              project strengthened my ability to translate user pain points into
+              thoughtful, structured solutions that balance usability, emotion,
+              and real-world practicality.
             </p>
           </div>
 
