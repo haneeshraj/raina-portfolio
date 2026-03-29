@@ -1411,6 +1411,11 @@
   margin-top: 0;
 }
 
+/* First item (Design & Aesthetics) - horizontal layout on desktop */
+.kfItem:first-of-type .kfBeforeAfter {
+  flex-wrap: nowrap;
+}
+
 /* ── TAKEAWAYS ────────────────────────────────── */
 .takeawaysBlock {
   display: grid;
@@ -1573,6 +1578,11 @@
 
   .kfArrow {
     display: none;
+  }
+
+  /* First item (Design & Aesthetics) - keep arrow visible on tablet */
+  .kfItem:first-of-type .kfArrow {
+    display: block;
   }
 
   .metricsNote {
@@ -1838,5 +1848,14 @@
     transform: rotate(90deg);
     font-size: 2.4rem;
     margin: 0.6rem 0;
+  }
+
+  /* First item (Design & Aesthetics) - keep vertical stack on mobile with rotated arrow */
+  .kfItem:first-of-type .kfBeforeAfter {
+    flex-direction: column;
+  }
+
+  .kfItem:first-of-type .kfArrow {
+    transform: rotate(90deg);
   }
 }

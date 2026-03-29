@@ -543,7 +543,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>Toggle & Browse</p>
+              <p className={styles["hiFiCaption"]}>Browse Profiles</p>
             </div>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -555,7 +555,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>Swipe Profiles</p>
+              <p className={styles["hiFiCaption"]}>Browse Listings</p>
             </div>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -567,7 +567,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>Like Confirmation</p>
+              <p className={styles["hiFiCaption"]}>Swipe to Like</p>
             </div>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -639,7 +639,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>Likes Tab</p>
+              <p className={styles["hiFiCaption"]}>Conversation</p>
             </div>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -651,7 +651,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>Saved Listings</p>
+              <p className={styles["hiFiCaption"]}>Likes & Recommendations</p>
             </div>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -663,7 +663,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>User Profile</p>
+              <p className={styles["hiFiCaption"]}>Saved Listing</p>
             </div>
             <div className={styles["medFiItem"]}>
               <div className={styles["hiFiImageWrap"]}>
@@ -675,7 +675,7 @@ export default function BunkBuddy() {
                   className={styles["hiFiImage"]}
                 />
               </div>
-              <p className={styles["hiFiCaption"]}>Iterated Design</p>
+              <p className={styles["hiFiCaption"]}>User Profile</p>
             </div>
           </div>
         </div>
