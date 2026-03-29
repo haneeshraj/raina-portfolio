@@ -9,7 +9,11 @@ const Footer = () => {
       <div className={styles.footer__notch} aria-hidden="true" />
       <div className={styles.footer__inner}>
         <div className={styles.footer__left}>
-          <Link href="/" className={styles.footer__logoLink} aria-label="Raina home">
+          <Link
+            href="/"
+            className={styles.footer__logoLink}
+            aria-label="Raina home"
+          >
             <Image
               src="/logo-white.svg"
               alt="Raina logo"
@@ -62,7 +66,10 @@ const Footer = () => {
         </div>
 
         <div className={styles.footer__right}>
-          <a className={styles.footer__infoLink} href="mailto:rainamotihar114@gmail.com">
+          <a
+            className={styles.footer__infoLink}
+            href="mailto:rainamotihar114@gmail.com"
+          >
             Email
           </a>
           <a
@@ -76,6 +83,9 @@ const Footer = () => {
           <p className={styles.footer__location}>📍 Toronto, CA</p>
         </div>
       </div>
+      <p className={styles.footer__copyright}>
+        &copy; {new Date().getFullYear()} Raina Motihar. All rights reserved.
+      </p>
     </footer>
   );
 };

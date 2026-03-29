@@ -21,6 +21,7 @@
   max-width: 120rem;
   margin: 0 auto;
   padding: 5.2rem 4rem 5.8rem;
+  padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 4rem;
@@ -289,4 +290,10 @@
   .footer__right .footer__infoLink:first-child {
     margin-top: 0rem;
   }
+}
+
+.footer__copyright {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
